@@ -74,7 +74,8 @@ use Symplify\EasyCodingStandard\Config\ECSConfig;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ECSConfig $ecsConfig): void {
-    $ecsConfig->cacheDirectory(__DIR__ . '/.cache/ecs');
+    $directory = getcwd();
+    $ecsConfig->cacheDirectory($directory . '/.cache/ecs');
     $ecsConfig->lineEnding("\n");
     $ecsConfig->parallel();
     $ecsConfig->sets([
@@ -91,11 +92,11 @@ return static function (ECSConfig $ecsConfig): void {
         SetList::SYMPLIFY,
     ]);
 
-    $ecsConfig->paths([__DIR__ . '/ecs.php', __DIR__ . '/README.md', __DIR__ . '/src', __DIR__ . '/tests']);
+    $ecsConfig->paths([$directory . '/ecs.php', $directory . '/README.md']);
 
     $ecsConfig->skip([
-        __DIR__ . '/tests/Fixture/*',
-        __DIR__ . '/vendor/*',
+        $directory . '/tests/Fixture/*',
+        $directory . '/vendor/*',
         GroupImportFixer::class,
         BinaryOperatorSpacesFixer::class,
         GeneralPhpdocAnnotationRemoveFixer::class,
