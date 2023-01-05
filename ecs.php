@@ -75,15 +75,39 @@ use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ECSConfig $ecsConfig): void {
     $ecsConfig->cacheDirectory(__DIR__ . '/.cache/ecs');
+    $ecsConfig->lineEnding("\n");
     $ecsConfig->parallel();
+    $ecsConfig->sets([
+        SetList::ARRAY,
+        SetList::CLEAN_CODE,
+        SetList::COMMON,
+        SetList::CONTROL_STRUCTURES,
+        SetList::NAMESPACES,
+        SetList::PSR_12,
+        SetList::DOCBLOCK,
+        SetList::PHPUNIT,
+        SetList::SPACES,
+        SetList::STRICT,
+        SetList::SYMPLIFY,
+    ]);
+
     $ecsConfig->paths([
-        __DIR__ . '/bin',
         __DIR__ . '/ecs.php',
         __DIR__ . '/README.md',
-        __DIR__ . '/rector.php',
         __DIR__ . '/src',
         __DIR__ . '/tests',
     ]);
+
+    $ecsConfig->skip([
+        __DIR__ . '/tests/Fixture/*',
+        __DIR__ . '/vendor/*',
+        GroupImportFixer::class,
+        BinaryOperatorSpacesFixer::class,
+        GeneralPhpdocAnnotationRemoveFixer::class,
+        PhpdocLineSpanFixer::class,
+        PhpdocTrimFixer::class,
+    ]);
+
 
     $ecsConfig->rules([
         DeclareStrictTypesFixer::class,
@@ -168,29 +192,5 @@ return static function (ECSConfig $ecsConfig): void {
     ]);
     $ecsConfig->ruleWithConfiguration(OrderedInterfacesFixer::class, [
         'order' => 'alpha',
-    ]);
-
-    $ecsConfig->sets([
-        SetList::ARRAY,
-        SetList::CLEAN_CODE,
-        SetList::COMMON,
-        SetList::CONTROL_STRUCTURES,
-        SetList::NAMESPACES,
-        SetList::PSR_12,
-        SetList::DOCBLOCK,
-        SetList::PHPUNIT,
-        SetList::SPACES,
-        SetList::STRICT,
-        SetList::SYMPLIFY,
-    ]);
-
-    $ecsConfig->skip([
-        '*/tests/Fixture/*',
-        '*/vendor/*',
-        GroupImportFixer::class,
-        BinaryOperatorSpacesFixer::class,
-        GeneralPhpdocAnnotationRemoveFixer::class,
-        PhpdocLineSpanFixer::class,
-        PhpdocTrimFixer::class,
     ]);
 };
