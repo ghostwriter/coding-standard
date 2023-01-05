@@ -1,36 +1,49 @@
-# wip
+# Coding Standard
 
-[![Compliance](https://github.com/ghostwriter/wip/actions/workflows/compliance.yml/badge.svg)](https://github.com/ghostwriter/wip/actions/workflows/compliance.yml)
-[![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/wip?color=8892bf)](https://www.php.net/supported-versions)
-[![Type Coverage](https://shepherd.dev/github/ghostwriter/wip/coverage.svg)](https://shepherd.dev/github/ghostwriter/wip)
-[![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/wip)](https://packagist.org/packages/ghostwriter/wip)
-[![Downloads](https://badgen.net/packagist/dt/ghostwriter/wip?color=blue)](https://packagist.org/packages/ghostwriter/wip)
+[![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/coding-standard?color=8892bf)](https://www.php.net/supported-versions)
+[![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/coding-standard)](https://packagist.org/packages/ghostwriter/coding-standard)
+[![Downloads](https://badgen.net/packagist/dt/ghostwriter/coding-standard?color=blue)](https://packagist.org/packages/ghostwriter/coding-standard)
 
-work in progress
-
-> **Warning**
->
-> This project is not finished yet, work in progress.
-
+My personal PHP Coding Standard.
 
 ## Installation
 
 You can install the package via composer:
 
 ``` bash
-composer require ghostwriter/wip
+composer require ghostwriter/coding-standard --dev
 ```
 
 ## Usage
 
-```php
-// work in progress
+- Add configuration
+
+```php.php
+use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
+use Symplify\EasyCodingStandard\Config\ECSConfig;
+use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
+
+return static function (ECSConfig $ecsConfig): void {
+    $ecsConfig->import(__DIR__ . '/vendor/ghostwriter/coding-standard/ecs.php');
+    $ecsConfig->paths([__DIR__ . '/src', __DIR__ . '/tests']);
+    // A. full sets
+    $ecsConfig->sets([SetList::PSR_12]);
+
+    // B. standalone rule
+    $ecsConfig->ruleWithConfiguration(ArraySyntaxFixer::class, [
+        'syntax' => 'short',
+    ]);
+};
 ```
 
-## Testing
+## Command
 
 ``` bash
-composer test
+vendor/bin/ecs
+```
+
+``` bash
+vendor/bin/ecs --fix
 ```
 
 ## Changelog
@@ -48,7 +61,11 @@ If you discover any security related issues, please email `nathanael.esayeas@pro
 ## Credits
 
 - [Nathanael Esayeas](https://github.com/ghostwriter)
-- [All Contributors](https://github.com/ghostwriter/wip/contributors)
+- [friendsofphp/php-cs-fixer](https://github.com/friendsofphp/php-cs-fixer)
+- [squizlabs/php_codesniffer](https://github.com/squizlabs/php_codesniffer)
+- [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
+- [symplify/easy-coding-standard](https://github.com/symplify/easy-coding-standard)
+- [All Contributors](https://github.com/ghostwriter/coding-standard/contributors)
 
 ## License
 
