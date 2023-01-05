@@ -91,12 +91,7 @@ return static function (ECSConfig $ecsConfig): void {
         SetList::SYMPLIFY,
     ]);
 
-    $ecsConfig->paths([
-        __DIR__ . '/ecs.php',
-        __DIR__ . '/README.md',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
-    ]);
+    $ecsConfig->paths([__DIR__ . '/ecs.php', __DIR__ . '/README.md', __DIR__ . '/src', __DIR__ . '/tests']);
 
     $ecsConfig->skip([
         __DIR__ . '/tests/Fixture/*',
@@ -107,7 +102,6 @@ return static function (ECSConfig $ecsConfig): void {
         PhpdocLineSpanFixer::class,
         PhpdocTrimFixer::class,
     ]);
-
 
     $ecsConfig->rules([
         DeclareStrictTypesFixer::class,
