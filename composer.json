@@ -32,9 +32,9 @@
     "require": {
         "php": ">=8.1,<8.3",
         "friendsofphp/php-cs-fixer": "^3.13",
-        "slevomat/coding-standard": "^8.7",
+        "slevomat/coding-standard": "^8.8",
         "squizlabs/php_codesniffer": "^3.7",
-        "symplify/easy-coding-standard": "^11.1"
+        "symplify/easy-coding-standard": "11.2.0.72"
     },
     "config": {
         "allow-plugins": {
