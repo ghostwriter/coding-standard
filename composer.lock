@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e98631d6423661384ad5be144848e29",
+    "content-hash": "3378507fc7fd3f014c097be156211a02",
     "packages": [
         {
             "name": "amphp/amp",
@@ -986,16 +986,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "dev-master",
+            "version": "v3.14.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "fa326d316a6f5a0f9f03a5f79705a0e64a4ea3d7"
+                "reference": "1b3d9dba63d93b8a202c31e824748218781eae6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/fa326d316a6f5a0f9f03a5f79705a0e64a4ea3d7",
-                "reference": "fa326d316a6f5a0f9f03a5f79705a0e64a4ea3d7",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/1b3d9dba63d93b8a202c31e824748218781eae6b",
+                "reference": "1b3d9dba63d93b8a202c31e824748218781eae6b",
                 "shasum": ""
             },
             "require": {
@@ -1038,7 +1038,6 @@
                 "ext-dom": "For handling output formats in XML",
                 "ext-mbstring": "For handling non-UTF8 characters."
             },
-            "default-branch": true,
             "bin": [
                 "php-cs-fixer"
             ],
@@ -1065,7 +1064,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/master"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.14.4"
             },
             "funding": [
                 {
@@ -1073,7 +1072,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-04T22:07:35+00:00"
+            "time": "2023-02-09T21:49:13+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
@@ -2017,16 +2016,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.9.16",
+            "version": "1.9.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "922e2689bb180575d0f57de0443c431a5a698e8f"
+                "reference": "204e459e7822f2c586463029f5ecec31bb45a1f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/922e2689bb180575d0f57de0443c431a5a698e8f",
-                "reference": "922e2689bb180575d0f57de0443c431a5a698e8f",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/204e459e7822f2c586463029f5ecec31bb45a1f2",
+                "reference": "204e459e7822f2c586463029f5ecec31bb45a1f2",
                 "shasum": ""
             },
             "require": {
@@ -2056,7 +2055,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.9.16"
+                "source": "https://github.com/phpstan/phpstan/tree/1.9.17"
             },
             "funding": [
                 {
@@ -2072,7 +2071,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-07T10:42:21+00:00"
+            "time": "2023-02-08T12:25:00+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2394,16 +2393,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.5",
+            "version": "10.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5f4a775285c6401693cee39876f3ba764d42cb24"
+                "reference": "a6f61c5629dd95db79af72f1e94d56702187479a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5f4a775285c6401693cee39876f3ba764d42cb24",
-                "reference": "5f4a775285c6401693cee39876f3ba764d42cb24",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a6f61c5629dd95db79af72f1e94d56702187479a",
+                "reference": "a6f61c5629dd95db79af72f1e94d56702187479a",
                 "shasum": ""
             },
             "require": {
@@ -2474,7 +2473,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.7"
             },
             "funding": [
                 {
@@ -2490,7 +2489,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-07T06:06:01+00:00"
+            "time": "2023-02-08T15:16:31+00:00"
         },
         {
             "name": "psalm/plugin-phpunit",
@@ -5737,9 +5736,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "friendsofphp/php-cs-fixer": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
