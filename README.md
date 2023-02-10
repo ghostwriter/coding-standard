@@ -62,10 +62,6 @@ If you discover any security related issues, please email `nathanael.esayeas@pro
 ## Credits
 
 - [Nathanael Esayeas](https://github.com/ghostwriter)
-- [friendsofphp/php-cs-fixer](https://github.com/friendsofphp/php-cs-fixer)
-- [squizlabs/php_codesniffer](https://github.com/squizlabs/php_codesniffer)
-- [slevomat/coding-standard](https://github.com/slevomat/coding-standard)
-- [symplify/easy-coding-standard](https://github.com/symplify/easy-coding-standard)
 - [All Contributors](https://github.com/ghostwriter/coding-standard/contributors)
 
 ## License
