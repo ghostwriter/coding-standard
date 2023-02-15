@@ -49,18 +49,15 @@ use PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertInternalTypeFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitExpectationFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitFqcnAnnotationFixer;
-use PhpCsFixer\Fixer\PhpUnit\PhpUnitInternalClassFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitMethodCasingFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitMockFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitMockShortWillReturnFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitNamespacedFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitNoExpectationAnnotationFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitSetUpTearDownVisibilityFixer;
-use PhpCsFixer\Fixer\PhpUnit\PhpUnitSizeClassFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitStrictFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitTestAnnotationFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitTestCaseStaticMethodCallsFixer;
-use PhpCsFixer\Fixer\PhpUnit\PhpUnitTestClassRequiresCoversFixer;
 use PhpCsFixer\Fixer\Semicolon\NoEmptyStatementFixer;
 use PhpCsFixer\Fixer\Semicolon\NoSinglelineWhitespaceBeforeSemicolonsFixer;
 use PhpCsFixer\Fixer\Semicolon\SemicolonAfterInstructionFixer;
@@ -125,17 +122,14 @@ return static function (ECSConfig $ecsConfig): void {
         PhpUnitDedicateAssertInternalTypeFixer::class,
         PhpUnitExpectationFixer::class,
         PhpUnitFqcnAnnotationFixer::class,
-        PhpUnitInternalClassFixer::class,
         PhpUnitMethodCasingFixer::class,
         PhpUnitMockFixer::class,
         PhpUnitMockShortWillReturnFixer::class,
         PhpUnitNamespacedFixer::class,
         PhpUnitNoExpectationAnnotationFixer::class,
         PhpUnitSetUpTearDownVisibilityFixer::class,
-        PhpUnitSizeClassFixer::class,
         PhpUnitStrictFixer::class,
         PhpUnitTestAnnotationFixer::class,
-        PhpUnitTestClassRequiresCoversFixer::class,
         ProtectedToPrivateFixer::class,
         RandomApiMigrationFixer::class,
         ReturnTypeDeclarationFixer::class,
