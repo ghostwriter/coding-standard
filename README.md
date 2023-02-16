@@ -19,9 +19,7 @@ composer require ghostwriter/coding-standard:dev-main --dev
 
 - Create a `ecs.php` configuration file.
 
-```php
-<?php
-
+``` php
 declare(strict_types=1);
 
 use Symplify\EasyCodingStandard\Config\ECSConfig;
