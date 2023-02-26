@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3378507fc7fd3f014c097be156211a02",
+    "content-hash": "16169b2d9e99d3c674e74a7a633c87f9",
     "packages": [
         {
             "name": "amphp/amp",
@@ -2016,16 +2016,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.1",
+            "version": "1.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "1cd5fc530a8b68702f3733ad64294b2a39564198"
+                "reference": "5419375b5891add97dc74be71e6c1c34baaddf64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/1cd5fc530a8b68702f3733ad64294b2a39564198",
-                "reference": "1cd5fc530a8b68702f3733ad64294b2a39564198",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/5419375b5891add97dc74be71e6c1c34baaddf64",
+                "reference": "5419375b5891add97dc74be71e6c1c34baaddf64",
                 "shasum": ""
             },
             "require": {
@@ -2055,7 +2055,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.10.1"
+                "source": "https://github.com/phpstan/phpstan/tree/1.10.3"
             },
             "funding": [
                 {
@@ -2071,27 +2071,27 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-21T21:57:23+00:00"
+            "time": "2023-02-25T14:47:13+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "10.0.0",
+            "version": "10.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "bf4fbc9c13af7da12b3ea807574fb460f255daba"
+                "reference": "b9c21a93dd8c8eed79879374884ee733259475cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/bf4fbc9c13af7da12b3ea807574fb460f255daba",
-                "reference": "bf4fbc9c13af7da12b3ea807574fb460f255daba",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/b9c21a93dd8c8eed79879374884ee733259475cc",
+                "reference": "b9c21a93dd8c8eed79879374884ee733259475cc",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
-                "nikic/php-parser": "^4.14",
+                "nikic/php-parser": "^4.15",
                 "php": ">=8.1",
                 "phpunit/php-file-iterator": "^4.0",
                 "phpunit/php-text-template": "^3.0",
@@ -2140,7 +2140,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.0.0"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/10.0.1"
             },
             "funding": [
                 {
@@ -2148,7 +2148,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-03T07:14:34+00:00"
+            "time": "2023-02-25T05:35:03+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2393,16 +2393,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "10.0.11",
+            "version": "10.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d18a18b07e7a9ad52d994b1785f9e301fc84b616"
+                "reference": "87d5cfdb4ecf440fb9f08b636b1152be433fc6f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d18a18b07e7a9ad52d994b1785f9e301fc84b616",
-                "reference": "d18a18b07e7a9ad52d994b1785f9e301fc84b616",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/87d5cfdb4ecf440fb9f08b636b1152be433fc6f1",
+                "reference": "87d5cfdb4ecf440fb9f08b636b1152be433fc6f1",
                 "shasum": ""
             },
             "require": {
@@ -2473,7 +2473,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.11"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.0.12"
             },
             "funding": [
                 {
@@ -2489,7 +2489,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-20T16:39:36+00:00"
+            "time": "2023-02-25T06:05:15+00:00"
         },
         {
             "name": "psalm/plugin-phpunit",
@@ -3969,16 +3969,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.7.1",
+            "version": "3.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "1359e176e9307e906dc3d890bcc9603ff6d90619"
+                "reference": "ed8e00df0a83aa96acf703f8c2979ff33341f879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/1359e176e9307e906dc3d890bcc9603ff6d90619",
-                "reference": "1359e176e9307e906dc3d890bcc9603ff6d90619",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ed8e00df0a83aa96acf703f8c2979ff33341f879",
+                "reference": "ed8e00df0a83aa96acf703f8c2979ff33341f879",
                 "shasum": ""
             },
             "require": {
@@ -4014,14 +4014,15 @@
             "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
             "keywords": [
                 "phpcs",
-                "standards"
+                "standards",
+                "static analysis"
             ],
             "support": {
                 "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2022-06-18T07:21:10+00:00"
+            "time": "2023-02-22T23:07:41+00:00"
         },
         {
             "name": "symfony/console",
@@ -5570,16 +5571,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "5.7.5",
+            "version": "5.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "5390c212bab06ee230c8720c2e9c54b823db00c8"
+                "reference": "e028ba46ba0d7f9a78bc3201c251e137383e145f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/5390c212bab06ee230c8720c2e9c54b823db00c8",
-                "reference": "5390c212bab06ee230c8720c2e9c54b823db00c8",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/e028ba46ba0d7f9a78bc3201c251e137383e145f",
+                "reference": "e028ba46ba0d7f9a78bc3201c251e137383e145f",
                 "shasum": ""
             },
             "require": {
@@ -5669,9 +5670,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vimeo/psalm/issues",
-                "source": "https://github.com/vimeo/psalm/tree/5.7.5"
+                "source": "https://github.com/vimeo/psalm/tree/5.7.7"
             },
-            "time": "2023-02-21T16:02:51+00:00"
+            "time": "2023-02-25T01:05:07+00:00"
         },
         {
             "name": "webmozart/assert",
