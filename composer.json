@@ -41,9 +41,6 @@
         "symplify/easy-coding-standard": "^11.3.2",
         "vimeo/psalm": "^5.8.0"
     },
-    "conflict": {
-        "symplify/easy-coding-standard": ">=11.3,<11.3.2"
-    },
     "config": {
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
