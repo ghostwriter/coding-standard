@@ -24,7 +24,6 @@ use PhpCsFixer\Fixer\ClassNotation\VisibilityRequiredFixer;
 use PhpCsFixer\Fixer\ControlStructure\ElseifFixer;
 use PhpCsFixer\Fixer\ControlStructure\NoSuperfluousElseifFixer;
 use PhpCsFixer\Fixer\ControlStructure\SimplifiedIfReturnFixer;
-use PhpCsFixer\Fixer\ControlStructure\YodaStyleFixer;
 use PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer;
 use PhpCsFixer\Fixer\FunctionNotation\StaticLambdaFixer;
 use PhpCsFixer\Fixer\FunctionNotation\UseArrowFunctionsFixer;
@@ -145,7 +144,6 @@ return static function (ECSConfig $ecsConfig): void {
         StrictParamFixer::class,
         UseArrowFunctionsFixer::class,
         VisibilityRequiredFixer::class,
-        YodaStyleFixer::class,
     ]);
 
     $ecsConfig->ruleWithConfiguration(GlobalNamespaceImportFixer::class, [
