@@ -34,7 +34,8 @@ return static function (ECSConfig $ecsConfig): void {
 ```
 
 - Create a `rector.php` configuration file.
-```php
+
+``` php
 <?php
 
 declare(strict_types=1);
