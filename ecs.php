@@ -86,7 +86,7 @@ return static function (ECSConfig $ecsConfig): void {
         SetList::SYMPLIFY,
     ]);
 
-    $ecsConfig->paths([$directory . '/ecs.php', $directory . '/README.md']);
+    $ecsConfig->paths([$directory . '/ecs.php', $directory . '/rector.php']);
 
     $ecsConfig->skip([$directory . '/tests/Fixture/*', $directory . '/vendor/*']);
 
