@@ -49,18 +49,23 @@
         },
         "classmap-authoritative": true,
         "optimize-autoloader": true,
+        "preferred-install": "dist",
         "sort-packages": true
     },
     "scripts": {
         "check": [
             "@composer validate",
+            "@jump",
             "@cs-check",
             "@cs-fix"
         ],
-        "cs-check": "vendor/bin/ecs check --clear-cache || true",
-        "cs-fix": [
-            "vendor/bin/ecs check --fix --clear-cache"
+        "jump": [
+            "@composer update --no-interaction --no-progress --prefer-dist",
+            "@composer bump --no-interaction",
+            "@composer dump-autoload --classmap-authoritative --no-dev --no-interaction --optimize"
         ],
+        "cs-check": "vendor/bin/ecs check --clear-cache || true",
+        "cs-fix": "vendor/bin/ecs check --fix --clear-cache",
         "phpunit": "true"
     }
 }
