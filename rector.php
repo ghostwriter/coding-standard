@@ -2,10 +2,8 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
 use Rector\CodeQuality\Rector\Array_\CallableThisArrayToAnonymousFunctionRector;
-use Rector\CodingStyle\Enum\PreferenceSelfThis;
-use Rector\CodingStyle\Rector\MethodCall\PreferThisOrSelfMethodCallRector;
+use Rector\CodingStyle\Rector\ClassMethod\UnSpreadOperatorRector;
 use Rector\Config\RectorConfig;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
@@ -47,8 +45,6 @@ use Rector\PHPUnit\Rector\MethodCall\UseSpecificWillMethodRector;
 use Rector\PHPUnit\Rector\StaticCall\GetMockRector;
 use Rector\PHPUnit\Set\PHPUnitLevelSetList;
 use Rector\Renaming\Rector\FileWithoutNamespace\PseudoNamespaceToNamespaceRector;
-use Rector\Renaming\Rector\MethodCall\RenameMethodRector;
-use Rector\Renaming\ValueObject\MethodCallRename;
 use Rector\Set\ValueObject\DowngradeLevelSetList;
 use Rector\Set\ValueObject\DowngradeSetList;
 use Rector\Set\ValueObject\LevelSetList;
@@ -69,7 +65,6 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::DEAD_CODE,
         SetList::NAMING,
         SetList::PRIVATIZATION,
-        SetList::PSR_4,
         SetList::TYPE_DECLARATION,
         SetList::EARLY_RETURN,
         SetList::PHP_81,
@@ -90,21 +85,8 @@ return static function (RectorConfig $rectorConfig): void {
         PseudoNamespaceToNamespaceRector::class,
         StringClassNameToClassConstantRector::class,
         AddDoesNotPerformAssertionToNonAssertingTestRector::class,
+        UnSpreadOperatorRector::class,
     ]);
-    // prefer self:: over $this for phpunit
-    $rectorConfig->ruleWithConfiguration(
-        PreferThisOrSelfMethodCallRector::class,
-        [
-            TestCase::class => PreferenceSelfThis::PREFER_SELF,
-        ]
-    );
-    $rectorConfig->ruleWithConfiguration(
-        RenameMethodRector::class,
-        [
-            new MethodCallRename(TestCase::class, 'setExpectedException', 'expectedException'),
-            new MethodCallRename(TestCase::class, 'setExpectedExceptionRegExp', 'expectedException'),
-        ]
-    );
     // register single rule
     $rectorConfig->rule(RestoreDefaultNullToNullableTypePropertyRector::class);
     $rectorConfig->rule(AddSeeTestAnnotationRector::class);
