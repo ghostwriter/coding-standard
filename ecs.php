@@ -83,7 +83,6 @@ return static function (ECSConfig $ecsConfig): void {
         SetList::PHPUNIT,
         SetList::SPACES,
         SetList::STRICT,
-        SetList::SYMPLIFY,
     ]);
 
     $ecsConfig->paths([$directory . '/ecs.php', $directory . '/rector.php']);
