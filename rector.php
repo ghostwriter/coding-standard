@@ -32,7 +32,6 @@ use Rector\PHPUnit\Rector\MethodCall\AssertSameBoolNullToSpecificMethodRector;
 use Rector\PHPUnit\Rector\MethodCall\AssertSameTrueFalseToAssertTrueFalseRector;
 use Rector\PHPUnit\Rector\MethodCall\AssertTrueFalseInternalTypeToSpecificMethodRector;
 use Rector\PHPUnit\Rector\MethodCall\AssertTrueFalseToSpecificMethodRector;
-use Rector\PHPUnit\Rector\MethodCall\CreateMockToCreateStubRector;
 use Rector\PHPUnit\Rector\MethodCall\DelegateExceptionArgumentsRector;
 use Rector\PHPUnit\Rector\MethodCall\ExplicitPhpErrorApiRector;
 use Rector\PHPUnit\Rector\MethodCall\GetMockBuilderGetMockToCreateMockRector;
@@ -106,7 +105,6 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->rule(AssertTrueFalseInternalTypeToSpecificMethodRector::class);
     $rectorConfig->rule(AssertTrueFalseToSpecificMethodRector::class);
     $rectorConfig->rule(ConstructClassMethodToSetUpTestCaseRector::class);
-    $rectorConfig->rule(CreateMockToCreateStubRector::class);
     $rectorConfig->rule(DelegateExceptionArgumentsRector::class);
     $rectorConfig->rule(ExceptionAnnotationRector::class);
     $rectorConfig->rule(ExplicitPhpErrorApiRector::class);
