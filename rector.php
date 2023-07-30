@@ -8,7 +8,6 @@ use Rector\Config\RectorConfig;
 use Rector\Core\ValueObject\PhpVersion;
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
 use Rector\Php74\Rector\Property\RestoreDefaultNullToNullableTypePropertyRector;
-use Rector\PHPUnit\Rector\Class_\AddSeeTestAnnotationRector;
 use Rector\PHPUnit\Rector\Class_\ConstructClassMethodToSetUpTestCaseRector;
 use Rector\PHPUnit\Rector\Class_\RemoveDataProviderTestPrefixRector;
 use Rector\PHPUnit\Rector\Class_\TestListenerToHooksRector;
@@ -88,7 +87,6 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
     // register single rule
     $rectorConfig->rule(RestoreDefaultNullToNullableTypePropertyRector::class);
-    $rectorConfig->rule(AddSeeTestAnnotationRector::class);
     $rectorConfig->rule(AssertCompareToSpecificMethodRector::class);
     $rectorConfig->rule(AssertComparisonToSpecificMethodRector::class);
     $rectorConfig->rule(AssertEqualsParameterToSpecificMethodsTypeRector::class);
