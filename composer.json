@@ -30,42 +30,40 @@
         }
     ],
     "require": {
-        "php": ">=8.1,<8.3",
+        "php": "*",
         "friendsofphp/php-cs-fixer": "^3.22.0",
-        "infection/infection": "^0.27.0",
-        "phpbench/phpbench": "^1.2.14",
         "phpunit/phpunit": "^10.2.6",
         "psalm/plugin-phpunit": "^0.18.4",
-        "rector/rector": "^0.17.6",
-        "slevomat/coding-standard": "^8.13.1",
+        "rector/rector": "^0.17.7",
+        "slevomat/coding-standard": "^8.13.4",
         "squizlabs/php_codesniffer": "^3.7.2",
-        "symplify/easy-coding-standard": "^11.5.0",
-        "vimeo/psalm": "^5.13.1"
+        "symplify/easy-coding-standard": "^11.5.0"
     },
+    "bin": [
+        "tools/infection",
+        "tools/php-cs-fixer",
+        "tools/phpbench",
+        "tools/phpcbf",
+        "tools/phpunit",
+        "tools/psalm"
+    ],
     "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "infection/extension-installer": true
-        },
         "classmap-authoritative": true,
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     },
     "scripts": {
         "check": [
-            "@composer validate",
-            "@jump",
-            "@cs-check",
-            "@cs-fix"
+            "@p:u",
+            "tools/php-cs-fixer fix --diff --using-cache=no --rules=@PER src",
+            "tools/phpcbf src"
         ],
-        "jump": [
-            "@composer update --no-interaction --no-progress --prefer-dist",
-            "@composer bump --no-interaction",
-            "@composer dump-autoload --classmap-authoritative --no-dev --no-interaction --optimize"
-        ],
-        "cs-check": "vendor/bin/ecs check --clear-cache || true",
-        "cs-fix": "vendor/bin/ecs check --fix --clear-cache",
+        "p:u": "phive update",
+        "p:i": "phive install --force-accept-unsigned -c",
         "phpunit": "true"
     }
 }
