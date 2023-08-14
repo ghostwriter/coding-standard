@@ -31,12 +31,8 @@
     ],
     "require": {
         "php": "*",
-        "friendsofphp/php-cs-fixer": "^3.22.0",
-        "phpunit/phpunit": "^10.2.6",
         "psalm/plugin-phpunit": "^0.18.4",
-        "rector/rector": "^0.17.7",
-        "slevomat/coding-standard": "^8.13.4",
-        "squizlabs/php_codesniffer": "^3.7.2",
+        "rector/rector": "^0.17.13",
         "symplify/easy-coding-standard": "^11.5.0"
     },
     "bin": [
@@ -47,6 +43,7 @@
         "tools/php-cs-fixer",
         "tools/phpbench",
         "tools/phpcbf",
+        "tools/phpcs",
         "tools/psalm"
     ],
     "config": {
