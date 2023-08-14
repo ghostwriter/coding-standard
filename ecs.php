@@ -85,9 +85,34 @@ return static function (ECSConfig $ecsConfig): void {
         SetList::STRICT,
     ]);
 
-    $ecsConfig->paths([$directory . '/ecs.php', $directory . '/rector.php']);
+    $paths = array_filter(
+        [
+            $directory . '/ecs.php',
+            $directory . '/config',
+            $directory . '/data',
+            $directory . '/module',
+            $directory . '/public',
+            $directory . '/src',
+            $directory . '/test',
+            $directory . '/tests',
+            $directory . '/rector.php',
+        ],
+        static fn (string $path): bool => file_exists($path),
+    );
 
-    $ecsConfig->skip([$directory . '/tests/Fixture/*', $directory . '/vendor/*']);
+    $skip = array_filter(
+        [
+            $directory . '/fixture/*',
+            $directory . '/fixtures/*',
+            $directory . '/test/Fixture/*',
+            $directory . '/tests/Fixture/*',
+            $directory . '/vendor/*',
+        ],
+        static fn (string $path): bool => ! in_array(glob($path), [false, []], true)
+    );
+
+    $ecsConfig->paths($paths);
+    $ecsConfig->skip($skip);
 
     $ecsConfig->rules([
         DeclareStrictTypesFixer::class,
