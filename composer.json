@@ -66,6 +66,6 @@
             "phive update",
             "phive purge"
         ],
-        "phpunit": "true"
+        "phpunit": "tools/phpunit"
     }
 }
