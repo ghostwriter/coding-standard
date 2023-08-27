@@ -3,8 +3,7 @@
 [![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/coding-standard?color=8892bf)](https://www.php.net/supported-versions)
 [![Latest Version on Packagist](https://badgen.net/packagist/v/ghostwriter/coding-standard)](https://packagist.org/packages/ghostwriter/coding-standard)
 [![Downloads](https://badgen.net/packagist/dt/ghostwriter/coding-standard?color=blue)](https://packagist.org/packages/ghostwriter/coding-standard)
-
-My personal PHP Coding Standard.
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/coding-standard&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
 
 ## Installation
 
@@ -16,92 +15,53 @@ composer require ghostwriter/coding-standard:dev-main --dev
 
 ## Usage
 
-- Create a `ecs.php` configuration file.
-
-``` php
-<?php
-
-declare(strict_types=1);
-
-use Symplify\EasyCodingStandard\Config\ECSConfig;
-
-return static function (ECSConfig $ecsConfig): void {
-    $ecsConfig->sets([
-        __DIR__ . '/vendor/ghostwriter/coding-standard/ecs.php',
-    ]);
-
-    $ecsConfig->paths([
-        __DIR__ . '/ecs.php',
-        __DIR__ . '/rector.php',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
-    ]);
-
-    $ecsConfig->skip([
-        __DIR__ . '/tests/Fixture/*',
-        __DIR__ . '/vendor/*',
-    ]);
-};
-
+```sh
+vendor/ghostwriter/coding-standard/tools/composer-normalize
 ```
 
-- Create a `rector.php` configuration file.
-
-``` php
-<?php
-
-declare(strict_types=1);
-
-use Rector\Config\RectorConfig;
-use Rector\Core\ValueObject\PhpVersion;
-
-return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->sets([
-        __DIR__ . '/vendor/ghostwriter/coding-standard/rector.php',
-    ]);
-
-    $rectorConfig->phpVersion(PhpVersion::PHP_81);
-
-    $rectorConfig->paths([
-        __DIR__ . '/ecs.php',
-        __DIR__ . '/rector.php',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
-    ]);
-
-    $rectorConfig->skip([
-        __DIR__ . '/tests/Fixture/*',
-        __DIR__ . '/vendor/*'
-    ]);
-};
-
+```sh
+vendor/ghostwriter/coding-standard/tools/composer-require-checker
 ```
 
-## Command
-
-``` bash
-vendor/bin/ecs
+```sh
+vendor/ghostwriter/coding-standard/tools/composer-unused
 ```
 
-``` bash
-vendor/bin/ecs --fix
+```sh
+vendor/ghostwriter/coding-standard/tools/deptrac
 ```
 
-``` bash
-vendor/bin/rector
+```sh
+vendor/ghostwriter/coding-standard/tools/infection
 ```
 
-## Changelog
+```sh
+vendor/ghostwriter/coding-standard/tools/php-cs-fixer
+```
 
-Please see [CHANGELOG.md](./CHANGELOG.md) for more information what has changed recently.
+```sh
+vendor/ghostwriter/coding-standard/tools/php-fuzzer
+```
 
-## Security
+```sh
+vendor/ghostwriter/coding-standard/tools/phpbench
+```
 
-If you discover any security related issues, please email `nathanael.esayeas@protonmail.com` instead of using the issue tracker.
+```sh
+vendor/ghostwriter/coding-standard/tools/phpcbf
+```
 
-## Support
+```sh
+vendor/ghostwriter/coding-standard/tools/phpcs
+```
 
-[[`Become a GitHub Sponsor`](https://github.com/sponsors/ghostwriter)]
+```sh
+vendor/ghostwriter/coding-standard/tools/phpunit
+```
+
+```sh
+vendor/ghostwriter/coding-standard/tools/psalm
+```
 
 ## Credits
 
