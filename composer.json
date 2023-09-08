@@ -30,19 +30,21 @@
         }
     ],
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.1",
+        "phpunit/phpunit": "^10.3"
     },
     "bin": [
         "tools/composer-normalize",
         "tools/composer-require-checker",
         "tools/composer-unused",
+        "tools/deptrac",
         "tools/infection",
         "tools/php-cs-fixer",
+        "tools/php-fuzzer",
         "tools/phpbench",
         "tools/phpcbf",
         "tools/phpcs",
-        "tools/psalm",
-        "tools/phpunit"
+        "tools/psalm"
     ],
     "config": {
         "sort-packages": true
@@ -50,8 +52,7 @@
     "scripts": {
         "check": [
             "@p:u",
-            "tools/php-cs-fixer fix --diff --using-cache=no --rules=@PER src",
-            "tools/phpcbf src"
+            "tools/php-cs-fixer fix --diff --using-cache=no --rules=@PER ."
         ],
         "crcc": "tools/composer-require-checker check --help",
         "infection": "tools/infection run --threads=max --min-msi=0 --min-covered-msi=0",
