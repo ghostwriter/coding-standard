@@ -40,7 +40,6 @@
         "tools/composer-unused",
         "tools/deptrac",
         "tools/infection",
-        "tools/php-cs-fixer",
         "tools/php-fuzzer",
         "tools/phpbench",
         "tools/phpcbf",
@@ -51,8 +50,7 @@
     },
     "scripts": {
         "check": [
-            "@p:u",
-            "tools/php-cs-fixer fix --diff --using-cache=no --rules=@PER ."
+            "@p:u"
         ],
         "crcc": "tools/composer-require-checker check --help",
         "infection": "tools/infection run --threads=max --min-msi=0 --min-covered-msi=0",

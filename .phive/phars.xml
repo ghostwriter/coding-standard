@@ -6,7 +6,6 @@
   <phar name="deptrac" version="^1.0" installed="1.0.2" location="./tools/deptrac" copy="true"/>
   <phar name="infection" version="^0.27" installed="0.27.3" location="./tools/infection" copy="true"/>
   <phar name="nikic/php-fuzzer" version="^0.0.9" installed="0.0.10" location="./tools/php-fuzzer" copy="true"/>
-  <phar name="php-cs-fixer" version="^3.26" installed="3.26.1" location="./tools/php-cs-fixer" copy="true"/>
   <phar name="phpbench" version="^1.2" installed="1.2.14" location="./tools/phpbench" copy="true"/>
   <phar name="phpcbf" version="^3.7" installed="3.7.2" location="./tools/phpcbf" copy="true"/>
   <phar name="phpcs" version="^3.7" installed="3.7.2" location="./tools/phpcs" copy="true"/>
