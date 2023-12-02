@@ -30,9 +30,7 @@
         }
     ],
     "require": {
-        "php": ">=8.1",
-        "phpunit/phpunit": "^10.4",
-        "vimeo/psalm": "^5.16"
+        "php": ">=8.1"
     },
     "bin": [
         "tools/composer-normalize",
@@ -40,6 +38,7 @@
         "tools/composer-unused",
         "tools/deptrac",
         "tools/infection",
+        "tools/phive",
         "tools/php-fuzzer",
         "tools/phpbench",
         "tools/phpcbf",
@@ -51,16 +50,17 @@
     },
     "scripts": {
         "check": [
-            "@p:u"
+            "@phive:update"
         ],
         "crcc": "tools/composer-require-checker check --help",
         "infection": "tools/infection run --threads=max --min-msi=0 --min-covered-msi=0",
         "normalize": "tools/composer-normalize --no-update-lock",
         "unused": "tools/composer-unused",
-        "p:i": "phive install --copy --force-accept-unsigned ",
-        "p:u": [
-            "phive update --force-accept-unsigned",
-            "phive purge"
+        "phive": "tools/phive",
+        "phive:install": "@phive install --copy --force-accept-unsigned ",
+        "phive:update": [
+            "@phive update --force-accept-unsigned",
+            "@phive purge"
         ],
         "phpunit": "tools/phpunit"
     }
