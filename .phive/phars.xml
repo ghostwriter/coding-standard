@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phive xmlns="https://phar.io/phive">
-  <phar name="composer-normalize" version="^2.39.0" installed="2.39.0" location="./tools/composer-normalize" copy="true"/>
+  <phar name="composer-normalize" version="^2.40.0" installed="2.40.0" location="./tools/composer-normalize" copy="true"/>
   <phar name="composer-require-checker" version="^4.8.0" installed="4.8.0" location="./tools/composer-require-checker" copy="true"/>
   <phar name="composer-unused" version="^0.8.11" installed="0.8.11" location="./tools/composer-unused" copy="true"/>
   <phar name="composer" version="^2.6.5" installed="2.6.5" location="./tools/composer" copy="true"/>
