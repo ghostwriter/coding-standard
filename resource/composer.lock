@@ -715,7 +715,7 @@
             "source": {
                 "type": "git",
                 "url": "../../coding-standard",
-                "reference": "962b995c46e68ae9bd8b5d6ab229455756029e85"
+                "reference": "8b0e97b9dc27b628b3a0f1d85dd1f816c071c71f"
             },
             "require": {
                 "composer-plugin-api": "^2.6.0",
