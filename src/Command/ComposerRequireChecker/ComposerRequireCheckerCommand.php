@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\CodingStandard\Command\Phive;
+namespace Ghostwriter\CodingStandard\Command\ComposerRequireChecker;
 
 use Ghostwriter\CodingStandard\Command\AbstractCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
