@@ -162,7 +162,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
     public function onPreFileDownload(): void
     {
-        echo 'The PRE_FILE_DOWNLOAD event occurs before downloading a file', PHP_EOL;
+        // echo 'The PRE_FILE_DOWNLOAD event occurs before downloading a file', PHP_EOL;
     }
 
     public function onPreInstallCmd(): void
