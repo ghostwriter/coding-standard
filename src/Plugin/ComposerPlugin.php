@@ -24,6 +24,7 @@ use Generator;
 use Ghostwriter\CodingStandard\Command\Composer\ComposerBumpCommand;
 use Ghostwriter\CodingStandard\Command\Composer\ComposerUpdateCommand;
 use Ghostwriter\CodingStandard\Command\ComposerRequireChecker\ComposerRequireCheckerCommand;
+use Ghostwriter\CodingStandard\Command\ComposerRequireChecker\ComposerUnusedCommand;
 use Ghostwriter\CodingStandard\Command\Phive\PhiveInstallCommand;
 use Ghostwriter\CodingStandard\Command\Phive\PhiveUninstallCommand;
 use Ghostwriter\CodingStandard\Command\Phive\PhiveUpdateCommand;
@@ -83,6 +84,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
             new ComposerBumpCommand($processExecutor),
             new ComposerRequireCheckerCommand($processExecutor),
             new ComposerUpdateCommand($processExecutor),
+            new ComposerUnusedCommand($processExecutor),
             new PhiveInstallCommand($processExecutor),
             new PhiveUninstallCommand($processExecutor),
             new PhiveUpdateCommand($processExecutor),
