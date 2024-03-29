@@ -28,7 +28,7 @@ final class PhiveUninstallCommand extends AbstractCommand
                 'uninstall',
                 '--no-progress',
                 '--no-interaction',
-                $input->getOption('tool')
+                $input->getOption('tool'),
             ],
         );
     }
