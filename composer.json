@@ -48,20 +48,6 @@
             "Ghostwriter\\CodingStandardTests\\": "tests"
         }
     },
-    "bin": [
-        "tools/composer-normalize",
-        "tools/composer-require-checker",
-        "tools/composer-unused",
-        "tools/deptrac",
-        "tools/infection",
-        "tools/phive",
-        "tools/php-fuzzer",
-        "tools/phpactor",
-        "tools/phpbench",
-        "tools/phpcbf",
-        "tools/phpcs",
-        "tools/psalm"
-    ],
     "config": {
         "sort-packages": true
     },
