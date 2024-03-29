@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f71afd25aa32bf8cce1944c31d54363c",
+    "content-hash": "5d4a953fc3cca4c3aad8d6aa493e48de",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1718,12 +1718,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ac4f0257261ae2ff2990f34a96c61707721edc79"
+                "reference": "130337928499f8b5e431d18459c22d62124ec373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ac4f0257261ae2ff2990f34a96c61707721edc79",
-                "reference": "ac4f0257261ae2ff2990f34a96c61707721edc79",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/130337928499f8b5e431d18459c22d62124ec373",
+                "reference": "130337928499f8b5e431d18459c22d62124ec373",
                 "shasum": ""
             },
             "require": {
@@ -1811,7 +1811,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-23T08:59:48+00:00"
+            "time": "2024-03-28T10:10:53+00:00"
         },
         {
             "name": "psr/container",
@@ -4925,14 +4925,14 @@
         {
             "package": "phpunit/phpunit",
             "version": "dev-main",
-            "alias": "11.999",
-            "alias_normalized": "11.999.0.0"
+            "alias": "12.0.0-dev",
+            "alias_normalized": "12.0.0.0-dev"
         },
         {
             "package": "vimeo/psalm",
             "version": "dev-main",
-            "alias": "5.999",
-            "alias_normalized": "5.999.0.0"
+            "alias": "6.0.0-dev",
+            "alias_normalized": "6.0.0.0-dev"
         }
     ],
     "minimum-stability": "stable",
