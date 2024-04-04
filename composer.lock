@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "761c2c700e11e847ab1559fa9adff9d8",
+    "content-hash": "b96abc3f856662594b8385bc64de72e3",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1049,75 +1049,6 @@
             "time": "2024-02-07T09:43:46+00:00"
         },
         {
-            "name": "ghostwriter/mockery-rector",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/mockery-rector.git",
-                "reference": "6f5c3dd75e44f72e3cd162079e461034420c1ddf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/mockery-rector/zipball/6f5c3dd75e44f72e3cd162079e461034420c1ddf",
-                "reference": "6f5c3dd75e44f72e3cd162079e461034420c1ddf",
-                "shasum": ""
-            },
-            "require": {
-                "mockery/mockery": "^1.6 || ^2.0",
-                "php": "^8.2",
-                "rector/rector": "^1.0.3"
-            },
-            "conflict": {
-                "rector/rector": "<1.0"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/psalm-plugin": "^0.2 || ^0.3 || ^1.0",
-                "symplify/rule-doc-generator": "^12.1.10"
-            },
-            "default-branch": true,
-            "type": "rector-extension",
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\MockeryRector\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Rector extension for Mockery",
-            "homepage": "https://github.com/ghostwriter/mockery-rector",
-            "keywords": [
-                "ghostwriter",
-                "mockery-rector",
-                "rector",
-                "rector-extension"
-            ],
-            "support": {
-                "docs": "https://github.com/ghostwriter/mockery-rector",
-                "forum": "https://github.com/ghostwriter/mockery-rector/discussions",
-                "issues": "https://github.com/ghostwriter/mockery-rector/issues",
-                "rss": "https://github.com/ghostwriter/mockery-rector/releases.atom",
-                "source": "https://github.com/ghostwriter/mockery-rector"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-03-30T13:02:12+00:00"
-        },
-        {
             "name": "ghostwriter/psalm-plugin",
             "version": "0.2.0",
             "source": {
@@ -1895,68 +1826,6 @@
             "time": "2024-04-03T18:51:33+00:00"
         },
         {
-            "name": "phpstan/phpstan",
-            "version": "1.10.66",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "94779c987e4ebd620025d9e5fdd23323903950bd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/94779c987e4ebd620025d9e5fdd23323903950bd",
-                "reference": "94779c987e4ebd620025d9e5fdd23323903950bd",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2|^8.0"
-            },
-            "conflict": {
-                "phpstan/phpstan-shim": "*"
-            },
-            "bin": [
-                "phpstan",
-                "phpstan.phar"
-            ],
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "PHPStan - PHP Static Analysis Tool",
-            "keywords": [
-                "dev",
-                "static analysis"
-            ],
-            "support": {
-                "docs": "https://phpstan.org/user-guide/getting-started",
-                "forum": "https://github.com/phpstan/phpstan/discussions",
-                "issues": "https://github.com/phpstan/phpstan/issues",
-                "security": "https://github.com/phpstan/phpstan/security/policy",
-                "source": "https://github.com/phpstan/phpstan-src"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ondrejmirtes",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/phpstan",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-03-28T16:17:31+00:00"
-        },
-        {
             "name": "phpunit/php-code-coverage",
             "version": "10.1.14",
             "source": {
@@ -2553,62 +2422,6 @@
                 }
             ],
             "time": "2023-11-16T16:21:57+00:00"
-        },
-        {
-            "name": "rector/rector",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rectorphp/rector.git",
-                "reference": "c59507a9090b465d65e1aceed91e5b81986e375b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/c59507a9090b465d65e1aceed91e5b81986e375b",
-                "reference": "c59507a9090b465d65e1aceed91e5b81986e375b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.10.57"
-            },
-            "conflict": {
-                "rector/rector-doctrine": "*",
-                "rector/rector-downgrade-php": "*",
-                "rector/rector-phpunit": "*",
-                "rector/rector-symfony": "*"
-            },
-            "bin": [
-                "bin/rector"
-            ],
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Instant Upgrade and Automated Refactoring of any PHP code",
-            "keywords": [
-                "automation",
-                "dev",
-                "migration",
-                "refactoring"
-            ],
-            "support": {
-                "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/1.0.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/tomasvotruba",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-03-14T15:04:18+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -4981,22 +4794,14 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "ghostwriter/mockery-rector",
-            "version": "dev-main",
-            "alias": "0.0.1",
-            "alias_normalized": "0.0.1.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ghostwriter/mockery-rector": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2",
+        "composer-runtime-api": "^2.2.2",
         "composer-plugin-api": "^2.6.0"
     },
     "platform-dev": [],
