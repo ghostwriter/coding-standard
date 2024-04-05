@@ -32,19 +32,19 @@
     ],
     "require": {
         "php": "^8.2",
-        "composer-runtime-api": "^2.2.2",
         "composer-plugin-api": "^2.6.0",
+        "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.7.2",
         "mockery/mockery": "^1.6.11 || ^2.0.0",
-        "phpunit/phpunit": "^10.5.16 || ^11.0.9 || ^12.0.0",
+        "phpunit/phpunit": "^10.5.17 || ^11.0.9 || ^12.0.0",
         "vimeo/psalm": "^5.23.1 || ^6.0.0"
     },
     "require-dev": {},
     "suggest": {
         "composer/composer": "Composer may be required to run the plugin",
-        "mockery/mockery": "Mockery may be required to run the plugin",
         "ghostwriter/mockery-rector": "Mockery Rector may be required to run the plugin",
         "ghostwriter/psalm-plugin": "Psalm Plugin may be required to run the plugin",
+        "mockery/mockery": "Mockery may be required to run the plugin",
         "phpunit/phpunit": "PHPUnit may be required to run the plugin",
         "vimeo/psalm": "Psalm may be required to run the plugin"
     },
