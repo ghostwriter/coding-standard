@@ -62,7 +62,13 @@
         "allow-plugins": {
             "ghostwriter/coding-standard": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "classmap-authoritative": false,
+        "use-parent-dir": false,
+        "discard-changes": true,
+        "optimize-autoloader": true,
+        "prepend-autoloader": true
     },
     "extra": {
         "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
