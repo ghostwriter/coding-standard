@@ -9,7 +9,15 @@ use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-#[AsCommand(name: 'ghostwriter:infection:update-config', description: 'Update the project\'s Infection configuration file')]
+use function copy;
+use function dirname;
+use function file_exists;
+use function getcwd;
+
+#[AsCommand(
+    name: 'ghostwriter:infection:update-config',
+    description: 'Update the project\'s Infection configuration file'
+)]
 final class InfectionUpdateConfigCommand extends AbstractCommand
 {
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -26,7 +34,7 @@ final class InfectionUpdateConfigCommand extends AbstractCommand
 
         $fromInfectionConfigPath = dirname(__DIR__, 3) . '/infection.json5.dist';
 
-        if (!file_exists($fromInfectionConfigPath)) {
+        if (! file_exists($fromInfectionConfigPath)) {
             $output->writeln('The Infection stub configuration file does not exist. - ' . $fromInfectionConfigPath);
 
             return 1;
@@ -34,7 +42,7 @@ final class InfectionUpdateConfigCommand extends AbstractCommand
 
         $toInfectionConfigPath = $currentWorkingDirectory . '/infection.json5.dist';
 
-        if (!copy($fromInfectionConfigPath, $toInfectionConfigPath)) {
+        if (! copy($fromInfectionConfigPath, $toInfectionConfigPath)) {
             $output->writeln('Unable to copy the Infection stub configuration file. - ' . $toInfectionConfigPath);
 
             return 1;
