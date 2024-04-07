@@ -37,6 +37,8 @@
         "composer/composer": "^2.7.2",
         "mockery/mockery": "^1.6.11 || ^2.0.0",
         "phpunit/phpunit": "^10.5.17 || ^11.0.9 || ^12.0.0",
+        "rector/rector": "^1.0.4",
+        "symplify/easy-coding-standard": "^12.1.14",
         "vimeo/psalm": "^5.23.1 || ^6.0.0"
     },
     "require-dev": {},
@@ -62,13 +64,13 @@
         "allow-plugins": {
             "ghostwriter/coding-standard": true
         },
-        "sort-packages": true,
-        "preferred-install": "dist",
         "classmap-authoritative": false,
-        "use-parent-dir": false,
         "discard-changes": true,
         "optimize-autoloader": true,
-        "prepend-autoloader": true
+        "preferred-install": "dist",
+        "prepend-autoloader": true,
+        "sort-packages": true,
+        "use-parent-dir": false
     },
     "extra": {
         "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
