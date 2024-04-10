@@ -90,7 +90,7 @@ $existingPaths = \array_filter(
         $workingDirectory . '/module',
         $workingDirectory . '/public',
         $workingDirectory . '/rector.php',
-        // $workingDirectory . '/resource',
+        $workingDirectory . '/resource',
         $workingDirectory . '/src',
         $workingDirectory . '/test',
         $workingDirectory . '/tests',
@@ -112,6 +112,7 @@ $existingSkips = \array_merge(
         GeneralPhpdocAnnotationRemoveFixer::class,
         PhpdocLineSpanFixer::class,
         PhpdocTrimFixer::class,
+        PhpUnitStrictFixer::class => ['tests/Unit/ParameterBuilderTest.php'],
     ]
 );
 
