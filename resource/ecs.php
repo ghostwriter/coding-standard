@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\VersionControl\GitMergeConflictSniff;
 use PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer;
 use PhpCsFixer\Fixer\Alias\ModernizeStrposFixer;
@@ -10,6 +11,7 @@ use PhpCsFixer\Fixer\Alias\RandomApiMigrationFixer;
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use PhpCsFixer\Fixer\Basic\PsrAutoloadingFixer;
 use PhpCsFixer\Fixer\Casing\ConstantCaseFixer;
+use PhpCsFixer\Fixer\Operator\ConcatSpaceFixer;
 use PhpCsFixer\Fixer\Casing\LowercaseKeywordsFixer;
 use PhpCsFixer\Fixer\Casing\LowercaseStaticReferenceFixer;
 use PhpCsFixer\Fixer\Casing\MagicConstantCasingFixer;
@@ -185,7 +187,7 @@ return ECSConfig::configure()
         DeclareStrictTypesFixer::class,
         ElseifFixer::class,
         FinalClassFixer::class,
-        FullyQualifiedStrictTypesFixer::class,
+        // FullyQualifiedStrictTypesFixer::class,
         GetClassToClassKeywordFixer::class,
         GitMergeConflictSniff::class,
         LowercaseKeywordsFixer::class,
@@ -237,7 +239,6 @@ return ECSConfig::configure()
         StrictComparisonFixer::class,
         StrictParamFixer::class,
         UseArrowFunctionsFixer::class,
-        VisibilityRequiredFixer::class,
     ])
     ->withConfiguredRule(ArraySyntaxFixer::class, [
         'syntax' => 'short',
@@ -345,4 +346,17 @@ return ECSConfig::configure()
             'version',
         ],
     ])
+    ->withConfiguredRule(MethodArgumentSpaceFixer::class, [
+        'on_multiline' => 'ensure_fully_multiline',
+    ])
+    ->withConfiguredRule(SingleClassElementPerStatementFixer::class, [
+        'elements' => ['property'],
+    ])
+    ->withConfiguredRule(ConcatSpaceFixer::class, [
+        'spacing' => 'one',
+    ])
+    ->withConfiguredRule(VisibilityRequiredFixer::class, [
+        'elements' => ['const', 'method', 'property'],
+    ])
+    ->withParallel()
     ->withRootFiles();
