@@ -34,16 +34,9 @@
         "php": "^8.2",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.7.2",
+        "composer/composer": "^2.7.3",
         "mockery/mockery": "^1.6.11",
         "phpunit/phpunit": "^11.1.2"
-    },
-    "suggest": {
-        "ghostwriter/mockery-rector": "Mockery Rector may be required to run the plugin",
-        "ghostwriter/psalm-plugin": "Psalm Plugin may be required to run the plugin",
-        "mockery/mockery": "Mockery may be required to run the plugin",
-        "phpunit/phpunit": "PHPUnit may be required to run the plugin",
-        "vimeo/psalm": "Psalm may be required to run the plugin"
     },
     "autoload": {
         "psr-4": {
