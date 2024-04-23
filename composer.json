@@ -36,8 +36,7 @@
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.7.4",
         "mockery/mockery": "^1.6.11",
-        "phpunit/phpunit": "^10.5.19 || ^11.1.2",
-        "vimeo/psalm": "^5.23.1 || ^6.x-dev"
+        "phpunit/phpunit": "^10.5.19 || ^11.1.2"
     },
     "autoload": {
         "psr-4": {
