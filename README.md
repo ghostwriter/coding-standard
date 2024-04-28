@@ -16,19 +16,16 @@ composer require ghostwriter/coding-standard:dev-main --dev
 ## Usage
 
 ```sh
-vendor/ghostwriter/coding-standard/tools/composer
-vendor/ghostwriter/coding-standard/tools/composer-normalize
-vendor/ghostwriter/coding-standard/tools/composer-require-checker
-vendor/ghostwriter/coding-standard/tools/composer-unused
-vendor/ghostwriter/coding-standard/tools/deptrac
-vendor/ghostwriter/coding-standard/tools/infection
-vendor/ghostwriter/coding-standard/tools/phive
-vendor/ghostwriter/coding-standard/tools/php-fuzzer
-vendor/ghostwriter/coding-standard/tools/phpbench
-vendor/ghostwriter/coding-standard/tools/phpcbf
-vendor/ghostwriter/coding-standard/tools/phpcs
-vendor/ghostwriter/coding-standard/tools/phpunit
-vendor/ghostwriter/coding-standard/tools/psalm
+composer ghostwriter:infection:run             Run the project's Infection test suite
+composer ghostwriter:infection:update-config   Update the project's Infection configuration file
+
+composer ghostwriter:phpunit:migrate           Migrate the project's PHPUnit configuration to the latest version
+composer ghostwriter:phpunit:test              Run the project's PHPUnit test suite
+
+composer ghostwriter:psalm                     Run Psalm to analyze the project's codebase
+composer ghostwriter:psalm:baseline            Use Psalm to create a baseline for the project's codebase
+composer ghostwriter:psalm:update     Use Psalm to update the baseline for the project's codebase
+composer ghostwriter:psalm:security            Use Psalm to analyze the project's codebase for security issues
 ```
 
 ## Credits
