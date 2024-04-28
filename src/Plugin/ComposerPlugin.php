@@ -38,9 +38,6 @@ use Ghostwriter\CodingStandard\Command\Psalm\PsalmCommand;
 use Ghostwriter\CodingStandard\Command\Psalm\PsalmSecurityCommand;
 use RuntimeException;
 
-use const PATHINFO_EXTENSION;
-use const PHP_EOL;
-
 use function array_key_exists;
 use function file_exists;
 use function file_get_contents;
@@ -55,6 +52,9 @@ use function sprintf;
 use function str_contains;
 use function str_starts_with;
 use function trim;
+
+use const PATHINFO_EXTENSION;
+use const PHP_EOL;
 
 final readonly class ComposerPlugin implements Capable, CommandProvider, EventSubscriberInterface, PluginInterface
 {
