@@ -48,6 +48,19 @@
             "Tests\\": "tests"
         }
     },
+    "bin": [
+        "tools/ghostwriter-composer",
+        "tools/ghostwriter-composer-normalize",
+        "tools/ghostwriter-composer-require-checker",
+        "tools/ghostwriter-composer-unused",
+        "tools/ghostwriter-infection",
+        "tools/ghostwriter-phive",
+        "tools/ghostwriter-phpbench",
+        "tools/ghostwriter-phpcbf",
+        "tools/ghostwriter-phpcs",
+        "tools/ghostwriter-phpunit",
+        "tools/ghostwriter-psalm"
+    ],
     "config": {
         "allow-plugins": {
             "ghostwriter/coding-standard": true
@@ -57,9 +70,9 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "prepend-autoloader": true,
+        "process-timeout": 5000,
         "sort-packages": true,
-        "use-parent-dir": false,
-        "process-timeout": 5000
+        "use-parent-dir": false
     },
     "extra": {
         "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
@@ -71,16 +84,16 @@
         "check": [
             "@phive:update"
         ],
-        "crcc": "tools/composer-require-checker check --help",
-        "infection": "tools/infection run --threads=max --min-msi=0 --min-covered-msi=0",
-        "normalize": "tools/composer-normalize --no-update-lock",
-        "phive": "tools/phive",
+        "crcc": "tools/ghostwriter-composer-require-checker check --help",
+        "infection": "tools/ghostwriter-infection run --threads=max --min-msi=0 --min-covered-msi=0",
+        "normalize": "tools/ghostwriter-composer-normalize --no-update-lock",
+        "phive": "tools/ghostwriter-phive",
         "phive:install": "@phive install --copy --force-accept-unsigned ",
         "phive:update": [
             "@phive update --force-accept-unsigned",
             "@phive purge"
         ],
-        "phpunit": "tools/phpunit",
-        "unused": "tools/composer-unused"
+        "phpunit": "tools/ghostwriter-phpunit",
+        "unused": "tools/ghostwriter-composer-unused"
     }
 }
