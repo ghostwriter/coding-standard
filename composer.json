@@ -36,7 +36,11 @@
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.7.4",
         "mockery/mockery": "^1.6.11",
-        "phpunit/phpunit": "^10.5.20 || ^11.1.3"
+        "phpunit/phpunit": "^10.5.20",
+        "vimeo/psalm": "^5.23.1"
+    },
+    "conflict": {
+        "vimeo/psalm": "<4.30"
     },
     "autoload": {
         "psr-4": {
@@ -49,21 +53,13 @@
         }
     },
     "bin": [
-        "tools/ghostwriter-composer",
-        "tools/ghostwriter-composer-normalize",
-        "tools/ghostwriter-composer-require-checker",
-        "tools/ghostwriter-composer-unused",
-        "tools/ghostwriter-infection",
-        "tools/ghostwriter-phive",
-        "tools/ghostwriter-phpbench",
-        "tools/ghostwriter-phpcbf",
-        "tools/ghostwriter-phpcs",
-        "tools/ghostwriter-phpunit",
-        "tools/ghostwriter-psalm"
+        "tools/infection",
+        "tools/phive"
     ],
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true
+            "ghostwriter/coding-standard": true,
+            "infection/extension-installer": true
         },
         "classmap-authoritative": false,
         "discard-changes": true,
@@ -81,19 +77,13 @@
         "plugin-optional": false
     },
     "scripts": {
+        "bin_infection": "tools/infection",
+        "bin_phive": "tools/phive",
         "check": [
-            "@phive:update"
+            "@bin_phive update --force-accept-unsigned",
+            "@bin_phive purge"
         ],
-        "crcc": "tools/ghostwriter-composer-require-checker check --help",
-        "infection": "tools/ghostwriter-infection run --threads=max --min-msi=0 --min-covered-msi=0",
-        "normalize": "tools/ghostwriter-composer-normalize --no-update-lock",
-        "phive": "tools/ghostwriter-phive",
-        "phive:install": "@phive install --copy --force-accept-unsigned ",
-        "phive:update": [
-            "@phive update --force-accept-unsigned",
-            "@phive purge"
-        ],
-        "phpunit": "tools/ghostwriter-phpunit",
-        "unused": "tools/ghostwriter-composer-unused"
+        "infection": "@bin_infection run --threads=max --min-msi=0 --min-covered-msi=0",
+        "phive:install": "@bin_phive install --copy --force-accept-unsigned "
     }
 }
