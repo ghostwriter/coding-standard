@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Rector\Caching\ValueObject\Storage\FileCacheStorage;
 use Rector\PHPUnit\Set\PHPUnitSetList;
 use PHPUnit\Framework\TestCase;
 use Rector\CodeQuality\Rector\Array_\CallableThisArrayToAnonymousFunctionRector;
@@ -63,6 +64,7 @@ $existingSkips[] = CallableThisArrayToAnonymousFunctionRector::class;
 
 return RectorConfig::configure()
     ->withAttributesSets(phpunit: true)
+    ->withCache(cacheClass: FileCacheStorage::class, cacheDirectory: $workingDirectory . '/.cache/rector')
     ->withConfiguredRule(RenameMethodRector::class, [
         new MethodCallRename(TestCase::class, 'setExpectedException', 'expectedException'),
         new MethodCallRename(TestCase::class, 'setExpectedExceptionRegExp', 'expectedException'),
