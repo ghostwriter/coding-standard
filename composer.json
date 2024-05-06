@@ -34,10 +34,10 @@
         "php": "^8.2",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.7.4",
+        "composer/composer": "^2.7.6",
         "mockery/mockery": "^1.6.11",
         "phpunit/phpunit": "^10.5.20",
-        "vimeo/psalm": "^5.23.1"
+        "vimeo/psalm": "^5.24.0"
     },
     "conflict": {
         "vimeo/psalm": "<4.30"
