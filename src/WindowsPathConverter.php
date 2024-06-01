@@ -20,10 +20,15 @@ final readonly class WindowsPathConverter
             return $unixPath;
         }
 
+        $currentWorkingDirectory = getcwd();
+        if ($currentWorkingDirectory === false) {
+            throw new \RuntimeException('Could not determine the current working directory.');
+        }
+
         // Replace forward slashes with backslashes
         $windowsPath = str_replace('/', '\\', $unixPath);
 
-        return ltrim($windowsPath, '\\');
+        return $currentWorkingDirectory . DIRECTORY_SEPARATOR . $windowsPath;
     }
 
 }
