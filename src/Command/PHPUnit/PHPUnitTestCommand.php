@@ -18,7 +18,7 @@ final class PHPUnitTestCommand extends AbstractCommand
 
         return $this->processExecutor->execute(
             command: [
-                'vendor/ghostwriter/coding-standard/tools/phpunit',
+                $this->windowsPathConverter->convert('vendor/ghostwriter/coding-standard/tools/phpunit'),
                 '--colors=always',
                 '--do-not-cache-result',
                 '--stop-on-failure',
