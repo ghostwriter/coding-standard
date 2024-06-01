@@ -7,7 +7,7 @@ namespace Ghostwriter\CodingStandard;
 final readonly class WindowsPathConverter
 {
     /**
-     * Convert a Unix-style path to a Windows-style path.
+     * Convert a Unix-style path to a Windows-style path, on windows.
      *
      * @param string $unixPath The Unix-style path to convert.
      * @return string The Windows-style path.
