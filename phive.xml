@@ -4,5 +4,5 @@
   <phar name="infection" version="^0.29.5" installed="0.29.5" location="./tools/infection" copy="true"/>
   <phar name="phar-io/phive" version="^0.15.2" installed="0.15.2" location="./tools/phive" copy="true"/>
   <phar name="phpunit" version="^11.2.3" installed="11.2.3" location="./tools/phpunit" copy="true"/>
-  <phar name="psalm" version="^5.24.0" installed="5.24.0" location="./tools/psalm" copy="true"/>
+  <phar name="psalm" version="^5.25.0" installed="5.25.0" location="./tools/psalm" copy="true"/>
 </phive>
