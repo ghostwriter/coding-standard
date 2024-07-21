@@ -97,13 +97,13 @@ $existingPaths = \array_filter(
         $workingDirectory . '/test',
         $workingDirectory . '/tests',
     ],
-    static fn (string $path) => \file_exists($path)
+    static fn (string $path): bool => \file_exists($path)
 );
 
 $existingSkips = \array_merge(
     \array_filter(
         [$workingDirectory . '/vendor', $workingDirectory . '/tests/Fixture'],
-        static fn (string $path) => \file_exists($path)
+        static fn (string $path): bool => \file_exists($path)
     ),
     [
         SemicolonAfterInstructionFixer::class,
