@@ -1,4 +1,3 @@
-@ -0,0 +1,30 @@
 <?php
 
 declare(strict_types=1);
