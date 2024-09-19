@@ -38,7 +38,7 @@
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.7.9",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^10.5 || ^11.3"
+        "phpunit/phpunit": "^11.3.6"
     },
     "conflict": {
         "vimeo/psalm": "<4.30"
