@@ -41,7 +41,7 @@
         "phpunit/phpunit": "^11.4.1"
     },
     "conflict": {
-        "vimeo/psalm": "<4.30"
+        "vimeo/psalm": "<5.26"
     },
     "autoload": {
         "psr-4": {
@@ -61,7 +61,8 @@
     ],
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true
+            "ghostwriter/coding-standard": true,
+            "ghostwriter/handrail": true
         },
         "classmap-authoritative": false,
         "discard-changes": true,
