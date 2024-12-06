@@ -39,10 +39,11 @@
         "composer/composer": "^2.8.3",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^11.5.0",
+        "vimeo/psalm": "^6.0 || dev-master as 6.0.0-alpha.999"
     },
     "require-dev": {
-        "ghostwriter/shell": "^0.1.0",
-        "ghostwriter/filesystem": "^0.1.1"
+        "ghostwriter/filesystem": "^0.1.1",
+        "ghostwriter/shell": "^0.1.0"
     },
     "conflict": {
         "vimeo/psalm": "<5.26"
@@ -54,7 +55,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests"
+            "Tests\\Unit\\": "tests/unit/"
         }
     },
     "bin": [
