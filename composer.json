@@ -38,8 +38,7 @@
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.8.3",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^11.5.0",
-        "vimeo/psalm": "^6.0 || dev-master as 6.0.0-alpha.999"
+        "phpunit/phpunit": "^11.5.0"
     },
     "require-dev": {
         "ghostwriter/filesystem": "^0.1.1",
