@@ -36,9 +36,9 @@
         "php": "^8.2",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.8.3",
+        "composer/composer": "^2.8.4",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^11.5.0"
+        "phpunit/phpunit": "^11.5.1"
     },
     "require-dev": {
         "ghostwriter/filesystem": "^0.1.1",
