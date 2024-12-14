@@ -6,6 +6,8 @@ use Rector\Config\RectorConfig;
 
 $workingDirectory = \getcwd() ?: __DIR__;
 
+require_once $workingDirectory . '/vendor/autoload.php';
+
 return RectorConfig::configure()->withSets(
     \array_filter(
         [
