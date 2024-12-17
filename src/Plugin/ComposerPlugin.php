@@ -55,6 +55,7 @@ use function preg_match;
 use function preg_replace;
 use function sprintf;
 use function str_contains;
+use function str_ends_with;
 use function str_starts_with;
 use function trim;
 
@@ -222,7 +223,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
             : $composerJsonFile . '.lock';
 
         $contents = file_get_contents($composerJsonFile);
-        if ($contents === false) {
+        if (false === $contents) {
             throw new RuntimeException('Unable to read the composer.json file');
         }
 
@@ -234,7 +235,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         );
 
         $written = file_put_contents($composerJsonFile, $composerJson);
-        if ($written === false) {
+        if (false === $written) {
             throw new RuntimeException('Unable to write the composer.json file');
         }
 
@@ -306,7 +307,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
      */
     private static function getLockedVersions(Locker $locker, RootPackageInterface $rootPackage): Generator
     {
-        /** @var array{packages:array<array{name:string,version:string}>,packages-dev:array<array{name:string,version: string}>} $lockData */
+        /** @var array{packages:list<array{name:string,version:string}>,packages-dev:list<array{name:string,version: string}>} $lockData */
         $lockData = $locker->getLockData();
 
         foreach (['packages', 'packages-dev'] as $packageType) {
@@ -318,7 +319,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         foreach ($rootPackage->getReplaces() as $replace) {
             $version = $replace->getPrettyConstraint();
 
-            yield $replace->getTarget() => $version === 'self.version' ? $version : $rootPackage->getVersion();
+            yield $replace->getTarget() => 'self.version' === $version ? $version : $rootPackage->getVersion();
         }
 
         yield $rootPackage->getName() => $rootPackage->getVersion();
@@ -338,7 +339,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         $lockVersions = iterator_to_array(self::getLockedVersions($locker, $rootPackage));
 
         foreach (['require', 'require-dev'] as $configKey) {
-            $isDev = $configKey === 'require-dev';
+            $isDev = 'require-dev' === $configKey;
 
             $requiredVersions = $isDev ? self::extractVersions($rootPackage->getDevRequires()) : self::extractVersions(
                 $rootPackage->getRequires()
@@ -349,22 +350,26 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
                 if (! array_key_exists($package, $lockVersions)) {
                     self::log(sprintf('Package <info>%s</info> not found in the lock file', $package), $IO);
+
                     continue;
                 }
 
                 // Skip complex ranges for now
                 if (str_contains($version, ',')) {
                     self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
+
                     continue;
                 }
 
                 if (str_contains($version, '|')) {
                     self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
+
                     continue;
                 }
 
                 if (str_contains($version, ' as ')) {
                     self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
+
                     continue;
                 }
 
