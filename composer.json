@@ -38,9 +38,11 @@
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.8.4",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^11.5.2"
+        "phpunit/phpunit": "11.5.2",
+        "symfony/var-dumper": "^7.2.0"
     },
     "require-dev": {
+        "ghostwriter/container":"^4.0.3",
         "ghostwriter/filesystem": "^0.1.1",
         "ghostwriter/shell": "^0.1.0"
     },
