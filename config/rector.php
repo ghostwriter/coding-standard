@@ -143,7 +143,6 @@ use Rector\PHPUnit\CodeQuality\Rector\Class_\ConstructClassMethodToSetUpTestCase
 use Rector\PHPUnit\CodeQuality\Rector\Class_\PreferPHPUnitThisCallRector;
 use Rector\PHPUnit\CodeQuality\Rector\ClassMethod\RemoveEmptyTestMethodRector;
 use Rector\PHPUnit\CodeQuality\Rector\Foreach_\SimplifyForeachInstanceOfRector;
-use Rector\PHPUnit\CodeQuality\Rector\MethodCall\AssertCompareToSpecificMethodRector;
 use Rector\PHPUnit\CodeQuality\Rector\MethodCall\AssertComparisonToSpecificMethodRector;
 use Rector\PHPUnit\CodeQuality\Rector\MethodCall\AssertEmptyNullableObjectToAssertInstanceofRector;
 use Rector\PHPUnit\CodeQuality\Rector\MethodCall\AssertEqualsOrAssertSameFloatParameterToSpecificMethodsTypeRector;
@@ -237,7 +236,16 @@ $existingPaths = \array_filter(
     [
         $workingDirectory . '/bin',
         $workingDirectory . '/config',
+        $workingDirectory . '/data',
+        $workingDirectory . '/docs',
+        $workingDirectory . '/ecs.php',
+        $workingDirectory . '/index.php',
+        $workingDirectory . '/module',
+        $workingDirectory . '/public',
+        $workingDirectory . '/rector.php',
+        $workingDirectory . '/resource',
         $workingDirectory . '/src',
+        $workingDirectory . '/test',
         $workingDirectory . '/tests',
     ],
     static fn (string $path): bool => \file_exists($path)
@@ -249,6 +257,7 @@ $existingSkips = \array_merge(
             $workingDirectory . '/resource',
             $workingDirectory . '/tests/Fixture',
             $workingDirectory . '/tests/fixture',
+            $workingDirectory . '/vendor',
             '*/tests/Fixture/*',
             '*/tests/fixture/*',
             '*/vendor/*',
@@ -259,6 +268,8 @@ $existingSkips = \array_merge(
 );
 
 return RectorConfig::configure()
+    ->withPaths($existingPaths)
+    ->withSkip($existingSkips)
     ->withAttributesSets(all: true)
     ->withCache(cacheDirectory: $workingDirectory . '/.cache/rector', cacheClass: FileCacheStorage::class)
     ->withConfiguredRule(RenameMethodRector::class, [
@@ -271,8 +282,7 @@ return RectorConfig::configure()
         $importShortClasses = true,
         $removeUnusedImports = true,
     )
-    ->withPaths($existingPaths)
-    ->withPhpSets(php83: true)
+    ->withPhpSets(php84: true)
     ->withPhpVersion(PhpVersion::PHP_10)
     ->withPreparedSets(
         $deadCode = false,
@@ -312,7 +322,6 @@ return RectorConfig::configure()
         AddVoidReturnTypeWhereNoReturnRector::class,
         ArrayKeyExistsOnPropertyRector::class,
         ArrayKeyFirstLastRector::class,
-        AssertCompareToSpecificMethodRector::class,
         AssertComparisonToSpecificMethodRector::class,
         AssertEmptyNullableObjectToAssertInstanceofRector::class,
         AssertEqualsOrAssertSameFloatParameterToSpecificMethodsTypeRector::class,
@@ -518,11 +527,11 @@ return RectorConfig::configure()
         PHPUnitSetList::PHPUNIT_CODE_QUALITY,
         PHPUnitSetList::ANNOTATIONS_TO_ATTRIBUTES,
     ])
-    ->withSkip($existingSkips)
     ->withSkip(
         [
             PreferPHPUnitThisCallRector::class,
             UnusedForeachValueToArrayKeysRector::class,
             FirstClassCallableRector::class,
         ]
-    );
+    )
+    ->withFluentCallNewLine(false);
