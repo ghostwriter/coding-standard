@@ -14,6 +14,6 @@ return RectorConfig::configure()->withSets(
             $workingDirectory . '/vendor/ghostwriter/coding-standard/config/rector.php',
             $workingDirectory . '/config/rector.php',
         ],
-        'file_exists'
+        static fn (string $path): bool => \file_exists($path)
     )
 );
