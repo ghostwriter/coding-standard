@@ -31,7 +31,11 @@
             "url": "https://github.com/sponsors/ghostwriter"
         }
     ],
-    "_comment": "#BlackLiveMatters",
+    "_comment": [
+        "#BlackLivesMatter",
+        "#FreePalestine",
+        "#StandWithUkraine"
+    ],
     "require": {
         "php": "^8.2",
         "composer-plugin-api": "^2.6.0",
@@ -39,7 +43,8 @@
         "composer/composer": "^2.8.5",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^11.5.3",
-        "symfony/var-dumper": "^7.2.0"
+        "symfony/var-dumper": "^7.2.0",
+        "vimeo/psalm": "^6.0.0"
     },
     "require-dev": {
         "ghostwriter/container": "^4.0.3",
@@ -47,7 +52,7 @@
         "ghostwriter/shell": "^0.1.0"
     },
     "conflict": {
-        "vimeo/psalm": "<5.26"
+        "vimeo/psalm": "<6.0"
     },
     "autoload": {
         "psr-4": {
