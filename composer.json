@@ -43,7 +43,7 @@
         "composer/composer": "^2.8.5",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^11.5.5",
-        "symfony/var-dumper": "^7.2.0",
+        "symfony/var-dumper": "^7.2.3",
         "vimeo/psalm": "^6.0.0"
     },
     "require-dev": {
