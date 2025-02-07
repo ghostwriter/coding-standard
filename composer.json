@@ -72,6 +72,7 @@
     "require-dev": {
         "ghostwriter/container": "^4.0.5",
         "ghostwriter/filesystem": "^0.1.1",
+        "ghostwriter/json": "^3.0.0",
         "ghostwriter/shell": "^0.1.0"
     },
     "conflict": {
