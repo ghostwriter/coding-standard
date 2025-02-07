@@ -24,7 +24,6 @@
     failOnSkipped="true"
     failOnWarning="true"
     requireCoverageMetadata="true"
-    stopOnFailure="false"
 >
     <coverage>
         <report>
