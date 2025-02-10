@@ -80,13 +80,19 @@
     },
     "autoload": {
         "psr-4": {
-            "Ghostwriter\\CodingStandard\\": "src"
+            "Ghostwriter\\CodingStandard\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\Unit\\": "tests/unit/"
-        }
+        },
+        "exclude-from-classmap": [
+            "tests/fixture/"
+        ],
+        "files": [
+            "bootstrap.php"
+        ]
     },
     "bin": [
         "tools/infection",
