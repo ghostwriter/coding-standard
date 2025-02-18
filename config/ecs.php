@@ -606,6 +606,7 @@ return ECSConfig::configure()
             'phpunit',
             'construct',
             'method:new',
+            'method:getInstance',
             'destruct',
             'magic',
 
