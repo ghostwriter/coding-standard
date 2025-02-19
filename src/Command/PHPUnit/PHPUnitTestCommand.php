@@ -23,6 +23,8 @@ final class PHPUnitTestCommand extends AbstractCommand
         return $this->processExecutor->execute(
             command: [
                 PHP_BINARY,
+                '-d',
+                'xdebug.mode=coverage',
                 $this->windowsPathConverter->convert('vendor/ghostwriter/coding-standard/tools/phpunit'),
                 '--colors=always',
                 '--do-not-cache-result',
