@@ -50,6 +50,7 @@ use function file_put_contents;
 use function is_numeric;
 use function iterator_to_array;
 use function mb_substr;
+use function mb_trim;
 use function pathinfo;
 use function preg_match;
 use function preg_replace;
@@ -57,7 +58,6 @@ use function sprintf;
 use function str_contains;
 use function str_ends_with;
 use function str_starts_with;
-use function trim;
 
 final readonly class ComposerPlugin implements Capable, CommandProvider, EventSubscriberInterface, PluginInterface
 {
@@ -355,19 +355,12 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                 }
 
                 // Skip complex ranges for now
-                if (str_contains($version, ',')) {
-                    self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
-
-                    continue;
-                }
-
-                if (str_contains($version, '|')) {
-                    self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
-
-                    continue;
-                }
-
-                if (str_contains($version, ' as ')) {
+                if (
+                    str_contains($version, ' ')
+                    || str_contains($version, ',')
+                    || str_contains($version, '|')
+                    || str_contains($version, ' as ')
+                ) {
                     self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
 
                     continue;
@@ -391,7 +384,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-                if (trim($version, '^v') === trim($lockVersion, '^v')) {
+                if (mb_trim($version, '^v') === mb_trim($lockVersion, '^v')) {
                     self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
 
                     continue;
