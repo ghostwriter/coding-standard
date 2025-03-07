@@ -65,7 +65,7 @@
         "composer/semver": "^3.4.3",
         "infection/infection": "^0.29.14",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^11 || ^12",
+        "phpunit/phpunit": "^12.0.7",
         "symfony/var-dumper": "^7.2.3",
         "vimeo/psalm": "^6.8.8"
     },
