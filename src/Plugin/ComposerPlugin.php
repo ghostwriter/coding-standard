@@ -377,6 +377,12 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
+                if (str_starts_with($version, '@')) {
+                    self::log(sprintf('Skipping @ version <info>%s</info>', $version), $IO);
+
+                    continue;
+                }
+
                 $lockVersion = $lockVersions[$package];
                 if (preg_match('#^dev-.+@dev$|@dev#', $lockVersion) === 1) {
                     self::log(sprintf('Skipping dev locked version <info>%s</info>', $lockVersion), $IO);
