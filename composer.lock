@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "222574e3f1d33eaf59068f93fba4692f",
+    "content-hash": "92afa6230d67eee51c7b7e4807841221",
     "packages": [
         {
             "name": "amphp/amp",
@@ -7223,7 +7223,21 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "composer/composer": 0,
+        "composer/semver": 0,
+        "doctrine/inflector": 0,
+        "ghostwriter/case-converter": 0,
+        "ghostwriter/container": 0,
+        "ghostwriter/filesystem": 0,
+        "ghostwriter/json": 0,
+        "ghostwriter/shell": 0,
+        "infection/infection": 0,
+        "mockery/mockery": 0,
+        "phpunit/phpunit": 0,
+        "symfony/var-dumper": 0,
+        "vimeo/psalm": 0
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
