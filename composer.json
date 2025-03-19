@@ -92,7 +92,8 @@
             "Tests\\Unit\\": "tests/unit/"
         },
         "files": [
-            "bootstrap.php"
+            "bootstrap.php",
+            "tests/bootstrap.php"
         ],
         "exclude-from-classmap": [
             "tests/fixture/"
