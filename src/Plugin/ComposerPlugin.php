@@ -52,7 +52,6 @@ use function iterator_to_array;
 use function mb_substr;
 use function mb_trim;
 use function pathinfo;
-use function preg_match;
 use function preg_replace;
 use function sprintf;
 use function str_contains;
@@ -372,16 +371,16 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
                 $lockVersion = $lockVersions[$package];
                 if (
-                    str_contains($lockVersion, '@') ||
-                    str_starts_with($lockVersion, 'dev-') ||
-                    str_ends_with($lockVersion, '-dev')
+                    str_contains($lockVersion, '@')
+                    || str_starts_with($lockVersion, 'dev-')
+                    || str_ends_with($lockVersion, '-dev')
                 ) {
                     self::log(sprintf('Skipping dev locked version <info>%s</info>', $lockVersion), $IO);
 
                     continue;
                 }
 
-                if (mb_trim($version, '^v') === mb_trim($lockVersion, '^v')) {
+                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
                     self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
 
                     continue;
