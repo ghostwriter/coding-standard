@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
+use Generator;
 use Ghostwriter\CodingStandard\VersionConstraintGenerator;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -18,9 +19,24 @@ final class VersionConstraintGeneratorTest extends TestCase
         self::assertSame($expected, VersionConstraintGenerator::generateConstraint($constraint, $new));
     }
 
-    public static function provideVersionConstraints(): array
+    public static function provideVersionConstraints(): Generator
     {
-        return [
+        yield from [
+            '~11.5.14 || ~12.0.8' => [
+                'constraint' => '~11.5.14 || ~12.0.8',
+                'new' => '12.0.9',
+                'expected' => '~11.5.14 || ~12.0.9',
+            ],
+            '~2.0.0 || ~2.1.0' => [
+                'constraint' => '~2.0.0',
+                'new' => '2.1.0',
+                'expected' => '~2.0.0 || ~2.1.0',
+            ],
+            '~0.29.14' => [
+                'constraint' => '~0.29.14',
+                'new' => '~0.29.14',
+                'expected' => '~0.29.14',
+            ],
             'fix middle' => [
                 'constraint' => '~1.0.1 || ~1.1.2 || ~1.2.3',
                 'new' => 'v1.1.3',
