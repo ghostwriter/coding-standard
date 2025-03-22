@@ -90,14 +90,14 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Unit\\": "tests/unit/"
+            "Tests\\Unit\\": "tests/Unit/"
         },
         "files": [
             "functions.php",
             "tests/bootstrap.php"
         ],
         "exclude-from-classmap": [
-            "tests/fixture/"
+            "tests/Fixture/"
         ]
     },
     "bin": [
