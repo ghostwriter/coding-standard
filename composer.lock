@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffdd46c939bb03648374ab1642c62660",
+    "content-hash": "d37bebd234beeddbca4d74c4fd1768fd",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1837,24 +1837,25 @@
         },
         {
             "name": "ghostwriter/case-converter",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/case-converter.git",
-                "reference": "e3479766f945d78c3e6a64569d8293cf6fe7b80e"
+                "reference": "21ea17ef7518e2241b504895752a1957f5284cc3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/case-converter/zipball/e3479766f945d78c3e6a64569d8293cf6fe7b80e",
-                "reference": "e3479766f945d78c3e6a64569d8293cf6fe7b80e",
+                "url": "https://api.github.com/repos/ghostwriter/case-converter/zipball/21ea17ef7518e2241b504895752a1957f5284cc3",
+                "reference": "21ea17ef7518e2241b504895752a1957f5284cc3",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=8.4"
+                "php": "^8.4"
             },
             "require-dev": {
-                "ghostwriter/coding-standard": "dev-main"
+                "ghostwriter/coding-standard": "dev-main",
+                "ghostwriter/container": "^5.0.1"
             },
             "type": "library",
             "autoload": {
@@ -1864,7 +1865,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "BSD-4-Clause"
             ],
             "authors": [
                 {
@@ -1904,7 +1905,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-06T12:07:45+00:00"
+            "time": "2025-03-21T01:13:07+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -7286,8 +7287,8 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "stability-flags": {},
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.4",
@@ -7316,7 +7317,7 @@
         "composer-plugin-api": "~2.6.0",
         "composer-runtime-api": "~2.2.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.4.999"
     },
