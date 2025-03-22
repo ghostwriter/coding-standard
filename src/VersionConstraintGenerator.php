@@ -31,7 +31,7 @@ final class VersionConstraintGenerator
         [$newMajor, $newMinor, $newPatch] = self::extractSemver($newVersion);
         $newConstraint = sprintf('~%d.%d.%d', $newMajor, $newMinor, $newPatch);
 
-        if (0 === $newMajor && 0 === $newMinor && 0 === $newPatch){
+        if (0 === $newMajor && 0 === $newMinor && 0 === $newPatch) {
             return $newConstraint;
         }
 
@@ -63,7 +63,7 @@ final class VersionConstraintGenerator
 
     private static function extractMinorVersion(string $constraint): string
     {
-        preg_match('#([\d+][.]?[*|\d]?)#', $constraint, $matches);
+        preg_match('#(\d+(?:\.[*|\d]+)?)#', $constraint, $matches);
 
         return $matches[1] ?? throw new InvalidArgumentException(sprintf('Invalid constraint: %s', $constraint));
     }
@@ -77,6 +77,11 @@ final class VersionConstraintGenerator
             (int) $matches[2] ?? throw new InvalidArgumentException(sprintf('Invalid minor version: %s', $version)),
             (int) $matches[3] ?? throw new InvalidArgumentException(sprintf('Invalid patch version: %s', $version)),
         ];
+    }
+
+    private static function isSemver(string $version): bool
+    {
+        return preg_match('#\d+\.\d+\.\d+#', $version) === 1;
     }
 
     private static function isSkippable(string $constraint): bool
@@ -93,20 +98,15 @@ final class VersionConstraintGenerator
 
     private static function normalize(string $version): string
     {
-        $version = mb_trim($version);
+        $trimmedVersion = mb_trim($version);
 
         return match (1) {
             // if new version is missing patch number (e.g. 2.0) we add .0 to make it 2.0.0
-            preg_match('#^\d+\.\d+$#', $version) => $version . '.0',
+            preg_match('#^\d+\.\d+$#', $trimmedVersion) => $trimmedVersion . '.0',
             // if new version is missing minor number (e.g. 2) we add .0.0 to make it 2.0.0
-            preg_match('#^\d+$#', $version) => $version . '.0.0',
+            preg_match('#^\d+$#', $trimmedVersion) => $trimmedVersion . '.0.0',
             // if new version is already in full format (e.g. 2.0.0 or dev-main ) we return it as is
-            default => $version,
+            default => $trimmedVersion,
         };
-    }
-
-    public static function isSemver(string $version): bool
-    {
-        return preg_match('#\d+\.\d+\.\d+#', $version) === 1;
     }
 }
