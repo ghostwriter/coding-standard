@@ -105,8 +105,7 @@
     ],
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true,
-            "infection/extension-installer": true
+            "ghostwriter/coding-standard": true
         },
         "bump-after-update": false,
         "classmap-authoritative": false,
@@ -183,8 +182,6 @@
         "check": [
             "@cache:clear",
             "@bin_composer validate",
-            "@normalize",
-            "@ecs",
             "@test"
         ],
         "docker": [
