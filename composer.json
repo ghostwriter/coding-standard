@@ -64,6 +64,7 @@
         "composer-runtime-api": "~2.2.2",
         "composer/composer": "~2.8.6",
         "composer/semver": "~3.4.3",
+        "fakerphp/faker": "~1.24.1",
         "ghostwriter/case-converter": "~2.1.0",
         "ghostwriter/container": "~5.0.1",
         "ghostwriter/event-dispatcher": "~5.0.3",
@@ -76,7 +77,7 @@
         "vimeo/psalm": "~6.9.4"
     },
     "require-dev": {
-        "doctrine/inflector": "~2.0.10"
+        "ghostwriter/inflector": "@dev"
     },
     "conflict": {
         "pestphp/pest": "*",
