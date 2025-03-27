@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44b966e2939f3d8072c66857e7fe6cd9",
+    "content-hash": "9ebd4ca971a37ee06d8e3fdf31f1806f",
     "packages": [
         {
             "name": "amphp/amp",
@@ -6288,16 +6288,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "6.9.5",
+            "version": "6.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "b9989c566097cd8a1cdc0378977938c8deb90545"
+                "reference": "61488aa2849793acfb72411829d114b4aa670941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/b9989c566097cd8a1cdc0378977938c8deb90545",
-                "reference": "b9989c566097cd8a1cdc0378977938c8deb90545",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/61488aa2849793acfb72411829d114b4aa670941",
+                "reference": "61488aa2849793acfb72411829d114b4aa670941",
                 "shasum": ""
             },
             "require": {
@@ -6402,7 +6402,7 @@
                 "issues": "https://github.com/vimeo/psalm/issues",
                 "source": "https://github.com/vimeo/psalm"
             },
-            "time": "2025-03-26T09:54:25+00:00"
+            "time": "2025-03-27T19:06:48+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -6470,12 +6470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "933dc568f750fe2d729d4804ce72e1b18e96a223"
+                "reference": "31c7249212ce4bfbd1844a8c9aa5366221027956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/933dc568f750fe2d729d4804ce72e1b18e96a223",
-                "reference": "933dc568f750fe2d729d4804ce72e1b18e96a223",
+                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/31c7249212ce4bfbd1844a8c9aa5366221027956",
+                "reference": "31c7249212ce4bfbd1844a8c9aa5366221027956",
                 "shasum": ""
             },
             "require": {
@@ -6524,7 +6524,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-26T10:42:25+00:00"
+            "time": "2025-03-27T03:29:29+00:00"
         }
     ],
     "aliases": [],
