@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6416fa49eea9f80072a136607c42ed9",
+    "content-hash": "4364644c7a3f08863c9fc91dce9d7252",
     "packages": [
         {
             "name": "amphp/amp",
@@ -6288,16 +6288,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "6.9.6",
+            "version": "6.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "61488aa2849793acfb72411829d114b4aa670941"
+                "reference": "9c0add4eb88d4b169ac04acb7c679918cbb9c252"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/61488aa2849793acfb72411829d114b4aa670941",
-                "reference": "61488aa2849793acfb72411829d114b4aa670941",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/9c0add4eb88d4b169ac04acb7c679918cbb9c252",
+                "reference": "9c0add4eb88d4b169ac04acb7c679918cbb9c252",
                 "shasum": ""
             },
             "require": {
@@ -6402,7 +6402,7 @@
                 "issues": "https://github.com/vimeo/psalm/issues",
                 "source": "https://github.com/vimeo/psalm"
             },
-            "time": "2025-03-27T19:06:48+00:00"
+            "time": "2025-03-31T10:12:50+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -6470,12 +6470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "b165c1848e4c03e27ebdac8f2664a124b7f66b31"
+                "reference": "4b06eb56494701e121268b8f37c8cacc4b371bc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/b165c1848e4c03e27ebdac8f2664a124b7f66b31",
-                "reference": "b165c1848e4c03e27ebdac8f2664a124b7f66b31",
+                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/4b06eb56494701e121268b8f37c8cacc4b371bc8",
+                "reference": "4b06eb56494701e121268b8f37c8cacc4b371bc8",
                 "shasum": ""
             },
             "require": {
@@ -6524,7 +6524,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-30T17:50:06+00:00"
+            "time": "2025-03-31T04:59:34+00:00"
         }
     ],
     "aliases": [],
@@ -6532,7 +6532,7 @@
     "stability-flags": {
         "ghostwriter/inflector": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.4",
@@ -6561,7 +6561,7 @@
         "composer-plugin-api": "~2.6.0",
         "composer-runtime-api": "~2.2.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.4.999"
     },
