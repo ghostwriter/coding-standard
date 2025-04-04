@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c764b7e2a4fd0e90c111431620b227b",
+    "content-hash": "43c322ed7a0982df7a2ff4ba4c716fe9",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3532,16 +3532,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.0.10",
+            "version": "12.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6075843014de23bcd6992842d69ca99d25d6a433"
+                "reference": "c433e7972440e1370a26879bb54c359f8898aa3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6075843014de23bcd6992842d69ca99d25d6a433",
-                "reference": "6075843014de23bcd6992842d69ca99d25d6a433",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c433e7972440e1370a26879bb54c359f8898aa3a",
+                "reference": "c433e7972440e1370a26879bb54c359f8898aa3a",
                 "shasum": ""
             },
             "require": {
@@ -3555,7 +3555,7 @@
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
                 "php": ">=8.3",
-                "phpunit/php-code-coverage": "^12.1.0",
+                "phpunit/php-code-coverage": "^12.1.2",
                 "phpunit/php-file-iterator": "^6.0.0",
                 "phpunit/php-invoker": "^6.0.0",
                 "phpunit/php-text-template": "^5.0.0",
@@ -3577,7 +3577,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "12.0-dev"
+                    "dev-main": "12.1-dev"
                 }
             },
             "autoload": {
@@ -3609,7 +3609,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.0.10"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.1.0"
             },
             "funding": [
                 {
@@ -3625,7 +3625,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-23T16:03:59+00:00"
+            "time": "2025-04-04T04:10:58+00:00"
         },
         {
             "name": "psr/container",
@@ -6553,12 +6553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "f05669b974db67ae72cdc188738e8f281a9ed553"
+                "reference": "27f717ee0db6298cd65c0f76c4840717b2aadc1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/f05669b974db67ae72cdc188738e8f281a9ed553",
-                "reference": "f05669b974db67ae72cdc188738e8f281a9ed553",
+                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/27f717ee0db6298cd65c0f76c4840717b2aadc1e",
+                "reference": "27f717ee0db6298cd65c0f76c4840717b2aadc1e",
                 "shasum": ""
             },
             "require": {
@@ -6607,7 +6607,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-03T15:21:58+00:00"
+            "time": "2025-04-03T19:20:21+00:00"
         }
     ],
     "aliases": [],
@@ -6615,7 +6615,7 @@
     "stability-flags": {
         "ghostwriter/inflector": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.4",
@@ -6644,7 +6644,7 @@
         "composer-plugin-api": "~2.6.0",
         "composer-runtime-api": "~2.2.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.4.999"
     },
