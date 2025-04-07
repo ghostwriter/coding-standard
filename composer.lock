@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a54f704266b856fbc2c4a523d97cf98d",
+    "content-hash": "7e070ca1c52666a48ab27db9ba7e27cd",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3693,128 +3693,6 @@
             "time": "2024-08-06T10:04:20+00:00"
         },
         {
-            "name": "ghostwriter/inflector",
-            "version": "0.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "807b2ad8882f31b5d7ad19cfc3a446c3e3f10919"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/807b2ad8882f31b5d7ad19cfc3a446c3e3f10919",
-                "reference": "807b2ad8882f31b5d7ad19cfc3a446c3e3f10919",
-                "shasum": ""
-            },
-            "require": {
-                "ghostwriter/case-converter": "~2.1.0",
-                "php": "^8.4"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/container": "~5.0.1"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\Inflector\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-4-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Convert words between singular and plural forms in PHP.",
-            "homepage": "https://github.com/ghostwriter/inflector",
-            "keywords": [
-                "ghostwriter",
-                "inflector"
-            ],
-            "support": {
-                "docs": "https://github.com/ghostwriter/inflector",
-                "issues": "https://github.com/ghostwriter/inflector/issues",
-                "rss": "https://github.com/ghostwriter/inflector/releases.atom",
-                "security": "https://github.com/ghostwriter/inflector/security/advisories/new",
-                "source": "https://github.com/ghostwriter/inflector"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-04-04T22:31:59+00:00"
-        },
-        {
-            "name": "ghostwriter/regex",
-            "version": "0.1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ghostwriter/regex.git",
-                "reference": "3bd9a004137af82c6d326b4e1380ca3958a6e2a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/regex/zipball/3bd9a004137af82c6d326b4e1380ca3958a6e2a5",
-                "reference": "3bd9a004137af82c6d326b4e1380ca3958a6e2a5",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.4"
-            },
-            "require-dev": {
-                "ghostwriter/coding-standard": "dev-main",
-                "ghostwriter/container": "~5.0.1"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Ghostwriter\\Regex\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Nathanael Esayeas",
-                    "email": "nathanael.esayeas@protonmail.com",
-                    "homepage": "https://github.com/ghostwriter",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Regular Expression parser for PHP",
-            "homepage": "https://github.com/ghostwriter/regex",
-            "keywords": [
-                "ghostwriter",
-                "parser",
-                "regex",
-                "regular-expression"
-            ],
-            "support": {
-                "docs": "https://github.com/ghostwriter/regex",
-                "issues": "https://github.com/ghostwriter/regex/issues",
-                "rss": "https://github.com/ghostwriter/regex/releases.atom",
-                "security": "https://github.com/ghostwriter/regex/security/advisories/new",
-                "source": "https://github.com/ghostwriter/regex"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/ghostwriter",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-04-04T22:33:49+00:00"
-        },
-        {
             "name": "hamcrest/hamcrest-php",
             "version": "v2.0.1",
             "source": {
@@ -6526,10 +6404,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ghostwriter/inflector": 20,
-        "ghostwriter/regex": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
