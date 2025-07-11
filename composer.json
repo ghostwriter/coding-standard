@@ -76,7 +76,7 @@
         "ext-xdebug": "*",
         "mockery/mockery": "~1.6.12",
         "nikic/php-parser": "~5.4.0 || ~5.5.0",
-        "phpunit/phpunit": "~12.2.6",
+        "phpunit/phpunit": "~12.2.7",
         "vimeo/psalm": "~6.12.1"
     },
     "conflict": {
