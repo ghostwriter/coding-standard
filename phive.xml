@@ -4,6 +4,6 @@
   <phar name="composer-normalize" version="^2.47.0" installed="2.47.0" location="./tools/composer-normalize" copy="true"/>
   <phar name="infection" version="^0.31.0" installed="0.31.0" location="./tools/infection" copy="true"/>
   <phar name="phar-io/phive" version="^0.16.0" installed="0.16.0" location="./tools/phive" copy="true"/>
-  <phar name="phpunit" version="^12.2.9" installed="12.2.9" location="./tools/phpunit" copy="true"/>
+  <phar name="phpunit" version="^12.3.0" installed="12.3.0" location="./tools/phpunit" copy="true"/>
   <phar name="psalm" version="^7.0.0-beta11" installed="7.0.0-beta11" location="./tools/psalm" copy="true"/>
 </phive>
