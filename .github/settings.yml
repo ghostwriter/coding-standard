@@ -3,6 +3,7 @@
   "description": "[WIP] PHP Coding Standard"
   "homepage": "https://github.com/ghostwriter/coding-standard"
   "topics": "coding-standard, dev, ghostwriter, php"
+  "private": false
   "has_issues": true
   "has_projects": false
   "has_wiki": false
