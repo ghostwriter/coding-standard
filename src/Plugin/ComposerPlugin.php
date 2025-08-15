@@ -337,7 +337,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
     ): string {
         $lockVersions = iterator_to_array(self::getLockedVersions($locker, $rootPackage));
 
-        $keys = ['require-dev']; // 'require',
+        $keys = [ 'require','require-dev']; //
         foreach ($keys as $configKey) {
             $isDev = 'require-dev' === $configKey;
 
@@ -346,7 +346,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
             );
 
             foreach ($requiredVersions as $package => $version) {
-                self::log(sprintf('Checking <info>%s</info> package <info>%s</info>...', $configKey, $package), $IO);
+                self::log(sprintf('Checking <info>[%s]</info> package <info>%s</info>...', $configKey, $package), $IO);
 
                 if (! array_key_exists($package, $lockVersions)) {
                     self::log(sprintf('Package <info>%s</info> not found in the lock file', $package), $IO);
@@ -380,11 +380,17 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
-                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
+//                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
+//                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
+//
+//                    continue;
+//                }
 
-                    continue;
-                }
+//                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
+//                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
+//
+//                    continue;
+//                }
 
                 $lockVersion = (string) preg_replace('#^v(?<version>.*)#', '\1', $lockVersion);
 
@@ -410,7 +416,8 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-                $constraintPrefix = str_starts_with($version, '~') ? '~' : '^';
+                $constraintPrefix = '~';
+//                    str_starts_with($version, '~') ? '~' : '^';
 
                 $lockVersionWithPrefix = $constraintPrefix . $lockVersion;
 
