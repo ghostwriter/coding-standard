@@ -4,8 +4,8 @@
   "homepage": "https://github.com/ghostwriter/coding-standard"
   "topics": "coding-standard, dev, ghostwriter, php"
   "has_issues": true
-  "has_projects": true
-  "has_wiki": true
+  "has_projects": false
+  "has_wiki": false
   "has_downloads": true
   "default_branch": "main"
   "allow_squash_merge": true
