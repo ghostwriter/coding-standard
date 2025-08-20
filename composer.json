@@ -64,7 +64,7 @@
         "composer-plugin-api": "~2.6.0",
         "composer-runtime-api": "~2.2.2",
         "composer/composer": "~2.8.10",
-        "composer/semver": "~3.4.3",
+        "composer/semver": "~3.4.4",
         "ghostwriter/case-converter": "~2.1.0",
         "ghostwriter/clock": "~3.0.1",
         "ghostwriter/config": "~1.0.0",
