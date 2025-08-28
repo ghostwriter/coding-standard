@@ -1,5 +1,5 @@
 {
-    "name": "ghostwriter/cs",
+    "name": "ghostwriter/coding-standard",
     "description": "PHP Coding Standard",
     "license": "BSD-4-Clause",
     "type": "composer-plugin",
