@@ -7,6 +7,8 @@ namespace Ghostwriter\CodingStandard;
 use InvalidArgumentException;
 
 use function array_map;
+use function array_merge;
+use function array_slice;
 use function explode;
 use function implode;
 use function mb_trim;
@@ -15,6 +17,8 @@ use function sprintf;
 use function str_contains;
 use function str_ends_with;
 use function str_starts_with;
+use function usort;
+use function version_compare;
 
 final class VersionConstraintGenerator
 {
@@ -31,9 +35,9 @@ final class VersionConstraintGenerator
         [$newMajor, $newMinor, $newPatch] = self::extractSemver($version);
         $newConstraint = sprintf('^%d.%d.%d', $newMajor, $newMinor, $newPatch);
 
-        if (0 === $newMajor && 0 === $newMinor && 0 === $newPatch) {
-            return $newConstraint;
-        }
+        //        if (0 === $newMajor && 0 === $newMinor && 0 === $newPatch) {
+        //            return $constraint;
+        //        }
 
         if ('' === $constraint || '*' === $constraint) {
             return $newConstraint;
@@ -47,6 +51,7 @@ final class VersionConstraintGenerator
         foreach ($constraints as $packageConstraint) {
             if (self::isSkippable($packageConstraint)) {
                 $updatedConstraints[] = $packageConstraint;
+
                 continue;
             }
 
@@ -63,7 +68,7 @@ final class VersionConstraintGenerator
         // Extract semver parts and sort constraints to keep the latest three
         usort(
             $semverConstraints,
-            static fn(string $left, string $right): int => version_compare(
+            static fn (string $left, string $right): int => version_compare(
                 self::extractSemverParts($left),
                 self::extractSemverParts($right),
             )
@@ -77,11 +82,6 @@ final class VersionConstraintGenerator
         return implode(' || ', $updatedConstraints);
     }
 
-    private static function extractSemverParts(string $constraint): string
-    {
-        preg_match('#(\d+\.\d+\.\d+)#', $constraint, $matches);
-        return $matches[1] ?? '0.0.0';
-    }
     private static function extractMinorVersion(string $constraint): string
     {
         preg_match('#(\d+(?:\.[*|\d]+)?)#', $constraint, $matches);
@@ -98,6 +98,13 @@ final class VersionConstraintGenerator
             (int) $matches[2] ?? throw new InvalidArgumentException(sprintf('Invalid minor version: %s', $version)),
             (int) $matches[3] ?? throw new InvalidArgumentException(sprintf('Invalid patch version: %s', $version)),
         ];
+    }
+
+    private static function extractSemverParts(string $constraint): string
+    {
+        preg_match('#(\d+\.\d+\.\d+)#', $constraint, $matches);
+
+        return $matches[1] ?? '0.0.0';
     }
 
     private static function isSemver(string $version): bool
