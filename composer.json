@@ -101,9 +101,7 @@
             "functions.php",
             "tests/bootstrap.php"
         ],
-        "exclude-from-classmap": [
-            "/tests/"
-        ]
+        "exclude-from-classmap": ["/tests/"]
     },
     "bin": [
         "tools/phar/composer",
