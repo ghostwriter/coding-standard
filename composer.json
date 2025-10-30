@@ -113,7 +113,6 @@
         "tools/phar/phpactor",
         "tools/phar/phpbench",
         "tools/phar/phpdocumentor",
-        "tools/phar/phpunit",
         "tools/phar/psalm"
     ],
     "config": {
