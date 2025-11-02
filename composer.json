@@ -65,8 +65,7 @@
         "composer-runtime-api": "~2.2.2",
         "composer/composer": "^2.8.12",
         "composer/semver": "^3.4.4",
-        "symfony/console": "^7.3.5",
-        "symfony/process": "^7.3.4"
+        "symfony/console": "^7.3.5"
     },
     "require-dev": {
         "ext-xdebug": "*",
