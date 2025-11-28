@@ -15,7 +15,6 @@ use Composer\Package\Locker;
 use Composer\Package\RootPackageInterface;
 use Composer\Plugin\Capability\CommandProvider;
 use Composer\Plugin\Capable;
-use Composer\Plugin\PluginEvents;
 use Composer\Plugin\PluginInterface;
 use Composer\Script\Event;
 use Composer\Script\ScriptEvents;
@@ -41,7 +40,6 @@ use RuntimeException;
 use Throwable;
 
 use const PATHINFO_EXTENSION;
-use const PHP_EOL;
 
 use function array_key_exists;
 use function file_exists;
@@ -50,7 +48,6 @@ use function file_put_contents;
 use function is_numeric;
 use function iterator_to_array;
 use function mb_substr;
-use function mb_trim;
 use function pathinfo;
 use function preg_replace;
 use function sprintf;
@@ -77,9 +74,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         ];
     }
 
-    /**
-     * @return list<BaseCommand>
-     */
+    /** @return list<BaseCommand> */
     public function getCommands(): array
     {
         $processExecutor = new ProcessExecutor();
@@ -177,9 +172,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         }
     }
 
-    /**
-     * @return Generator<string,string>
-     */
+    /** @return Generator<string,string> */
     private static function getLockedVersions(Locker $locker, RootPackageInterface $rootPackage): Generator
     {
         /** @var array{packages:list<array{name:string,version:string}>,packages-dev:list<array{name:string,version: string}>} $lockData */
@@ -213,7 +206,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
     ): string {
         $lockVersions = iterator_to_array(self::getLockedVersions($locker, $rootPackage));
 
-        $keys = [ 'require','require-dev']; //
+        $keys = ['require', 'require-dev'];
         foreach ($keys as $configKey) {
             $isDev = 'require-dev' === $configKey;
 
@@ -256,17 +249,17 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-//                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
-//                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
-//
-//                    continue;
-//                }
+                //                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
+                //                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
+                //
+                //                    continue;
+                //                }
 
-//                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
-//                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
-//
-//                    continue;
-//                }
+                //                if (mb_ltrim($version, '^v') === mb_ltrim($lockVersion, '^v')) {
+                //                    self::log(sprintf('Skipping same version <info>%s</info>', $version), $IO);
+                //
+                //                    continue;
+                //                }
 
                 $lockVersion = (string) preg_replace('#^v(?<version>.*)#', '\1', $lockVersion);
 
@@ -292,9 +285,9 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-//                $constraintPrefix = '~';
+                //                $constraintPrefix = '~';
                 $constraintPrefix = '^';
-//                    str_starts_with($version, '~') ? '~' : '^';
+                //                    str_starts_with($version, '~') ? '~' : '^';
 
                 $lockVersionWithPrefix = $constraintPrefix . $lockVersion;
 
@@ -316,9 +309,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         return $manipulator->getContents();
     }
 
-    /**
-     * @throws Throwable
-     */
+    /** @throws Throwable */
     private static function updateLockContentHash(string $composerLockFile, string $contentHash): void
     {
         $lockFile = new JsonFile($composerLockFile);
