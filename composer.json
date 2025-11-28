@@ -161,8 +161,8 @@
         "plugin-modifies-install-path": false,
         "plugin-optional": false,
         "thanks": {
-            "url": "https://github.com/ghostwriter/coding-standard",
-            "name": "ghostwriter/coding-standard"
+            "name": "ghostwriter/coding-standard",
+            "url": "https://github.com/ghostwriter/coding-standard"
         }
     },
     "scripts": {
