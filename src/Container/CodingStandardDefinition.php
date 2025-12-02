@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Ghostwriter\CodingStandard\Container;
 
 use Ghostwriter\CodingStandard\Container\Extension\ConfigurationExtension;
+use Ghostwriter\Config\Configuration;
 use Ghostwriter\Config\Interface\ConfigurationInterface;
 use Ghostwriter\Container\Interface\ContainerInterface;
 use Ghostwriter\Container\Interface\Service\DefinitionInterface;
@@ -20,6 +21,7 @@ final readonly class CodingStandardDefinition implements DefinitionInterface
     #[Override]
     public function __invoke(ContainerInterface $container): void
     {
+        $container->alias(Configuration::class, ConfigurationInterface::class);
         $container->extend(ConfigurationInterface::class, ConfigurationExtension::class);
 
         $configuration = $container->get(ConfigurationInterface::class);
