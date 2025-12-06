@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\CodingStandard\Container\Extension;
+namespace Ghostwriter\CodingStandard\Container\Ghostwriter\Config;
 
 use Ghostwriter\Config\Configuration;
 use Ghostwriter\Config\Interface\ConfigurationInterface;
