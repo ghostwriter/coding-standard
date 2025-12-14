@@ -88,7 +88,7 @@
         "composer-plugin-api": "~2.9.0",
         "composer-runtime-api": "~2.2.2",
         "composer/composer": "^2.9.2",
-        "ghostwriter/config": "^2.0.1",
+        "ghostwriter/config": "^2.0.2",
         "ghostwriter/console": "^0.1.2",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
