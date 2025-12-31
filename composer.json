@@ -94,7 +94,7 @@
         "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^12.5.4",
         "symfony/process": "^8.0.3",
-        "symfony/var-dumper": "^8.0.0"
+        "symfony/var-dumper": "^8.0.3"
     },
     "conflict": {
         "pestphp/pest": "*"
