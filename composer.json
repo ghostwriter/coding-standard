@@ -90,7 +90,7 @@
         "composer/composer": "^2.9.3",
         "ghostwriter/config": "^2.0.2",
         "ghostwriter/console": "^0.1.2",
-        "ghostwriter/github-cli": "^0.1.0 || @dev",
+        "ghostwriter/github-cli": "0.1.x-dev",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^12.5.4",
