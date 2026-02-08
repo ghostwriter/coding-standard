@@ -93,7 +93,7 @@
         "ghostwriter/github-cli": "^0.1.0",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
-        "phpunit/phpunit": "^13.0.0",
+        "phpunit/phpunit": "^13.0.1",
         "symfony/process": "^8.0.5",
         "symfony/var-dumper": "^8.0.4"
     },
