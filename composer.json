@@ -85,17 +85,9 @@
         "ext-zend-opcache": "*",
         "ext-zip": "*",
         "ext-zlib": "*",
-        "composer-plugin-api": "~2.9.0",
-        "composer-runtime-api": "~2.2.2",
-        "composer/composer": "^2.9.5",
-        "ghostwriter/config": "^2.0.2",
-        "ghostwriter/console": "^0.1.2",
-        "ghostwriter/git": "^0.1.3",
-        "ghostwriter/github-cli": "^0.1.0",
+        "infection/infection": "^0.32.4",
         "mockery/mockery": "^1.6.12",
-        "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^13.0.2",
-        "symfony/process": "^8.0.5",
         "symfony/var-dumper": "^8.0.4"
     },
     "conflict": {
@@ -112,14 +104,14 @@
             "Tests\\": "tests/"
         },
         "files": [
-            "functions.php",
             "tests/bootstrap.php"
         ],
         "exclude-from-classmap": ["/tests/"]
     },
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true
+            "ghostwriter/coding-standard": true,
+            "infection/extension-installer": true
         },
         "bump-after-update": false,
         "classmap-authoritative": false,
@@ -135,19 +127,6 @@
         "use-parent-dir": false
     },
     "extra": {
-        "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
-        "ghostwriter": {
-            "container": {
-                "definition": "Ghostwriter\\CodingStandard\\Container\\CodingStandardDefinition"
-            },
-            "conflict": {
-                "enabled": true,
-                "vendors": ["250", "acmephp", "asm89", "async", "bilge", "binarykitten", "codelegance", "connectors", "doctrine", "ezsystems", "growthbook", "jdorn", "joomla", "jwage", "kazist", "khanamiryan", "larastan", "nunomaduro", "object-calisthenics", "ocramius", "pegasus", "pestphp", "phptal", "phptype", "pimcore", "provider", "roave", "scriptfusion", "silverstripe", "socialiteproviders", "spatie", "tga", "topthink", "yiisoft", "yuan1994", "zendframework", "zetacomponents", "zf-commons"]
-            }
-        },
-        "plugin-modifies-downloads": false,
-        "plugin-modifies-install-path": false,
-        "plugin-optional": false,
         "thanks": {
             "name": "ghostwriter/coding-standard",
             "url": "https://github.com/ghostwriter/coding-standard"
