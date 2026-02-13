@@ -173,12 +173,12 @@ final class VersionConstraintGenerator
     private static function skip(string $constraint): bool
     {
         return match (true) {
-            str_starts_with($constraint, 'dev-'),
-            str_ends_with($constraint, '-dev'),
-                //            str_contains($constraint, '|'),
-            str_contains($constraint, '@'),
             str_contains($constraint, '-dev'),
-            str_contains($constraint, 'dev-') => true,
+            str_contains($constraint, '@'),
+            str_contains($constraint, 'dev-'),
+            str_contains($constraint, '|'),
+            str_ends_with($constraint, '-dev'),
+            str_starts_with($constraint, 'dev-') => true,
             default => false,
         };
     }
