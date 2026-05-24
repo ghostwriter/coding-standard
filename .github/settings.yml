@@ -8,7 +8,6 @@
 "repository":
   "name": "coding-standard"
   "description": "[WIP] PHP Coding Standard"
-  "topics": "ghostwriter, coding-standard, php, dev"
   "homepage": "https://github.com/ghostwriter/coding-standard"
   "default_branch": "main"
   "allow_auto_merge": true
