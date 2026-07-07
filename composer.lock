@@ -3127,16 +3127,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "12.1.0",
+            "version": "12.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "d331a5ced3d9a2b917baa9841b2211e72f9e780d"
+                "reference": "0ce76cf0940abbc31525420b7b8d174656c6675d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d331a5ced3d9a2b917baa9841b2211e72f9e780d",
-                "reference": "d331a5ced3d9a2b917baa9841b2211e72f9e780d",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/0ce76cf0940abbc31525420b7b8d174656c6675d",
+                "reference": "0ce76cf0940abbc31525420b7b8d174656c6675d",
                 "shasum": ""
             },
             "require": {
@@ -3192,7 +3192,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/12.1.0"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/12.1.1"
             },
             "funding": [
                 {
@@ -3200,7 +3200,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-17T13:56:07+00:00"
+            "time": "2025-04-03T03:41:27+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -6470,12 +6470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "c95cc0c8a5eaf80c0178ab7edbd7b320234dd21a"
+                "reference": "06e0bbbe5325b55bee15f15adf08b2822ec2af09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/c95cc0c8a5eaf80c0178ab7edbd7b320234dd21a",
-                "reference": "c95cc0c8a5eaf80c0178ab7edbd7b320234dd21a",
+                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/06e0bbbe5325b55bee15f15adf08b2822ec2af09",
+                "reference": "06e0bbbe5325b55bee15f15adf08b2822ec2af09",
                 "shasum": ""
             },
             "require": {
@@ -6524,7 +6524,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-01T15:48:33+00:00"
+            "time": "2025-04-02T17:07:41+00:00"
         }
     ],
     "aliases": [],
