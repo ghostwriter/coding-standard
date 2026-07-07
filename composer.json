@@ -68,7 +68,7 @@
         "mockery/mockery": "@stable",
         "phpunit/phpunit": "@stable",
         "symfony/var-dumper": "@stable",
-        "vimeo/psalm": "@stable"
+        "vimeo/psalm": "^6.9.1"
     },
     "require-dev": {
         "doctrine/inflector": "@stable",
