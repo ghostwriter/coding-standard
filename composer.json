@@ -62,10 +62,10 @@
         "ext-zlib": "*",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.8.6",
+        "composer/composer": "2.8.6",
         "composer/semver": "^3.4.3",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^12.0.5",
+        "phpunit/phpunit": "12.0.5",
         "symfony/var-dumper": "^7.2.3"
     },
     "require-dev": {
