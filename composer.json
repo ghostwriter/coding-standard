@@ -62,6 +62,7 @@
         "ext-zlib": "*",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
+        "composer/composer": "^2.8.6",
         "composer/semver": "^3.4.3",
         "infection/infection": "^0.29.14",
         "mockery/mockery": "^1.6.12",
@@ -70,7 +71,7 @@
         "vimeo/psalm": "^6.8.8"
     },
     "require-dev": {
-        "composer/composer": "^2.8.6",
+        "doctrine/inflector": "^2.0.10",
         "ghostwriter/case-converter": "^2.0.0",
         "ghostwriter/container": "^5.0.0",
         "ghostwriter/filesystem": "^0.1.1",
@@ -95,7 +96,6 @@
         ]
     },
     "bin": [
-        "tools/infection",
         "tools/phive",
         "tools/phpactor"
     ],
@@ -104,6 +104,7 @@
             "ghostwriter/coding-standard": true,
             "infection/extension-installer": true
         },
+        "bump-after-update": false,
         "classmap-authoritative": false,
         "discard-changes": true,
         "optimize-autoloader": true,
