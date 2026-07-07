@@ -22,6 +22,26 @@ final class VersionConstraintGeneratorTest extends TestCase
     public static function provideVersionConstraints(): Generator
     {
         yield from [
+            'last-three-and-major' => [
+                'constraint' => '~12.3.0 || ~12.4.0 || ~12.5.0 || ~12.6.0 || ~12.7.0',
+                'new' => '13.0.0',
+                'expected' => '~12.6.0 || ~12.7.0 || ~13.0.0',
+            ],
+            'last-three-and-minor' => [
+                'constraint' => '~12.3.0 || ~12.4.0 || ~12.5.0 || ~12.6.0 || ~12.7.0',
+                'new' => '12.7.0',
+                'expected' => '~12.5.0 || ~12.6.0 || ~12.7.0',
+            ],
+            'last-three-and-patch' => [
+                'constraint' => '~12.3.0 || ~12.4.0 || ~12.5.0 || ~12.6.0 || ~12.7.0',
+                'new' => '12.7.1',
+                'expected' => '~12.5.0 || ~12.6.0 || ~12.7.1',
+            ],
+            'star' => [
+                'constraint' => '*',
+                'new' => '12.0.9',
+                'expected' => '~12.0.9',
+            ],
             '~11.5.14 || ~12.0.8' => [
                 'constraint' => '~11.5.14 || ~12.0.8',
                 'new' => '12.0.9',
@@ -241,31 +261,31 @@ final class VersionConstraintGeneratorTest extends TestCase
             'complex constraint new minor' => [
                 'constraint' => '~1.0.0 || ~1.5.0 || ~2.0.0',
                 'new' => '2.1.0',
-                'expected' => '~1.0.0 || ~1.5.0 || ~2.0.0 || ~2.1.0',
+                'expected' => '~1.5.0 || ~2.0.0 || ~2.1.0',
             ],
 
             'complex constraint new major' => [
                 'constraint' => '~1.0.0 || ~1.5.0 || ~2.0.0',
                 'new' => '3.0.0',
-                'expected' => '~1.0.0 || ~1.5.0 || ~2.0.0 || ~3.0.0',
+                'expected' => '~1.5.0 || ~2.0.0 || ~3.0.0',
             ],
 
             'complex constraint with mixed versions' => [
                 'constraint' => '~1.0.0 || ~1.2.3 || ~2.0.0 || ~2.5.4',
                 'new' => '2.5.5',
-                'expected' => '~1.0.0 || ~1.2.3 || ~2.0.0 || ~2.5.5',
+                'expected' => '~1.2.3 || ~2.0.0 || ~2.5.5',
             ],
 
             'complex constraint with new unrelated version' => [
                 'constraint' => '~1.0.0 || ~1.5.0 || ~2.0.0',
                 'new' => '4.0.0',
-                'expected' => '~1.0.0 || ~1.5.0 || ~2.0.0 || ~4.0.0',
+                'expected' => '~1.5.0 || ~2.0.0 || ~4.0.0',
             ],
 
             'multiple major versions with minor update' => [
                 'constraint' => '~1.0.0 || ~2.0.0 || ~3.0.0',
                 'new' => '3.1.0',
-                'expected' => '~1.0.0 || ~2.0.0 || ~3.0.0 || ~3.1.0',
+                'expected' => '~2.0.0 || ~3.0.0 || ~3.1.0',
             ],
 
             'caret constraint minor update' => [
