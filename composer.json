@@ -93,7 +93,7 @@
             "Tests\\Unit\\": "tests/unit/"
         },
         "files": [
-            "bootstrap.php",
+            "functions.php",
             "tests/bootstrap.php"
         ],
         "exclude-from-classmap": [
