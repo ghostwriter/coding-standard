@@ -1,7 +1,7 @@
 {
     "name": "ghostwriter/coding-standard",
     "description": "PHP Coding Standard",
-    "license": "BSD-3-Clause",
+    "license": "BSD-4-Clause",
     "type": "composer-plugin",
     "keywords": [
         "ghostwriter",
