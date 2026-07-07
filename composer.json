@@ -32,7 +32,7 @@
     "require": {
         "php": ">=8.1",
         "phpunit/phpunit": "^10.4",
-        "vimeo/psalm": "^5.15"
+        "vimeo/psalm": "^5.16"
     },
     "bin": [
         "tools/composer-normalize",
