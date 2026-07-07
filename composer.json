@@ -36,8 +36,7 @@
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.7.6",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^10.5.20",
-        "vimeo/psalm": "^5.24.0"
+        "phpunit/phpunit": "^11.1.3"
     },
     "conflict": {
         "vimeo/psalm": "<4.30"
@@ -54,12 +53,13 @@
     },
     "bin": [
         "tools/infection",
-        "tools/phive"
+        "tools/phive",
+        "tools/phpactor",
+        "tools/psalm"
     ],
     "config": {
         "allow-plugins": {
-            "ghostwriter/coding-standard": true,
-            "infection/extension-installer": true
+            "ghostwriter/coding-standard": true
         },
         "classmap-authoritative": false,
         "discard-changes": true,
