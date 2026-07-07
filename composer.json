@@ -36,7 +36,7 @@
         "php": "^8.2",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.8.2",
+        "composer/composer": "^2.8.3",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^11.4.3"
     },
