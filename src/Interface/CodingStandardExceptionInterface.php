@@ -1,7 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ghostwriter\CodingStandard\Interface;
 
-interface CodingStandardExceptionInterface extends \Throwable
-{
-}
+use Throwable;
+
+interface CodingStandardExceptionInterface extends Throwable {}
