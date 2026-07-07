@@ -7287,8 +7287,8 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
-    "prefer-stable": true,
+    "stability-flags": [],
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.4",
@@ -7317,7 +7317,7 @@
         "composer-plugin-api": "~2.6.0",
         "composer-runtime-api": "~2.2.2"
     },
-    "platform-dev": {},
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.4.999"
     },

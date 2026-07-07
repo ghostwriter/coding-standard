@@ -174,19 +174,38 @@
         "plugin-optional": false
     },
     "scripts": {
-        "bin_infection": "vendor/bin/infection",
-        "bin_phive": "tools/phive",
-        "bin_phpunit": "vendor/bin/phpunit --do-not-cache-result --colors=always",
+        "bin_composer": "vendor/ghostwriter/coding-standard/tools/composer",
+        "bin_infection": "vendor/ghostwriter/coding-standard/tools/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
+        "bin_normalize": "vendor/ghostwriter/coding-standard/tools/composer-normalize",
+        "bin_phive": "vendor/ghostwriter/coding-standard/tools/phive",
+        "bin_phpunit": "vendor/ghostwriter/coding-standard/tools/phpunit --do-not-cache-result --colors=always",
+        "cache:clear": "rm -rf ./.cache/*",
         "check": [
+            "@cache:clear",
+            "@bin_composer validate",
+            "@normalize",
+            "@ecs",
+            "@test"
+        ],
+        "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
+        "infection": [
+            "@xdebug",
+            "@bin_infection"
+        ],
+        "normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "phive": [
             "@bin_phive update --force-accept-unsigned",
             "@bin_phive purge"
         ],
-        "infection": "@bin_infection run --threads=max --min-msi=0 --min-covered-msi=0",
         "phive:install": "@bin_phive install --copy --force-accept-unsigned ",
         "phive:update": "@bin_phive update",
         "phpunit": [
             "@xdebug",
             "@bin_phpunit"
+        ],
+        "phpunit:migrate": [
+            "@xdebug",
+            "@bin_phpunit --migrate-configuration"
         ],
         "test": [
             "@phpunit",
