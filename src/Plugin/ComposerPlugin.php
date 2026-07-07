@@ -155,7 +155,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
     {
         return [
             /** The post-autoload-dump event occurs after the autoload file has been generated */
-            ScriptEvents::POST_AUTOLOAD_DUMP => [[self::class, 'bump']],
+            ScriptEvents::POST_AUTOLOAD_DUMP => [['bump']],
         ];
     }
 
