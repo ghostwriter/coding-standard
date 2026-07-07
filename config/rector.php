@@ -249,6 +249,9 @@ $existingSkips = \array_merge(
             $workingDirectory . '/resource',
             $workingDirectory . '/tests/Fixture',
             $workingDirectory . '/tests/fixture',
+            '*/tests/Fixture/*',
+            '*/tests/fixture/*',
+            '*/vendor/*',
         ],
         static fn (string $path): bool => \file_exists($path)
     ),
