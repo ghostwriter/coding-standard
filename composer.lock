@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ffb14fce3a287a6f26ac4e582c1b7fcd",
+    "content-hash": "b02de74202d70e3c596f4ec1890ce137",
     "packages": [
         {
             "name": "boundwize/structarmed",
-            "version": "0.4.5",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "0b80097ec00cac1319913df18230345db7852eec"
+                "reference": "cd626ff2604e98e045427b7d1a6493632a351156"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/0b80097ec00cac1319913df18230345db7852eec",
-                "reference": "0b80097ec00cac1319913df18230345db7852eec",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/cd626ff2604e98e045427b7d1a6493632a351156",
+                "reference": "cd626ff2604e98e045427b7d1a6493632a351156",
                 "shasum": ""
             },
             "require": {
@@ -65,7 +65,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.4.5"
+                "source": "https://github.com/boundwize/structarmed/tree/0.5.0"
             },
             "funding": [
                 {
@@ -73,7 +73,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-05-12T16:06:53+00:00"
+            "time": "2026-05-13T01:30:23+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
