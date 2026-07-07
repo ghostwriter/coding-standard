@@ -94,7 +94,7 @@
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.7.0",
         "phpunit/phpunit": "^12.5.7",
-        "symfony/process": "^8.0.3",
+        "symfony/process": "^8.0.4",
         "symfony/var-dumper": "^8.0.4"
     },
     "conflict": {
