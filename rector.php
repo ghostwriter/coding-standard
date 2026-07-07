@@ -55,6 +55,7 @@ use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 
 return static function (RectorConfig $rectorConfig): void {
+    $directory = getcwd();
     $rectorConfig->importNames();
     $rectorConfig->importShortClasses();
     $rectorConfig->parallel();
@@ -74,17 +75,17 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::PHP_81,
     ]);
     $rectorConfig->paths([
-        __DIR__ . '/bin',
-        __DIR__ . '/ecs.php',
-        __DIR__ . '/rector.php',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
+        $directory . '/bin',
+        $directory . '/ecs.php',
+        $directory . '/rector.php',
+        $directory . '/src',
+        $directory . '/tests',
     ]);
 
     $rectorConfig->phpVersion(PhpVersion::PHP_81);
     $rectorConfig->skip([
-        __DIR__ . '*/tests/Fixture/*',
-        __DIR__ . '*/vendor/*',
+        $directory . '*/tests/Fixture/*',
+        $directory . '*/vendor/*',
         CallableThisArrayToAnonymousFunctionRector::class,
         PseudoNamespaceToNamespaceRector::class,
         StringClassNameToClassConstantRector::class,
