@@ -34,7 +34,7 @@
         "php": "^8.2",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.7.3",
+        "composer/composer": "^2.7.4",
         "mockery/mockery": "^1.6.11",
         "phpunit/phpunit": "^11.1.2"
     },
@@ -45,7 +45,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ghostwriter\\CodingStandardTests\\": "tests"
+            "Tests\\": "tests"
         }
     },
     "config": {
