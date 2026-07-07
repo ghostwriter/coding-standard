@@ -87,7 +87,7 @@
         "ext-zlib": "*",
         "boundwize/structarmed": "^0.6.17",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^13.1.10",
+        "phpunit/phpunit": "^13.1.11",
         "symfony/var-dumper": "^8.0.8"
     },
     "conflict": {
