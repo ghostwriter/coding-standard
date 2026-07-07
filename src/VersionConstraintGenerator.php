@@ -29,7 +29,7 @@ final class VersionConstraintGenerator
         }
 
         [$newMajor, $newMinor, $newPatch] = self::extractSemver($version);
-        $newConstraint = sprintf('~%d.%d.%d', $newMajor, $newMinor, $newPatch);
+        $newConstraint = sprintf('^%d.%d.%d', $newMajor, $newMinor, $newPatch);
 
         if (0 === $newMajor && 0 === $newMinor && 0 === $newPatch) {
             return $newConstraint;
