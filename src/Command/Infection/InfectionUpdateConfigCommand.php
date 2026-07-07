@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\CodingStandard\Command\PHPUnit;
+namespace Ghostwriter\CodingStandard\Command\Infection;
 
 use Ghostwriter\CodingStandard\Command\AbstractCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
