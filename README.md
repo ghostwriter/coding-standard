@@ -27,10 +27,23 @@ declare(strict_types=1);
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 return static function (ECSConfig $ecsConfig): void {
-    $ecsConfig->import(__DIR__ . '/vendor/ghostwriter/coding-standard/ecs.php');
-    $ecsConfig->paths([__DIR__ . '/rector.php', __DIR__ . '/ecs.php', __DIR__ . '/src', __DIR__ . '/tests']);
-    $ecsConfig->skip([__DIR__ . '/vendor/*']);
+    $ecsConfig->sets([
+        __DIR__ . '/vendor/ghostwriter/coding-standard/ecs.php',
+    ]);
+
+    $ecsConfig->paths([
+        __DIR__ . '/ecs.php',
+        __DIR__ . '/rector.php',
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
+    ]);
+
+    $ecsConfig->skip([
+        __DIR__ . '/tests/Fixture/*',
+        __DIR__ . '/vendor/*',
+    ]);
 };
+
 ```
 
 - Create a `rector.php` configuration file.
@@ -44,12 +57,25 @@ use Rector\Config\RectorConfig;
 use Rector\Core\ValueObject\PhpVersion;
 
 return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->import(__DIR__ . '/vendor/ghostwriter/coding-standard/rector.php');
+    $rectorConfig->sets([
+        __DIR__ . '/vendor/ghostwriter/coding-standard/rector.php',
+    ]);
+
     $rectorConfig->phpVersion(PhpVersion::PHP_81);
 
-    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/ecs.php', __DIR__ . '/rector.php']);
-    $rectorConfig->skip([__DIR__ . '*/tests/Fixture/*', __DIR__ . '*/vendor/*']);
+    $rectorConfig->paths([
+        __DIR__ . '/ecs.php',
+        __DIR__ . '/rector.php',
+        __DIR__ . '/src',
+        __DIR__ . '/tests',
+    ]);
+
+    $rectorConfig->skip([
+        __DIR__ . '/tests/Fixture/*',
+        __DIR__ . '/vendor/*'
+    ]);
 };
+
 ```
 
 ## Command
