@@ -61,7 +61,7 @@
         "ext-xml": "*",
         "ext-xmlwriter": "*",
         "ext-zlib": "*",
-        "composer-plugin-api": "~2.6.0",
+        "composer-plugin-api": "~2.9.0",
         "composer-runtime-api": "~2.2.2",
         "composer/composer": "^2.9.1",
         "symfony/console": "^7.3.6"
