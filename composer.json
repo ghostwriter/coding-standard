@@ -72,8 +72,6 @@
         "ghostwriter/shell": "~0.1.0"
     },
     "require-dev": {
-        "ghostwriter/inflector": "@dev",
-        "ghostwriter/regex": "@dev",
         "mockery/mockery": "~1.6.12",
         "nikic/php-parser": "~5.4.0",
         "phpunit/phpunit": "~12.1.0",
