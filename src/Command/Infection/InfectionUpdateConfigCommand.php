@@ -26,7 +26,7 @@ final class InfectionUpdateConfigCommand extends AbstractCommand
 
         $currentWorkingDirectory = getcwd();
 
-        if ($currentWorkingDirectory === false) {
+        if (false === $currentWorkingDirectory) {
             $output->writeln('Unable to determine the current working directory.');
 
             return 1;
