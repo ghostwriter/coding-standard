@@ -17,23 +17,19 @@ composer require ghostwriter/coding-standard:dev-main --dev
 
 ## Usage
 
-- Add configuration
+- Create a `ecs.php` configuration file.
 
-```php.php
-use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
+```php
+<?php
+
+declare(strict_types=1);
+
 use Symplify\EasyCodingStandard\Config\ECSConfig;
-use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ECSConfig $ecsConfig): void {
     $ecsConfig->import(__DIR__ . '/vendor/ghostwriter/coding-standard/ecs.php');
-    $ecsConfig->paths([__DIR__ . '/src', __DIR__ . '/tests']);
-    // A. full sets
-    $ecsConfig->sets([SetList::PSR_12]);
-
-    // B. standalone rule
-    $ecsConfig->ruleWithConfiguration(ArraySyntaxFixer::class, [
-        'syntax' => 'short',
-    ]);
+    $ecsConfig->paths([__DIR__ . '/rector.php', __DIR__ . '/ecs.php', __DIR__ . '/src', __DIR__ . '/tests']);
+    $ecsConfig->skip([__DIR__ . '/vendor/*']);
 };
 ```
 
