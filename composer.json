@@ -36,7 +36,7 @@
         "vimeo/psalm": ">=5.23 || dev-main as 6.0.0.999"
     },
     "require-dev":{
-        "composer/composer": "^2.7.1"
+        "composer/composer": "^2.7.2"
     },
     "autoload": {
         "psr-4": {
