@@ -38,6 +38,10 @@ use Ghostwriter\CodingStandard\Command\Psalm\PsalmCommand;
 use Ghostwriter\CodingStandard\Command\Psalm\PsalmSecurityCommand;
 use Ghostwriter\CodingStandard\WindowsPathConverter;
 use RuntimeException;
+use Throwable;
+
+use const PATHINFO_EXTENSION;
+use const PHP_EOL;
 
 use function array_key_exists;
 use function file_exists;
@@ -54,19 +58,16 @@ use function str_contains;
 use function str_starts_with;
 use function trim;
 
-use const PATHINFO_EXTENSION;
-use const PHP_EOL;
-
 final readonly class ComposerPlugin implements Capable, CommandProvider, EventSubscriberInterface, PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io): void
     {
-        $io->write('Activating the plugin... ' . self::class);
+        // $io->write('Activating the plugin... ' . self::class);
     }
 
     public function deactivate(Composer $composer, IOInterface $io): void
     {
-        $io->write('Deactivating the plugin... ' . self::class);
+        // $io->write('Deactivating the plugin... ' . self::class);
     }
 
     public function getCapabilities(): array
@@ -430,6 +431,9 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         return $manipulator->getContents();
     }
 
+    /**
+     * @throws Throwable
+     */
     private static function updateLockContentHash(string $composerLockFile, string $contentHash): void
     {
         $lockFile = new JsonFile($composerLockFile);
