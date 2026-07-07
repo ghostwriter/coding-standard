@@ -29,7 +29,7 @@ final class PhiveInstallCommand extends AbstractCommand
                 '--trust-gpg-keys',
                 '--no-progress',
                 '--no-interaction',
-                $input->getOption('tool')
+                $input->getOption('tool'),
             ],
         );
     }
