@@ -109,22 +109,7 @@
             "/tests/"
         ]
     },
-    "bin": [
-        "tools/phar/composer-normalize",
-        "tools/phar/composer-require-checker",
-        "tools/phar/composer-unused",
-        "tools/phar/infection",
-        "tools/phar/phive",
-        "tools/phar/phpactor",
-        "tools/phar/phpbench",
-        "tools/phar/phpdocumentor",
-        "tools/phar/psalm"
-    ],
     "config": {
-        "allow-plugins": {
-            "ghostwriter/coding-standard": true,
-            "infection/extension-installer": true
-        },
         "bump-after-update": false,
         "classmap-authoritative": false,
         "discard-changes": true,
@@ -163,16 +148,10 @@
         }
     },
     "scripts": {
-        "bin_composer": "tools/phar/composer",
-        "bin_infection": "tools/phar/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
-        "bin_normalize": "tools/phar/composer-normalize",
-        "bin_phive": "tools/phar/phive",
-        "bin_phpunit": "tools/phar/phpunit --do-not-cache-result --colors=always",
-        "bin_psalm": "tools/phar/psalm --no-cache",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@cache:clear",
-            "@bin_composer validate",
+            "@composer validate",
             "@test"
         ],
         "docker": [
@@ -184,30 +163,30 @@
         "git:submodule:update": "git submodule update --depth=1 --init --recursive --recommend-shallow --remote",
         "infection": [
             "@xdebug",
-            "@bin_infection"
+            "infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max"
         ],
-        "normalize": "@bin_normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
+        "normalize": "composer-normalize --no-cache --diff --no-check-lock --no-scripts --no-plugins",
         "phive": [
-            "@bin_phive update --force-accept-unsigned",
-            "@bin_phive purge"
+            "phive update --force-accept-unsigned",
+            "phive purge"
         ],
-        "phive:install": "@bin_phive install --copy --force-accept-unsigned ",
-        "phive:update": "@bin_phive update",
+        "phive:install": "phive install --copy --force-accept-unsigned ",
+        "phive:update": "phive update",
         "phpunit": [
             "@xdebug",
-            "@bin_phpunit"
+            "phpunit --do-not-cache-result --colors=always"
         ],
         "phpunit:migrate": [
             "@xdebug",
-            "@bin_phpunit --migrate-configuration"
+            "phpunit --do-not-cache-result --colors=always --migrate-configuration"
         ],
-        "psalm": "@bin_psalm --show-info=true --no-diff --shepherd --stats",
-        "psalm:alter": "@bin_psalm --alter --allow-backwards-incompatible-changes=false --safe-types",
-        "psalm:baseline": "@bin_psalm --no-diff --set-baseline=psalm-baseline.xml",
-        "psalm:dry-run": "@bin_psalm --alter --issues=all --dry-run",
-        "psalm:fix": "@bin_psalm --alter --issues=UnnecessaryVarAnnotation",
-        "psalm:security": "@bin_psalm --no-diff --taint-analysis",
-        "psalm:update": "@bin_psalm --no-diff --update-baseline=psalm-baseline.xml",
+        "psalm": "psalm --no-cache --show-info=true --no-diff --shepherd --stats",
+        "psalm:alter": "psalm --no-cache --alter --allow-backwards-incompatible-changes=false --safe-types",
+        "psalm:baseline": "psalm --no-cache --no-diff --set-baseline=psalm-baseline.xml",
+        "psalm:dry-run": "psalm --no-cache --alter --issues=all --dry-run",
+        "psalm:fix": "psalm --no-cache --alter --issues=UnnecessaryVarAnnotation",
+        "psalm:security": "psalm --no-cache --no-diff --taint-analysis",
+        "psalm:update": "psalm --no-cache --no-diff --update-baseline=psalm-baseline.xml",
         "test": [
             "@phpunit",
             "@infection",
