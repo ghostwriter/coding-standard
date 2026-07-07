@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 #[AsCommand(name: 'ghostwriter:infection:update-config', description: 'Update the project\'s Infection configuration file')]
-final class InfectionRunCommand extends AbstractCommand
+final class InfectionUpdateConfigCommand extends AbstractCommand
 {
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
