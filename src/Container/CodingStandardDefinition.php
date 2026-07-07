@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ghostwriter\CodingStandard\Container;
 
-use Ghostwriter\CodingStandard\Container\Extension\ConfigurationExtension;
+use Ghostwriter\CodingStandard\Container\Ghostwriter\Config\ConfigurationExtension;
 use Ghostwriter\Config\Configuration;
 use Ghostwriter\Config\Interface\ConfigurationInterface;
 use Ghostwriter\Container\Interface\ContainerInterface;
