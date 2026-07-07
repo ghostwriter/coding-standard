@@ -1,5 +1,5 @@
 {
-    "name": "ghostwriter/coding-standard",
+    "name": "ghostwriter/cs",
     "description": "PHP Coding Standard",
     "license": "BSD-4-Clause",
     "type": "composer-plugin",
@@ -66,18 +66,22 @@
         "composer/composer": "~2.8.10",
         "composer/semver": "~3.4.3",
         "ghostwriter/case-converter": "~2.1.0",
+        "ghostwriter/clock": "~3.0.1",
+        "ghostwriter/config": "~1.0.0",
         "ghostwriter/container": "~5.0.1",
         "ghostwriter/event-dispatcher": "~5.0.3",
         "ghostwriter/filesystem": "~0.1.1",
         "ghostwriter/json": "~3.0.0",
+        "ghostwriter/option": "~2.0.0",
+        "ghostwriter/result": "~2.0.0",
         "ghostwriter/shell": "~0.1.0"
     },
     "require-dev": {
         "ext-xdebug": "*",
-        "mockery/mockery": "^1.6.12",
+        "mockery/mockery": "~1.6.12",
         "nikic/php-parser": "~5.6.1",
         "phpunit/phpunit": "^12.3.4",
-        "symfony/var-dumper": "^7.3.2",
+        "symfony/var-dumper": "~7.3.2",
         "vimeo/psalm": "~6.13.1"
     },
     "conflict": {
@@ -102,8 +106,8 @@
         ]
     },
     "bin": [
-        "tools/phive",
-        "tools/phpactor"
+        "tools/phar/phive",
+        "tools/phar/phpactor"
     ],
     "config": {
         "allow-plugins": {
