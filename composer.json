@@ -64,7 +64,7 @@
         "composer-plugin-api": "~2.9.0",
         "composer-runtime-api": "~2.2.2",
         "composer/composer": "^2.9.2",
-        "symfony/console": "^7.3.6"
+        "symfony/console": "^8.0.0"
     },
     "require-dev": {
         "ext-xdebug": "*",
