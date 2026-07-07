@@ -223,6 +223,7 @@ use PhpCsFixer\Fixer\Whitespace\SpacesInsideParenthesesFixer;
 use PhpCsFixer\Fixer\Whitespace\StatementIndentationFixer;
 use PhpCsFixer\Fixer\Whitespace\TypeDeclarationSpacesFixer;
 use PhpCsFixer\Fixer\Whitespace\TypesSpacesFixer;
+use Symplify\CodingStandard\Fixer\Spacing\MethodChainingNewlineFixer;
 use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 $workingDirectory = \getcwd() ?: __DIR__;
@@ -233,6 +234,7 @@ $existingPaths = \array_filter(
         $workingDirectory . '/bin',
         $workingDirectory . '/config',
         $workingDirectory . '/data',
+        $workingDirectory . '/docs',
         $workingDirectory . '/ecs.php',
         $workingDirectory . '/index.php',
         $workingDirectory . '/module',
@@ -264,6 +266,7 @@ $existingSkips = \array_merge(
         PhpdocLineSpanFixer::class,
         PhpdocTrimFixer::class,
         SemicolonAfterInstructionFixer::class,
+        MethodChainingNewlineFixer::class,
     ]
 );
 
@@ -605,9 +608,10 @@ return ECSConfig::configure()
             'method:new',
             'destruct',
             'magic',
-            //            'method',
+
             'method_abstract',
             'method_static',
+
             'method_public',
             'method_protected',
             'method_private',
