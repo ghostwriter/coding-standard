@@ -40,8 +40,9 @@
         </include>
     </source>
     <testsuites>
-        <testsuite name="Test Suite">
+        <testsuite name="default">
             <directory>tests</directory>
+            <exclude>tests/Fixture</exclude>
         </testsuite>
     </testsuites>
 </phpunit>
