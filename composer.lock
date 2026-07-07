@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3722816ae8188329682c6db9c8b7eb72",
+    "content-hash": "f1d5cbb30bce89f00c720590e98f36e4",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -5435,16 +5435,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "12.2.8",
+            "version": "12.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "49dc7c0669b97c7a36f63411635f48eedc140eb4"
+                "reference": "442c06d0a952a5dbffba181cff969b91fdc9bada"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/49dc7c0669b97c7a36f63411635f48eedc140eb4",
-                "reference": "49dc7c0669b97c7a36f63411635f48eedc140eb4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/442c06d0a952a5dbffba181cff969b91fdc9bada",
+                "reference": "442c06d0a952a5dbffba181cff969b91fdc9bada",
                 "shasum": ""
             },
             "require": {
@@ -5512,7 +5512,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.2.8"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/12.2.9"
             },
             "funding": [
                 {
@@ -5536,7 +5536,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-30T05:58:18+00:00"
+            "time": "2025-07-31T07:12:16+00:00"
         },
         {
             "name": "psr/clock",
@@ -7516,7 +7516,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
