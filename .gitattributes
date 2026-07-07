@@ -24,8 +24,6 @@
 /.github export-ignore
 /.gitignore export-ignore
 /composer.lock export-ignore
-/ecs.php export-ignore
 /package-lock.json export-ignore
 /phive.xml export-ignore
-/rector.php export-ignore
 /tests export-ignore
