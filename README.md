@@ -16,57 +16,26 @@ composer require ghostwriter/coding-standard:dev-main --dev
 ## Usage
 
 ```sh
+vendor/ghostwriter/coding-standard/tools/composer
 vendor/ghostwriter/coding-standard/tools/composer-normalize
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/composer-require-checker
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/composer-unused
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/deptrac
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/infection
-```
-
-```sh
-vendor/ghostwriter/coding-standard/tools/php-cs-fixer
-```
-
-```sh
+vendor/ghostwriter/coding-standard/tools/phive
 vendor/ghostwriter/coding-standard/tools/php-fuzzer
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/phpbench
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/phpcbf
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/phpcs
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/phpunit
-```
-
-```sh
 vendor/ghostwriter/coding-standard/tools/psalm
 ```
 
 ## Credits
 
-- [Nathanael Esayeas](https://github.com/ghostwriter)
-- [All Contributors](https://github.com/ghostwriter/coding-standard/contributors)
+- [`Nathanael Esayeas`](https://github.com/ghostwriter)
+- [`phive`](https://github.com/phar-io/phive)
+- [`All Contributors`](https://github.com/ghostwriter/coding-standard/contributors)
 
 ## License
 
