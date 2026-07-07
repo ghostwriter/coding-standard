@@ -40,7 +40,7 @@
         "slevomat/coding-standard": "^8.13.1",
         "squizlabs/php_codesniffer": "^3.7.2",
         "symplify/easy-coding-standard": "^11.5.0",
-        "vimeo/psalm": "^5.13.0"
+        "vimeo/psalm": "^5.13.1"
     },
     "config": {
         "allow-plugins": {
