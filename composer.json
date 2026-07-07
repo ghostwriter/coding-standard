@@ -45,9 +45,6 @@
         "tools/phpunit"
     ],
     "config": {
-        "classmap-authoritative": true,
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
         "sort-packages": true
     },
     "scripts": {
@@ -62,7 +59,7 @@
         "unused": "tools/composer-unused",
         "p:i": "phive install --copy --force-accept-unsigned ",
         "p:u": [
-            "phive update",
+            "phive update --force-accept-unsigned",
             "phive purge"
         ],
         "phpunit": "tools/phpunit"
