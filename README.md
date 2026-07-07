@@ -34,6 +34,14 @@ composer ghostwriter:psalm:security            Use Psalm to analyze the project'
 - [`phive`](https://github.com/phar-io/phive)
 - [`All Contributors`](https://github.com/ghostwriter/coding-standard/contributors)
 
-## License
+### Changelog
 
-The BSD-3-Clause. Please see [License File](./LICENSE) for more information.
+Please see [CHANGELOG.md](./CHANGELOG.md) for more information on what has changed recently.
+
+### License
+
+Please see [LICENSE](./LICENSE) for more information on the license that applies to this project.
+
+### Security
+
+Please see [SECURITY.md](./SECURITY.md) for more information on security disclosure process.
