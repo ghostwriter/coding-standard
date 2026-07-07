@@ -6,6 +6,8 @@ use Symplify\EasyCodingStandard\Config\ECSConfig;
 
 $workingDirectory = \getcwd() ?: __DIR__;
 
+require_once $workingDirectory . '/vendor/autoload.php';
+
 return ECSConfig::configure()->withSets(
     \array_filter(
         [
