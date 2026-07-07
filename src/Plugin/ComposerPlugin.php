@@ -416,7 +416,8 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-                $constraintPrefix = '~';
+//                $constraintPrefix = '~';
+                $constraintPrefix = '^';
 //                    str_starts_with($version, '~') ? '~' : '^';
 
                 $lockVersionWithPrefix = $constraintPrefix . $lockVersion;
