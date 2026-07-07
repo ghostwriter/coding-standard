@@ -56,8 +56,7 @@
     "bin": [
         "tools/infection",
         "tools/phive",
-        "tools/phpactor",
-        "tools/psalm"
+        "tools/phpactor"
     ],
     "config": {
         "allow-plugins": {
