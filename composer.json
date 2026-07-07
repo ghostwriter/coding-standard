@@ -35,11 +35,9 @@
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
         "composer/composer": "^2.7.2",
-        "mockery/mockery": "^1.6.11 || ^2.0.0",
-        "phpunit/phpunit": "^10.5.17 || ^11.0.9 || ^12.0.0",
-        "vimeo/psalm": "^5.23.1 || ^6.0.0"
+        "mockery/mockery": "^1.6.11",
+        "phpunit/phpunit": "^11.1.2"
     },
-    "require-dev": {},
     "suggest": {
         "ghostwriter/mockery-rector": "Mockery Rector may be required to run the plugin",
         "ghostwriter/psalm-plugin": "Psalm Plugin may be required to run the plugin",
