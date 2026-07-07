@@ -34,11 +34,17 @@
         "friendsofphp/php-cs-fixer": "^3.13",
         "slevomat/coding-standard": "^8.8",
         "squizlabs/php_codesniffer": "^3.7",
-        "symplify/easy-coding-standard": "11.2.2.72"
+        "symplify/easy-coding-standard": "^11.2",
+        "infection/infection": "^0.26",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.18",
+        "rector/rector": "^0.15",
+        "vimeo/psalm": "^5.4"
     },
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "infection/extension-installer": true
         },
         "classmap-authoritative": true,
         "optimize-autoloader": true,
