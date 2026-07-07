@@ -74,7 +74,7 @@
     "require-dev": {
         "mockery/mockery": "~1.6.12",
         "nikic/php-parser": "~5.4.0",
-        "phpunit/phpunit": "~12.1.5",
+        "phpunit/phpunit": "~12.1.6",
         "vimeo/psalm": "~6.10.3 || ~6.11.0"
     },
     "conflict": {
