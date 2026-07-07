@@ -63,7 +63,7 @@
         "ext-zlib": "*",
         "composer-plugin-api": "~2.6.0",
         "composer-runtime-api": "~2.2.2",
-        "composer/composer": "~2.8.11",
+        "composer/composer": "~2.8.12",
         "composer/semver": "~3.4.4",
         "ghostwriter/case-converter": "~2.1.0",
         "ghostwriter/clock": "~3.0.1",
