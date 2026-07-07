@@ -104,96 +104,6 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
         ];
     }
 
-    public function onCommand(): void
-    {
-        // echo 'The COMMAND event occurs as a command begins', PHP_EOL;
-    }
-
-    public function onInit(): void
-    {
-        // echo 'The INIT event occurs after a Composer instance is done being initialized', PHP_EOL;
-    }
-
-    public function onPostArchiveCmd(): void
-    {
-        // echo 'The post-archive-cmd event occurs after the archive command has been executed', PHP_EOL;
-    }
-
-    public function onPostAutoloadDump(): void
-    {
-        // echo 'The post-autoload-dump event occurs after the autoload file has been generated', PHP_EOL;
-    }
-
-    public function onPostCreateProjectCmd(): void
-    {
-        // echo 'The POST_CREATE_PROJECT_CMD event occurs after the create-project command has been executed', PHP_EOL;
-    }
-
-    public function onPostFileDownload(): void
-    {
-        // echo 'The POST_FILE_DOWNLOAD event occurs after downloading a package dist file', PHP_EOL;
-    }
-
-    public function onPostInstallCmd(): void
-    {
-        // echo 'The post-install-cmd event occurs after the install command has been executed', PHP_EOL;
-    }
-
-    public function onPostRootPackageInstall(): void
-    {
-        // echo 'The POST_ROOT_PACKAGE_INSTALL event occurs after the root package has been installed', PHP_EOL;
-    }
-
-    public function onPostStatusCmd(): void
-    {
-        // echo 'The post-status-cmd event occurs after the status command has been executed', PHP_EOL;
-    }
-
-    public function onPostUpdateCmd(): void
-    {
-        // echo 'The post-update-cmd event occurs after the update command has been executed', PHP_EOL;
-    }
-
-    public function onPreArchiveCmd(): void
-    {
-        // echo 'The PRE_ARCHIVE_CMD event occurs before the update command is executed', PHP_EOL;
-    }
-
-    public function onPreAutoloadDump(): void
-    {
-        // echo 'The PRE_AUTOLOAD_DUMP event occurs before the autoload file is generated', PHP_EOL;
-    }
-
-    public function onPreCommandRun(): void
-    {
-        // echo 'The PRE_COMMAND_RUN event occurs before a command is executed and lets you modify the input arguments/options', PHP_EOL;
-    }
-
-    public function onPreFileDownload(): void
-    {
-        // echo 'The PRE_FILE_DOWNLOAD event occurs before downloading a file', PHP_EOL;
-    }
-
-    public function onPreInstallCmd(): void
-    {
-        // echo 'The PRE_INSTALL_CMD event occurs before the install command is executed', PHP_EOL;
-    }
-
-    public function onPrePoolCreate(): void
-    {
-        // echo 'The PRE_POOL_CREATE event occurs before the Pool of packages is created, and lets you filter the list of packages which is going to enter the Solver', PHP_EOL;
-    }
-
-    public function onPreStatusCmd(): void
-    {
-        // echo 'The PRE_STATUS_CMD event occurs before the status command is executed', PHP_EOL;
-    }
-
-    public function onPreUpdateCmd(): void
-    {
-        // echo 'The PRE_UPDATE_CMD event occurs before the update command is executed', PHP_EOL;
-    }
-
     public function uninstall(Composer $composer, IOInterface $io): void
     {
         $io->write('Uninstalling the plugin... ' . self::class);
@@ -209,7 +119,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
             return;
         }
 
-        self::log('Bumping package versions...', $io);
+        self::log('[*]Bumping package versions...', $io);
 
         $composer = $composerEvent->getComposer();
 
@@ -244,42 +154,8 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
     public static function getSubscribedEvents(): array
     {
         return [
-            /** The INIT event occurs after a Composer instance is done being initialized */
-            PluginEvents::INIT => [['onInit']],
-            /** The COMMAND event occurs as a command begins */
-            PluginEvents::COMMAND => [['onCommand']],
-            /** The PRE_FILE_DOWNLOAD event occurs before downloading a file */
-            PluginEvents::PRE_FILE_DOWNLOAD => [['onPreFileDownload']],
-            /** The POST_FILE_DOWNLOAD event occurs after downloading a package dist file */
-            PluginEvents::POST_FILE_DOWNLOAD => [['onPostFileDownload']],
-            /** The PRE_COMMAND_RUN event occurs before a command is executed and lets you modify the input arguments/options */
-            PluginEvents::PRE_COMMAND_RUN => [['onPreCommandRun']],
-            /** The PRE_POOL_CREATE event occurs before the Pool of packages is created, and lets you filter the list of packages which is going to enter the Solver */
-            PluginEvents::PRE_POOL_CREATE => [['onPrePoolCreate']],
-            /** The POST_ROOT_PACKAGE_INSTALL event occurs after the root package has been installed */
-            ScriptEvents::POST_ROOT_PACKAGE_INSTALL => [['onPostRootPackageInstall']],
-            /** The POST_CREATE_PROJECT_CMD event occurs after the create-project command has been executed */
-            ScriptEvents::POST_CREATE_PROJECT_CMD => [['onPostCreateProjectCmd']],
             /** The post-autoload-dump event occurs after the autoload file has been generated */
-            ScriptEvents::POST_AUTOLOAD_DUMP => [['onPostAutoloadDump']],
-            /** The PRE_ARCHIVE_CMD event occurs before the update command is executed */
-            ScriptEvents::PRE_ARCHIVE_CMD => [['onPreArchiveCmd']],
-            /** The POST_ARCHIVE_CMD event occurs after the status command is executed */
-            ScriptEvents::POST_ARCHIVE_CMD => [['onPostArchiveCmd']],
-            /** The PRE_INSTALL_CMD event occurs before the install command is executed */
-            ScriptEvents::PRE_INSTALL_CMD => [['onPreInstallCmd']],
-            /** The POST_INSTALL_CMD event occurs after the install command is executed */
-            ScriptEvents::POST_INSTALL_CMD => [['onPostInstallCmd'], ['bump']],
-            /** The PRE_UPDATE_CMD event occurs before the update command is executed */
-            ScriptEvents::PRE_UPDATE_CMD => [['onPreUpdateCmd']],
-            /** The POST_UPDATE_CMD event occurs after the update command is executed */
-            ScriptEvents::POST_UPDATE_CMD => [['onPostUpdateCmd'], ['bump']],
-            /** The PRE_STATUS_CMD event occurs before the status command is executed */
-            ScriptEvents::PRE_STATUS_CMD => [['onPreStatusCmd']],
-            /** The POST_STATUS_CMD event occurs after the status command is executed */
-            ScriptEvents::POST_STATUS_CMD => [['onPostStatusCmd']],
-            /** The PRE_AUTOLOAD_DUMP event occurs before the autoload file is generated */
-            ScriptEvents::PRE_AUTOLOAD_DUMP => [['onPreAutoloadDump']],
+            ScriptEvents::POST_AUTOLOAD_DUMP => [[self::class, 'bump']],
         ];
     }
 
