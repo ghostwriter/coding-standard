@@ -125,51 +125,16 @@
         "ghostwriter": {
             "conflict": {
                 "enabled": true,
-                "vendors": [
-                    "250",
-                    "acmephp",
-                    "asm89",
-                    "async",
-                    "bilge",
-                    "binarykitten",
-                    "codelegance",
-                    "connectors",
-                    "doctrine",
-                    "ezsystems",
-                    "growthbook",
-                    "jdorn",
-                    "joomla",
-                    "jwage",
-                    "kazist",
-                    "khanamiryan",
-                    "larastan",
-                    "nunomaduro",
-                    "object-calisthenics",
-                    "ocramius",
-                    "pegasus",
-                    "pestphp",
-                    "phptal",
-                    "phptype",
-                    "pimcore",
-                    "provider",
-                    "roave",
-                    "scriptfusion",
-                    "silverstripe",
-                    "socialiteproviders",
-                    "spatie",
-                    "tga",
-                    "topthink",
-                    "yiisoft",
-                    "yuan1994",
-                    "zendframework",
-                    "zetacomponents",
-                    "zf-commons"
-                ]
+                "vendors": ["250", "acmephp", "asm89", "async", "bilge", "binarykitten", "codelegance", "connectors", "doctrine", "ezsystems", "growthbook", "jdorn", "joomla", "jwage", "kazist", "khanamiryan", "larastan", "nunomaduro", "object-calisthenics", "ocramius", "pegasus", "pestphp", "phptal", "phptype", "pimcore", "provider", "roave", "scriptfusion", "silverstripe", "socialiteproviders", "spatie", "tga", "topthink", "yiisoft", "yuan1994", "zendframework", "zetacomponents", "zf-commons"]
             }
         },
         "plugin-modifies-downloads": false,
         "plugin-modifies-install-path": false,
-        "plugin-optional": false
+        "plugin-optional": false,
+        "thanks": {
+            "url": "https://github.com/ghostwriter/coding-standard",
+            "name": "ghostwriter/coding-standard"
+        }
     },
     "scripts": {
         "bin_composer": "tools/phar/composer",
