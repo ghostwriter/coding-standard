@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ebd4ca971a37ee06d8e3fdf31f1806f",
+    "content-hash": "c6416fa49eea9f80072a136607c42ed9",
     "packages": [
         {
             "name": "amphp/amp",
@@ -6470,12 +6470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "851ed6447239513d9ebfb28c398ad8b89f3b2626"
+                "reference": "cdc2706be59eef226f425983c93b910c964b9774"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/851ed6447239513d9ebfb28c398ad8b89f3b2626",
-                "reference": "851ed6447239513d9ebfb28c398ad8b89f3b2626",
+                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/cdc2706be59eef226f425983c93b910c964b9774",
+                "reference": "cdc2706be59eef226f425983c93b910c964b9774",
                 "shasum": ""
             },
             "require": {
@@ -6524,7 +6524,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-28T16:40:12+00:00"
+            "time": "2025-03-29T03:26:44+00:00"
         }
     ],
     "aliases": [],
