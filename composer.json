@@ -39,7 +39,7 @@
         "#StopGenocide"
     ],
     "require": {
-        "php": "~8.4.0 || ~8.5.0",
+        "php": "~8.4.0 || ~8.5.0 || ~8.6.0",
         "ext-apcu": "*",
         "ext-bcmath": "*",
         "ext-ctype": "*",
@@ -128,10 +128,28 @@
         "platform": {
             "php": "8.4.999"
         },
-        "preferred-install": "dist",
+        "policy": {
+            "advisories": {
+                "block": true,
+                "audit": "fail"
+            },
+            "malware": {
+                "block": true,
+                "block-scope": "all",
+                "audit": "fail"
+            },
+            "abandoned": {
+                "block": true,
+                "audit": "fail"
+            }
+        },
+        "preferred-install": {
+            "*": "dist"
+        },
         "prepend-autoloader": true,
         "process-timeout": 5000,
         "sort-packages": true,
+        "strict-psr-autoloader": true,
         "use-parent-dir": false
     },
     "extra": {
