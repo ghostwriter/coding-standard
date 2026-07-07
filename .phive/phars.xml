@@ -10,5 +10,5 @@
   <phar name="phpcbf" version="^3.8.1" installed="3.8.1" location="./tools/phpcbf" copy="true"/>
   <phar name="phpcs" version="^3.8.1" installed="3.8.1" location="./tools/phpcs" copy="true"/>
   <phar name="phpunit" version="^11.0.3" installed="11.0.3" location="./tools/phpunit" copy="true"/>
-  <phar name="psalm" version="5.22.0" installed="5.22.0" location="./tools/psalm" copy="true"/>
+  <phar name="psalm" version="5.22.1" installed="5.22.1" location="./tools/psalm" copy="true"/>
 </phive>
