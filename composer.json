@@ -37,7 +37,7 @@
         "#StandWithUkraine"
     ],
     "require": {
-        "php": "^8.2",
+        "php": "^8.4",
         "ext-ctype": "*",
         "ext-curl": "*",
         "ext-dom": "*",
@@ -63,11 +63,11 @@
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
         "composer/semver": "^3.4.3",
-        "mockery/mockery": "^1.6.12",
         "infection/infection": "^0.29.14",
-        "vimeo/psalm": "^6.8.8",
+        "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^11 || ^12",
-        "symfony/var-dumper": "^7.2.3"
+        "symfony/var-dumper": "^7.2.3",
+        "vimeo/psalm": "^6.8.8"
     },
     "require-dev": {
         "composer/composer": "^2.8.6",
