@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\VersionControl\GitMergeConflictSniff;
 use PhpCsFixer\Fixer\Alias\MbStrFunctionsFixer;
 use PhpCsFixer\Fixer\Alias\ModernizeStrposFixer;
@@ -11,7 +10,6 @@ use PhpCsFixer\Fixer\Alias\RandomApiMigrationFixer;
 use PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer;
 use PhpCsFixer\Fixer\Basic\PsrAutoloadingFixer;
 use PhpCsFixer\Fixer\Casing\ConstantCaseFixer;
-use PhpCsFixer\Fixer\Operator\ConcatSpaceFixer;
 use PhpCsFixer\Fixer\Casing\LowercaseKeywordsFixer;
 use PhpCsFixer\Fixer\Casing\LowercaseStaticReferenceFixer;
 use PhpCsFixer\Fixer\Casing\MagicConstantCasingFixer;
@@ -31,6 +29,7 @@ use PhpCsFixer\Fixer\ConstantNotation\NativeConstantInvocationFixer;
 use PhpCsFixer\Fixer\ControlStructure\ElseifFixer;
 use PhpCsFixer\Fixer\ControlStructure\NoSuperfluousElseifFixer;
 use PhpCsFixer\Fixer\ControlStructure\SimplifiedIfReturnFixer;
+use PhpCsFixer\Fixer\FunctionNotation\MethodArgumentSpaceFixer;
 use PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer;
 use PhpCsFixer\Fixer\FunctionNotation\ReturnTypeDeclarationFixer;
 use PhpCsFixer\Fixer\FunctionNotation\StaticLambdaFixer;
@@ -47,6 +46,7 @@ use PhpCsFixer\Fixer\Import\SingleLineAfterImportsFixer;
 use PhpCsFixer\Fixer\LanguageConstruct\GetClassToClassKeywordFixer;
 use PhpCsFixer\Fixer\Naming\NoHomoglyphNamesFixer;
 use PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer;
+use PhpCsFixer\Fixer\Operator\ConcatSpaceFixer;
 use PhpCsFixer\Fixer\Phpdoc\GeneralPhpdocAnnotationRemoveFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAnnotationWithoutDotFixer;
@@ -235,15 +235,6 @@ return ECSConfig::configure()
     ->withParallel()
     ->withPaths($existingPaths)
     ->withPhpCsFixerSets(
-        doctrineAnnotation: true,
-        per: true,
-        perCS: true,
-        perCS10: true,
-        perCS10Risky: true,
-        perCS20: true,
-        perCS20Risky: true,
-        perCSRisky: true,
-        perRisky: true,
         php54Migration: true,
         php56MigrationRisky: true,
         php70Migration: true,
@@ -273,14 +264,6 @@ return ECSConfig::configure()
         phpunit75MigrationRisky: true,
         phpunit84MigrationRisky: true,
         phpunit100MigrationRisky: true,
-        psr1: true,
-        psr2: true,
-        psr12: true,
-        psr12Risky: true,
-        phpCsFixer: false,
-        phpCsFixerRisky: false,
-        symfony: false,
-        symfonyRisky: false
     )
     ->withPreparedSets(
         psr12: true,
