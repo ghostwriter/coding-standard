@@ -24,10 +24,10 @@ final class InfectionRunCommand extends AbstractCommand
             return 1;
         }
 
-        $fromInfectionConfigPath = dirname(__DIR__) . '/infection.json5.dist';
+        $fromInfectionConfigPath = dirname(__DIR__, 3) . '/infection.json5.dist';
 
         if (!file_exists($fromInfectionConfigPath)) {
-            $output->writeln('The Infection stub configuration file does not exist.');
+            $output->writeln('The Infection stub configuration file does not exist. - ' . $fromInfectionConfigPath);
 
             return 1;
         }
@@ -35,7 +35,7 @@ final class InfectionRunCommand extends AbstractCommand
         $toInfectionConfigPath = $currentWorkingDirectory . '/infection.json5.dist';
 
         if (!copy($fromInfectionConfigPath, $toInfectionConfigPath)) {
-            $output->writeln('Unable to copy the Infection stub configuration file.');
+            $output->writeln('Unable to copy the Infection stub configuration file. - ' . $toInfectionConfigPath);
 
             return 1;
         }
