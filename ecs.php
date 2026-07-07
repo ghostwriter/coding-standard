@@ -30,22 +30,19 @@ use PhpCsFixer\Fixer\FunctionNotation\StaticLambdaFixer;
 use PhpCsFixer\Fixer\FunctionNotation\UseArrowFunctionsFixer;
 use PhpCsFixer\Fixer\Import\FullyQualifiedStrictTypesFixer;
 use PhpCsFixer\Fixer\Import\GlobalNamespaceImportFixer;
-use PhpCsFixer\Fixer\Import\GroupImportFixer;
 use PhpCsFixer\Fixer\Import\NoLeadingImportSlashFixer;
+use PhpCsFixer\Fixer\Import\NoUnneededImportAliasFixer;
 use PhpCsFixer\Fixer\Import\NoUnusedImportsFixer;
 use PhpCsFixer\Fixer\Import\OrderedImportsFixer;
 use PhpCsFixer\Fixer\Import\SingleImportPerStatementFixer;
+use PhpCsFixer\Fixer\Import\SingleLineAfterImportsFixer;
 use PhpCsFixer\Fixer\LanguageConstruct\GetClassToClassKeywordFixer;
 use PhpCsFixer\Fixer\Naming\NoHomoglyphNamesFixer;
-use PhpCsFixer\Fixer\Operator\BinaryOperatorSpacesFixer;
-use PhpCsFixer\Fixer\Phpdoc\GeneralPhpdocAnnotationRemoveFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAnnotationWithoutDotFixer;
-use PhpCsFixer\Fixer\Phpdoc\PhpdocLineSpanFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocOrderFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocSeparationFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocSummaryFixer;
-use PhpCsFixer\Fixer\Phpdoc\PhpdocTrimFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocTypesOrderFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitConstructFixer;
 use PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer;
@@ -75,6 +72,7 @@ use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
 
 return static function (ECSConfig $ecsConfig): void {
     $directory = getcwd();
+
     $ecsConfig->cacheDirectory($directory . '/.cache/ecs');
     $ecsConfig->lineEnding("\n");
     $ecsConfig->parallel();
@@ -94,15 +92,7 @@ return static function (ECSConfig $ecsConfig): void {
 
     $ecsConfig->paths([$directory . '/ecs.php', $directory . '/README.md']);
 
-    $ecsConfig->skip([
-        $directory . '/tests/Fixture/*',
-        $directory . '/vendor/*',
-        GroupImportFixer::class,
-        BinaryOperatorSpacesFixer::class,
-        GeneralPhpdocAnnotationRemoveFixer::class,
-        PhpdocLineSpanFixer::class,
-        PhpdocTrimFixer::class,
-    ]);
+    $ecsConfig->skip([$directory . '/tests/Fixture/*', $directory . '/vendor/*']);
 
     $ecsConfig->rules([
         DeclareStrictTypesFixer::class,
@@ -123,7 +113,13 @@ return static function (ECSConfig $ecsConfig): void {
         NoLeadingImportSlashFixer::class,
         NoSinglelineWhitespaceBeforeSemicolonsFixer::class,
         NoSuperfluousElseifFixer::class,
+        NoUnneededImportAliasFixer::class,
         NoUnusedImportsFixer::class,
+        PhpdocAnnotationWithoutDotFixer::class,
+        PhpdocOrderFixer::class,
+        PhpdocSeparationFixer::class,
+        PhpdocSummaryFixer::class,
+        PhpdocTypesOrderFixer::class,
         PhpUnitConstructFixer::class,
         PhpUnitDedicateAssertFixer::class,
         PhpUnitDedicateAssertInternalTypeFixer::class,
@@ -140,11 +136,6 @@ return static function (ECSConfig $ecsConfig): void {
         PhpUnitStrictFixer::class,
         PhpUnitTestAnnotationFixer::class,
         PhpUnitTestClassRequiresCoversFixer::class,
-        PhpdocAnnotationWithoutDotFixer::class,
-        PhpdocOrderFixer::class,
-        PhpdocSeparationFixer::class,
-        PhpdocSummaryFixer::class,
-        PhpdocTypesOrderFixer::class,
         ProtectedToPrivateFixer::class,
         RandomApiMigrationFixer::class,
         ReturnTypeDeclarationFixer::class,
@@ -154,6 +145,7 @@ return static function (ECSConfig $ecsConfig): void {
         SimplifiedIfReturnFixer::class,
         SingleClassElementPerStatementFixer::class,
         SingleImportPerStatementFixer::class,
+        SingleLineAfterImportsFixer::class,
         StaticLambdaFixer::class,
         StrictComparisonFixer::class,
         StrictParamFixer::class,
