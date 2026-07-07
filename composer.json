@@ -75,7 +75,7 @@
         "ghostwriter/option": "^2.0.0",
         "ghostwriter/result": "^2.0.0",
         "ghostwriter/shell": "^0.1.0",
-        "symfony/console": "^7.3.3"
+        "symfony/console": "^7.3.4"
     },
     "require-dev": {
         "ext-xdebug": "*",
