@@ -861,12 +861,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/github-cli.git",
-                "reference": "fb5580ed6cf3820d73c7b02bae5bc6f2137c3284"
+                "reference": "90434e0e284a7c126e3f3d55e2b2e1bcab8e1036"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/github-cli/zipball/fb5580ed6cf3820d73c7b02bae5bc6f2137c3284",
-                "reference": "fb5580ed6cf3820d73c7b02bae5bc6f2137c3284",
+                "url": "https://api.github.com/repos/ghostwriter/github-cli/zipball/90434e0e284a7c126e3f3d55e2b2e1bcab8e1036",
+                "reference": "90434e0e284a7c126e3f3d55e2b2e1bcab8e1036",
                 "shasum": ""
             },
             "require": {
@@ -932,7 +932,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-05T09:11:43+00:00"
+            "time": "2026-01-05T11:41:21+00:00"
         },
         {
             "name": "ghostwriter/shell",
