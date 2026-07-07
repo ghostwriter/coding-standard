@@ -59,6 +59,7 @@
         "cs-check": "vendor/bin/ecs check --clear-cache || true",
         "cs-fix": [
             "vendor/bin/ecs check --fix --clear-cache"
-        ]
+        ],
+        "phpunit": "true"
     }
 }
