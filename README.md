@@ -20,6 +20,8 @@ composer require ghostwriter/coding-standard:dev-main --dev
 - Create a `ecs.php` configuration file.
 
 ``` php
+<?php
+
 declare(strict_types=1);
 
 use Symplify\EasyCodingStandard\Config\ECSConfig;
@@ -31,6 +33,24 @@ return static function (ECSConfig $ecsConfig): void {
 };
 ```
 
+- Create a `rector.php` configuration file.
+```php
+<?php
+
+declare(strict_types=1);
+
+use Rector\Config\RectorConfig;
+use Rector\Core\ValueObject\PhpVersion;
+
+return static function (RectorConfig $rectorConfig): void {
+    $rectorConfig->import(__DIR__ . '/vendor/ghostwriter/coding-standard/rector.php');
+    $rectorConfig->phpVersion(PhpVersion::PHP_81);
+
+    $rectorConfig->paths([__DIR__ . '/src', __DIR__ . '/tests', __DIR__ . '/ecs.php', __DIR__ . '/rector.php']);
+    $rectorConfig->skip([__DIR__ . '*/tests/Fixture/*', __DIR__ . '*/vendor/*']);
+};
+```
+
 ## Command
 
 ``` bash
@@ -39,6 +59,10 @@ vendor/bin/ecs
 
 ``` bash
 vendor/bin/ecs --fix
+```
+
+``` bash
+vendor/bin/rector
 ```
 
 ## Changelog
