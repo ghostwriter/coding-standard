@@ -31,8 +31,7 @@
     ],
     "require": {
         "php": ">=8.1",
-        "phpunit/phpunit": "^10.3",
-        "vimeo/psalm": "^5.15"
+        "phpunit/phpunit": "^10.4"
     },
     "bin": [
         "tools/composer-normalize",
@@ -43,7 +42,8 @@
         "tools/php-fuzzer",
         "tools/phpbench",
         "tools/phpcbf",
-        "tools/phpcs"
+        "tools/phpcs",
+        "tools/psalm"
     ],
     "config": {
         "sort-packages": true
