@@ -33,6 +33,16 @@
         "php": ">=8.1",
         "phpunit/phpunit": "^10.5.3"
     },
+    "autoload": {
+        "psr-4": {
+            "Ghostwriter\\CodingStandard\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ghostwriter\\CodingStandardTests\\": "tests"
+        }
+    },
     "bin": [
         "tools/composer-normalize",
         "tools/composer-require-checker",
