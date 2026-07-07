@@ -61,7 +61,10 @@
             "tools/php-cs-fixer fix --diff --using-cache=no --rules=@PER src",
             "tools/phpcbf src"
         ],
-        "p:u": "phive update",
+        "p:u": [
+            "phive update",
+            "phive purge"
+        ],
         "p:i": "phive install --force-accept-unsigned -c",
         "phpunit": "true"
     }
