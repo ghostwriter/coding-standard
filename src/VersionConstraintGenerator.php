@@ -18,17 +18,17 @@ use function str_starts_with;
 
 final class VersionConstraintGenerator
 {
-    public static function generateConstraint(string $constraint, string $newVersion): string
+    public static function generateConstraint(string $constraint, string $version): string
     {
         $constraint = mb_trim($constraint);
 
-        $newVersion = self::normalize($newVersion);
+        $version = self::normalize($version);
 
-        if (! self::isSemver($newVersion)) {
+        if (! self::isSemver($version)) {
             return $constraint;
         }
 
-        [$newMajor, $newMinor, $newPatch] = self::extractSemver($newVersion);
+        [$newMajor, $newMinor, $newPatch] = self::extractSemver($version);
         $newConstraint = sprintf('~%d.%d.%d', $newMajor, $newMinor, $newPatch);
 
         if (0 === $newMajor && 0 === $newMinor && 0 === $newPatch) {
@@ -40,27 +40,48 @@ final class VersionConstraintGenerator
         }
 
         $newMinorVersion = sprintf('%d.%d', $newMajor, $newMinor);
+        $updatedConstraints = [];
+        $semverConstraints = [];
+
         $constraints = array_map('trim', explode('||', $constraint));
-
-        foreach ($constraints as $index => $packageConstraint) {
+        foreach ($constraints as $packageConstraint) {
             if (self::isSkippable($packageConstraint)) {
+                $updatedConstraints[] = $packageConstraint;
                 continue;
             }
 
-            if (self::extractMinorVersion($packageConstraint) !== $newMinorVersion) {
+            if (self::extractMinorVersion($packageConstraint) === $newMinorVersion) {
                 continue;
             }
 
-            $constraints[$index] = $newConstraint;
-
-            return implode(' || ', $constraints);
+            $semverConstraints[] = $packageConstraint;
         }
 
-        $constraints[] = $newConstraint;
+        // Add the new constraint
+        $semverConstraints[] = $newConstraint;
 
-        return implode(' || ', $constraints);
+        // Extract semver parts and sort constraints to keep the latest three
+        usort(
+            $semverConstraints,
+            static fn(string $left, string $right): int => version_compare(
+                self::extractSemverParts($left),
+                self::extractSemverParts($right),
+            )
+        );
+
+        $semverConstraints = array_slice($semverConstraints, -3);
+
+        // Merge non-semver and semver constraints
+        $updatedConstraints = array_merge($updatedConstraints, $semverConstraints);
+
+        return implode(' || ', $updatedConstraints);
     }
 
+    private static function extractSemverParts(string $constraint): string
+    {
+        preg_match('#(\d+\.\d+\.\d+)#', $constraint, $matches);
+        return $matches[1] ?? '0.0.0';
+    }
     private static function extractMinorVersion(string $constraint): string
     {
         preg_match('#(\d+(?:\.[*|\d]+)?)#', $constraint, $matches);
