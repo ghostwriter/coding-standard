@@ -1,9 +1,10 @@
 # Coding Standard
 
-[![GitHub Sponsors](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/coding-standard&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
 [![Automation](https://github.com/ghostwriter/coding-standard/actions/workflows/automation.yml/badge.svg)](https://github.com/ghostwriter/coding-standard/actions/workflows/automation.yml)
-[![Supported PHP Version](https://badgen.net/packagist/php/ghostwriter/coding-standard?color=8892bf)](https://www.php.net/supported-versions)
-[![Downloads](https://badgen.net/packagist/dt/ghostwriter/coding-standard?color=blue)](https://packagist.org/packages/ghostwriter/coding-standard)
+[![PHP Version](https://badgen.net/packagist/php/ghostwriter/coding-standard?color=777BB4)](https://www.php.net/supported-versions)
+[![Packagist Downloads](https://badgen.net/packagist/dt/ghostwriter/coding-standard?color=F28D1A)](https://packagist.org/packages/ghostwriter/coding-standard)
+[![PayPal](https://img.shields.io/badge/paypal-@codepoet-0079C1?logo=paypal&logoColor=002991)](https://paypal.me/codepoet)
+[![Sponsors via GitHub](https://img.shields.io/github/sponsors/ghostwriter?label=Sponsor+@ghostwriter/coding-standard&logo=GitHub+Sponsors)](https://github.com/sponsors/ghostwriter)
 
 A small set of tools, rules, and helper scripts designed to make it easy to apply and enforce modern PHP coding standards across projects. 
 
