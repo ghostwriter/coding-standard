@@ -37,7 +37,7 @@
         "#StandWithUkraine"
     ],
     "require": {
-        "php": "^8.4",
+        "php": "^8.2",
         "ext-ctype": "*",
         "ext-curl": "*",
         "ext-dom": "*",
@@ -60,23 +60,24 @@
         "ext-xml": "*",
         "ext-xmlwriter": "*",
         "ext-zlib": "*",
-        "composer-plugin-api": "^2.6.0",
-        "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.8 <3.0",
-        "composer/semver": "^3.0 <4.0",
-        "infection/infection": "^0.29 <1.0",
-        "mockery/mockery": "^1.6 <2.0",
-        "phpunit/phpunit": "^12.0.8",
-        "symfony/var-dumper": "^7.0 <8.0",
-        "vimeo/psalm": "^6.9 <7.0"
+        "composer-plugin-api": "~2.6.0",
+        "composer-runtime-api": "~2.2.2",
+        "composer/composer": "~2.8.6",
+        "composer/semver": "~3.4.3",
+        "infection/infection": "~0.29.14",
+        "mockery/mockery": "~1.6.12",
+        "phpunit/phpunit": "~11.5.14 || ~12.0.9",
+        "symfony/var-dumper": "~7.2.3",
+        "vimeo/psalm": "~6.9.1"
     },
     "require-dev": {
-        "doctrine/inflector": "^2.0.10",
-        "ghostwriter/case-converter": "^2.0.0",
-        "ghostwriter/container": "^5.0.1",
-        "ghostwriter/filesystem": "^0.1.1",
-        "ghostwriter/json": "^3.0.0",
-        "ghostwriter/shell": "^0.1.0"
+        "doctrine/inflector": "~2.0.10",
+        "ghostwriter/case-converter": "~2.0.0",
+        "ghostwriter/container": "~5.0.1",
+        "ghostwriter/event-dispatcher": "~5.0.3",
+        "ghostwriter/filesystem": "~0.1.1",
+        "ghostwriter/json": "~3.0.0",
+        "ghostwriter/shell": "~0.1.0"
     },
     "conflict": {
         "pestphp/pest": "*",
