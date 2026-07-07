@@ -8,3 +8,4 @@
 /.gitignore export-ignore
 /composer.lock export-ignore
 /phive.xml export-ignore
+/tests export-ignore
