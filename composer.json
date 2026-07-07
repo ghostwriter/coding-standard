@@ -86,8 +86,8 @@
         "ext-zlib": "*",
         "infection/infection": "^0.32.6",
         "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^13.0.5",
-        "symfony/var-dumper": "^8.0.6"
+        "phpunit/phpunit": "^11.5 || ^12.5 || ^13.0",
+        "symfony/var-dumper": "^7.0 || ^8.0"
     },
     "conflict": {
         "pestphp/pest": "*"
