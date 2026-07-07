@@ -151,6 +151,7 @@ use PhpCsFixer\Fixer\Phpdoc\AlignMultilineCommentFixer;
 use PhpCsFixer\Fixer\Phpdoc\GeneralPhpdocAnnotationRemoveFixer;
 use PhpCsFixer\Fixer\Phpdoc\NoBlankLinesAfterPhpdocFixer;
 use PhpCsFixer\Fixer\Phpdoc\NoEmptyPhpdocFixer;
+use PhpCsFixer\Fixer\Phpdoc\NoSuperfluousPhpdocTagsFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAlignFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocAnnotationWithoutDotFixer;
 use PhpCsFixer\Fixer\Phpdoc\PhpdocIndentFixer;
@@ -251,18 +252,18 @@ $existingSkips = \array_merge(
         static fn (string $path): bool => \file_exists($path)
     ),
     [
-        SemicolonAfterInstructionFixer::class,
-        '*/tests/fixture/*',
         '*/tests/Fixture/*',
+        '*/tests/fixture/*',
         '*/vendor/*',
-        GroupImportFixer::class,
         BinaryOperatorSpacesFixer::class,
+        FinalPublicMethodForAbstractClassFixer::class,
         GeneralPhpdocAnnotationRemoveFixer::class,
+        GroupImportFixer::class,
+        NoSuperfluousPhpdocTagsFixer::class,
+        PhpUnitStrictFixer::class => ['tests/Unit/ParameterBuilderTest.php'],
         PhpdocLineSpanFixer::class,
         PhpdocTrimFixer::class,
-
-        FinalPublicMethodForAbstractClassFixer::class,
-        PhpUnitStrictFixer::class => ['tests/Unit/ParameterBuilderTest.php'],
+        SemicolonAfterInstructionFixer::class,
     ]
 );
 
