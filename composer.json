@@ -81,7 +81,7 @@
         "ext-xdebug": "*",
         "mockery/mockery": "^1.6.12",
         "nikic/php-parser": "^5.6.2",
-        "phpunit/phpunit": "^12.4.1",
+        "phpunit/phpunit": "^12.4.2",
         "symfony/var-dumper": "^7.3.5"
     },
     "conflict": {
@@ -101,7 +101,9 @@
             "functions.php",
             "tests/bootstrap.php"
         ],
-        "exclude-from-classmap": ["/tests/"]
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
     },
     "bin": [
         "tools/phar/composer",
