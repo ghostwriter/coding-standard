@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phive xmlns="https://phar.io/phive">
   <phar name="composer-normalize" version="^2.42.0" installed="2.42.0" location="./tools/composer-normalize" copy="true"/>
-  <phar name="composer-require-checker" version="^4.8.0" installed="4.8.0" location="./tools/composer-require-checker" copy="true"/>
+  <phar name="composer-require-checker" version="^4.9.0" installed="4.9.0" location="./tools/composer-require-checker" copy="true"/>
   <phar name="composer-unused" version="^0.8.11" installed="0.8.11" location="./tools/composer-unused" copy="true"/>
   <phar name="composer" version="^2.7.1" installed="2.7.1" location="./tools/composer" copy="true"/>
   <phar name="infection" version="0.27.10" installed="0.27.10" location="./tools/infection" copy="true"/>
