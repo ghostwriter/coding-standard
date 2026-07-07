@@ -36,6 +36,7 @@ use Ghostwriter\CodingStandard\Command\PHPUnit\PHPUnitTestCommand;
 use Ghostwriter\CodingStandard\Command\Psalm\PsalmBaselineCommand;
 use Ghostwriter\CodingStandard\Command\Psalm\PsalmCommand;
 use Ghostwriter\CodingStandard\Command\Psalm\PsalmSecurityCommand;
+use Ghostwriter\CodingStandard\WindowsPathConverter;
 use RuntimeException;
 
 use function array_key_exists;
@@ -81,23 +82,24 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
     public function getCommands(): array
     {
         $processExecutor = new ProcessExecutor();
+        $windowsPathConverter = new WindowsPathConverter();
 
         return [
-            new ComposerBumpCommand($processExecutor),
-            new ComposerRequireCheckerCommand($processExecutor),
-            new ComposerUpdateCommand($processExecutor),
-            new ComposerUnusedCommand($processExecutor),
-            new PhiveInstallCommand($processExecutor),
-            new PhiveUninstallCommand($processExecutor),
-            new PhiveUpdateCommand($processExecutor),
-            new InfectionRunCommand($processExecutor),
-            new InfectionUpdateConfigCommand($processExecutor),
-            new PHPBenchCommand($processExecutor),
-            new PHPUnitMigrateCommand($processExecutor),
-            new PHPUnitTestCommand($processExecutor),
-            new PsalmBaselineCommand($processExecutor),
-            new PsalmCommand($processExecutor),
-            new PsalmSecurityCommand($processExecutor),
+            new ComposerBumpCommand($processExecutor, $windowsPathConverter),
+            new ComposerRequireCheckerCommand($processExecutor, $windowsPathConverter),
+            new ComposerUpdateCommand($processExecutor, $windowsPathConverter),
+            new ComposerUnusedCommand($processExecutor, $windowsPathConverter),
+            new PhiveInstallCommand($processExecutor, $windowsPathConverter),
+            new PhiveUninstallCommand($processExecutor, $windowsPathConverter),
+            new PhiveUpdateCommand($processExecutor, $windowsPathConverter),
+            new InfectionRunCommand($processExecutor, $windowsPathConverter),
+            new InfectionUpdateConfigCommand($processExecutor, $windowsPathConverter),
+            new PHPBenchCommand($processExecutor, $windowsPathConverter),
+            new PHPUnitMigrateCommand($processExecutor, $windowsPathConverter),
+            new PHPUnitTestCommand($processExecutor, $windowsPathConverter),
+            new PsalmBaselineCommand($processExecutor, $windowsPathConverter),
+            new PsalmCommand($processExecutor, $windowsPathConverter),
+            new PsalmSecurityCommand($processExecutor, $windowsPathConverter),
         ];
     }
 
