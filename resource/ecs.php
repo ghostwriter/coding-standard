@@ -14,6 +14,6 @@ return ECSConfig::configure()->withSets(
             $workingDirectory . '/vendor/ghostwriter/coding-standard/config/ecs.php',
             $workingDirectory . '/config/ecs.php',
         ],
-        'file_exists'
+        static fn (string $path): bool => \file_exists($path)
     )
 );
