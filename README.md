@@ -12,7 +12,7 @@ My personal PHP Coding Standard.
 You can install the package via composer:
 
 ``` bash
-composer require ghostwriter/coding-standard --dev
+composer require ghostwriter/coding-standard:dev-main --dev
 ```
 
 ## Usage
