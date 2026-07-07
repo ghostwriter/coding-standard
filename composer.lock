@@ -6470,12 +6470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/inflector.git",
-                "reference": "3f5dd82751db5fcf2cc5c633c17326b719e9bfc1"
+                "reference": "851ed6447239513d9ebfb28c398ad8b89f3b2626"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/3f5dd82751db5fcf2cc5c633c17326b719e9bfc1",
-                "reference": "3f5dd82751db5fcf2cc5c633c17326b719e9bfc1",
+                "url": "https://api.github.com/repos/ghostwriter/inflector/zipball/851ed6447239513d9ebfb28c398ad8b89f3b2626",
+                "reference": "851ed6447239513d9ebfb28c398ad8b89f3b2626",
                 "shasum": ""
             },
             "require": {
@@ -6524,7 +6524,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-28T00:08:20+00:00"
+            "time": "2025-03-28T16:40:12+00:00"
         }
     ],
     "aliases": [],
