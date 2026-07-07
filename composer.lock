@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42f77738d059a3f98b072a16fd086063",
+    "content-hash": "7ad9ff9f074f602211f7da2c8fcf3828",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -861,12 +861,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/github-cli.git",
-                "reference": "59ca9f1450c3da4f9956225978f2464ae860a3e8"
+                "reference": "e7835f93601fa6af6f7d3e2c522800a1b9d59b4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/github-cli/zipball/59ca9f1450c3da4f9956225978f2464ae860a3e8",
-                "reference": "59ca9f1450c3da4f9956225978f2464ae860a3e8",
+                "url": "https://api.github.com/repos/ghostwriter/github-cli/zipball/e7835f93601fa6af6f7d3e2c522800a1b9d59b4f",
+                "reference": "e7835f93601fa6af6f7d3e2c522800a1b9d59b4f",
                 "shasum": ""
             },
             "require": {
@@ -932,7 +932,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-01T05:15:43+00:00"
+            "time": "2026-01-02T20:31:53+00:00"
         },
         {
             "name": "ghostwriter/shell",
@@ -4600,7 +4600,7 @@
     "stability-flags": {
         "ghostwriter/github-cli": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "~8.4.0 || ~8.5.0",
@@ -4653,7 +4653,7 @@
         "composer-plugin-api": "~2.9.0",
         "composer-runtime-api": "~2.2.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.4.999"
     },
