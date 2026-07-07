@@ -62,23 +62,26 @@
         "ext-zlib": "*",
         "composer-plugin-api": "^2.6.0",
         "composer-runtime-api": "^2.2.2",
-        "composer/composer": "^2.8.6",
-        "composer/semver": "^3.4.3",
-        "infection/infection": "^0.29.14",
-        "mockery/mockery": "^1.6.12",
-        "phpunit/phpunit": "^12.0.7",
-        "symfony/var-dumper": "^7.2.3",
-        "vimeo/psalm": "^6.8.9"
+        "composer/composer": "@stable",
+        "composer/semver": "@stable",
+        "infection/infection": "@stable",
+        "mockery/mockery": "@stable",
+        "phpunit/phpunit": "@stable",
+        "symfony/var-dumper": "@stable",
+        "vimeo/psalm": "@stable"
     },
     "require-dev": {
-        "doctrine/inflector": "^2.0.10",
-        "ghostwriter/case-converter": "^2.0.0",
-        "ghostwriter/container": "^5.0.0",
-        "ghostwriter/filesystem": "^0.1.1",
-        "ghostwriter/json": "^3.0.0",
-        "ghostwriter/shell": "^0.1.0"
+        "doctrine/inflector": "@stable",
+        "ghostwriter/case-converter": "@stable",
+        "ghostwriter/container": "@stable",
+        "ghostwriter/filesystem": "@stable",
+        "ghostwriter/json": "@stable",
+        "ghostwriter/shell": "@stable"
     },
-    "conflict": {},
+    "conflict": {
+        "pestphp/pest": "*",
+        "phpunit/phpunit": "<12.0"
+    },
     "autoload": {
         "psr-4": {
             "Ghostwriter\\CodingStandard\\": "src/"
@@ -119,6 +122,51 @@
     },
     "extra": {
         "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
+        "ghostwriter": {
+            "conflict": {
+                "enabled": true,
+                "vendors": [
+                    "250",
+                    "acmephp",
+                    "asm89",
+                    "async",
+                    "bilge",
+                    "binarykitten",
+                    "codelegance",
+                    "connectors",
+                    "doctrine",
+                    "ezsystems",
+                    "growthbook",
+                    "jdorn",
+                    "joomla",
+                    "jwage",
+                    "kazist",
+                    "khanamiryan",
+                    "larastan",
+                    "nunomaduro",
+                    "object-calisthenics",
+                    "ocramius",
+                    "pegasus",
+                    "pestphp",
+                    "phptal",
+                    "phptype",
+                    "pimcore",
+                    "provider",
+                    "roave",
+                    "scriptfusion",
+                    "silverstripe",
+                    "socialiteproviders",
+                    "spatie",
+                    "tga",
+                    "topthink",
+                    "yiisoft",
+                    "yuan1994",
+                    "zendframework",
+                    "zetacomponents",
+                    "zf-commons"
+                ]
+            }
+        },
         "plugin-modifies-downloads": false,
         "plugin-modifies-install-path": false,
         "plugin-optional": false
