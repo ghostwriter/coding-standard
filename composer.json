@@ -70,7 +70,8 @@
         "preferred-install": "dist",
         "prepend-autoloader": true,
         "sort-packages": true,
-        "use-parent-dir": false
+        "use-parent-dir": false,
+        "process-timeout": 5000
     },
     "extra": {
         "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
