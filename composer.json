@@ -74,8 +74,8 @@
     },
     "extra": {
         "class": "Ghostwriter\\CodingStandard\\Plugin\\ComposerPlugin",
-        "plugin-modifies-downloads": true,
-        "plugin-modifies-install-path": true,
+        "plugin-modifies-downloads": false,
+        "plugin-modifies-install-path": false,
         "plugin-optional": false
     },
     "scripts": {
