@@ -338,7 +338,8 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
     ): string {
         $lockVersions = iterator_to_array(self::getLockedVersions($locker, $rootPackage));
 
-        foreach (['require', 'require-dev'] as $configKey) {
+        $keys = ['require-dev']; // 'require',
+        foreach ($keys as $configKey) {
             $isDev = 'require-dev' === $configKey;
 
             $requiredVersions = $isDev ? self::extractVersions($rootPackage->getDevRequires()) : self::extractVersions(
@@ -359,32 +360,22 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     str_contains($version, ' ')
                     || str_contains($version, ',')
                     || str_contains($version, '|')
+                    || str_contains($version, '@')
                     || str_contains($version, ' as ')
+                    || str_ends_with($version, '-dev')
+                    || str_starts_with($version, 'dev-')
                 ) {
                     self::log(sprintf('Skipping complex range <info>%s</info>', $version), $IO);
 
                     continue;
                 }
 
-                if (
-                    str_contains($version, '#')
-                    || str_contains($version, '@dev')
-                    || str_ends_with($version, '-dev')
-                    || str_starts_with($version, 'dev-')
-                ) {
-                    self::log(sprintf('Skipping dev version <info>%s</info>', $version), $IO);
-
-                    continue;
-                }
-
-                if (str_starts_with($version, '@')) {
-                    self::log(sprintf('Skipping @ version <info>%s</info>', $version), $IO);
-
-                    continue;
-                }
-
                 $lockVersion = $lockVersions[$package];
-                if (preg_match('#^dev-.+@dev$|@dev#', $lockVersion) === 1) {
+                if (
+                    str_contains($lockVersion, '@') ||
+                    str_starts_with($lockVersion, 'dev-') ||
+                    str_ends_with($lockVersion, '-dev')
+                ) {
                     self::log(sprintf('Skipping dev locked version <info>%s</info>', $lockVersion), $IO);
 
                     continue;
@@ -396,7 +387,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     continue;
                 }
 
-                $lockVersion = (string) preg_replace('/^v(?<version>.*)/', '\1', $lockVersion);
+                $lockVersion = (string) preg_replace('#^v(?<version>.*)#', '\1', $lockVersion);
 
                 if (is_numeric($version)) {
                     // Just by checking if the version is numeric
@@ -404,7 +395,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                     // with numbers and dots.
                     // is_numeric($version);
 
-                    $manipulator->addLink($configKey, $package, $lockVersion, false);
+                    $manipulator->addLink($configKey, $package, $lockVersion, true);
 
                     self::log(
                         sprintf(
@@ -422,7 +413,9 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
                 $constraintPrefix = str_starts_with($version, '~') ? '~' : '^';
 
-                $manipulator->addLink($configKey, $package, $constraintPrefix . $lockVersion, false);
+                $lockVersionWithPrefix = $constraintPrefix . $lockVersion;
+
+                $manipulator->addLink($configKey, $package, $lockVersionWithPrefix, true);
 
                 self::log(
                     sprintf(
@@ -430,7 +423,7 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
                         $package,
                         $isDev ? ' dev' : '',
                         $version,
-                        '^' . $lockVersion
+                        $lockVersionWithPrefix
                     ),
                     $IO
                 );
