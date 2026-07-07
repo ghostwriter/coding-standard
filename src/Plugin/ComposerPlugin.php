@@ -24,7 +24,7 @@ use Generator;
 use Ghostwriter\CodingStandard\Command\Composer\ComposerBumpCommand;
 use Ghostwriter\CodingStandard\Command\Composer\ComposerUpdateCommand;
 use Ghostwriter\CodingStandard\Command\ComposerRequireChecker\ComposerRequireCheckerCommand;
-use Ghostwriter\CodingStandard\Command\ComposerRequireChecker\ComposerUnusedCommand;
+use Ghostwriter\CodingStandard\Command\ComposerUnused\ComposerUnusedCommand;
 use Ghostwriter\CodingStandard\Command\Phive\PhiveInstallCommand;
 use Ghostwriter\CodingStandard\Command\Phive\PhiveUninstallCommand;
 use Ghostwriter\CodingStandard\Command\Phive\PhiveUpdateCommand;

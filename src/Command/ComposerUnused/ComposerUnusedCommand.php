@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\CodingStandard\Command\ComposerRequireChecker;
+namespace Ghostwriter\CodingStandard\Command\ComposerUnused;
 
 use Ghostwriter\CodingStandard\Command\AbstractCommand;
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -27,7 +27,6 @@ final class ComposerUnusedCommand extends AbstractCommand
                 '--output-format=json',
                 '--no-interaction',
                 '--no-progress',
-                '--no-ansi',
             ],
         );
     }
