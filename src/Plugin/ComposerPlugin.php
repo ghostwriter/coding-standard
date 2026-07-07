@@ -103,67 +103,67 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
     public function onCommand(): void
     {
-        echo 'The COMMAND event occurs as a command begins', PHP_EOL;
+        // echo 'The COMMAND event occurs as a command begins', PHP_EOL;
     }
 
     public function onInit(): void
     {
-        echo 'The INIT event occurs after a Composer instance is done being initialized', PHP_EOL;
+        // echo 'The INIT event occurs after a Composer instance is done being initialized', PHP_EOL;
     }
 
     public function onPostArchiveCmd(): void
     {
-        echo 'The post-archive-cmd event occurs after the archive command has been executed', PHP_EOL;
+        // echo 'The post-archive-cmd event occurs after the archive command has been executed', PHP_EOL;
     }
 
     public function onPostAutoloadDump(): void
     {
-        echo 'The post-autoload-dump event occurs after the autoload file has been generated', PHP_EOL;
+        // echo 'The post-autoload-dump event occurs after the autoload file has been generated', PHP_EOL;
     }
 
     public function onPostCreateProjectCmd(): void
     {
-        echo 'The POST_CREATE_PROJECT_CMD event occurs after the create-project command has been executed', PHP_EOL;
+        // echo 'The POST_CREATE_PROJECT_CMD event occurs after the create-project command has been executed', PHP_EOL;
     }
 
     public function onPostFileDownload(): void
     {
-        echo 'The POST_FILE_DOWNLOAD event occurs after downloading a package dist file', PHP_EOL;
+        // echo 'The POST_FILE_DOWNLOAD event occurs after downloading a package dist file', PHP_EOL;
     }
 
     public function onPostInstallCmd(): void
     {
-        echo 'The post-install-cmd event occurs after the install command has been executed', PHP_EOL;
+        // echo 'The post-install-cmd event occurs after the install command has been executed', PHP_EOL;
     }
 
     public function onPostRootPackageInstall(): void
     {
-        echo 'The POST_ROOT_PACKAGE_INSTALL event occurs after the root package has been installed', PHP_EOL;
+        // echo 'The POST_ROOT_PACKAGE_INSTALL event occurs after the root package has been installed', PHP_EOL;
     }
 
     public function onPostStatusCmd(): void
     {
-        echo 'The post-status-cmd event occurs after the status command has been executed', PHP_EOL;
+        // echo 'The post-status-cmd event occurs after the status command has been executed', PHP_EOL;
     }
 
     public function onPostUpdateCmd(): void
     {
-        echo 'The post-update-cmd event occurs after the update command has been executed', PHP_EOL;
+        // echo 'The post-update-cmd event occurs after the update command has been executed', PHP_EOL;
     }
 
     public function onPreArchiveCmd(): void
     {
-        echo 'The PRE_ARCHIVE_CMD event occurs before the update command is executed', PHP_EOL;
+        // echo 'The PRE_ARCHIVE_CMD event occurs before the update command is executed', PHP_EOL;
     }
 
     public function onPreAutoloadDump(): void
     {
-        echo 'The PRE_AUTOLOAD_DUMP event occurs before the autoload file is generated', PHP_EOL;
+        // echo 'The PRE_AUTOLOAD_DUMP event occurs before the autoload file is generated', PHP_EOL;
     }
 
     public function onPreCommandRun(): void
     {
-        echo 'The PRE_COMMAND_RUN event occurs before a command is executed and lets you modify the input arguments/options', PHP_EOL;
+        // echo 'The PRE_COMMAND_RUN event occurs before a command is executed and lets you modify the input arguments/options', PHP_EOL;
     }
 
     public function onPreFileDownload(): void
@@ -173,22 +173,22 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
     public function onPreInstallCmd(): void
     {
-        echo 'The PRE_INSTALL_CMD event occurs before the install command is executed', PHP_EOL;
+        // echo 'The PRE_INSTALL_CMD event occurs before the install command is executed', PHP_EOL;
     }
 
     public function onPrePoolCreate(): void
     {
-        echo 'The PRE_POOL_CREATE event occurs before the Pool of packages is created, and lets you filter the list of packages which is going to enter the Solver', PHP_EOL;
+        // echo 'The PRE_POOL_CREATE event occurs before the Pool of packages is created, and lets you filter the list of packages which is going to enter the Solver', PHP_EOL;
     }
 
     public function onPreStatusCmd(): void
     {
-        echo 'The PRE_STATUS_CMD event occurs before the status command is executed', PHP_EOL;
+        // echo 'The PRE_STATUS_CMD event occurs before the status command is executed', PHP_EOL;
     }
 
     public function onPreUpdateCmd(): void
     {
-        echo 'The PRE_UPDATE_CMD event occurs before the update command is executed', PHP_EOL;
+        // echo 'The PRE_UPDATE_CMD event occurs before the update command is executed', PHP_EOL;
     }
 
     public function uninstall(Composer $composer, IOInterface $io): void
