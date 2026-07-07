@@ -40,6 +40,9 @@
         "symplify/easy-coding-standard": "^11.5.0"
     },
     "bin": [
+        "tools/composer-normalize",
+        "tools/composer-require-checker",
+        "tools/composer-unused",
         "tools/infection",
         "tools/php-cs-fixer",
         "tools/phpbench",
@@ -47,13 +50,13 @@
         "tools/psalm"
     ],
     "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
         "classmap-authoritative": true,
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        }
+        "sort-packages": true
     },
     "scripts": {
         "check": [
@@ -61,11 +64,15 @@
             "tools/php-cs-fixer fix --diff --using-cache=no --rules=@PER src",
             "tools/phpcbf src"
         ],
+        "crcc": "tools/composer-require-checker check --help",
+        "infection": "tools/infection run --threads=max --min-msi=0 --min-covered-msi=0",
+        "normalize": "tools/composer-normalize --no-update-lock",
+        "unused": "tools/composer-unused",
+        "p:i": "phive install --copy --force-accept-unsigned ",
         "p:u": [
             "phive update",
             "phive purge"
         ],
-        "p:i": "phive install --force-accept-unsigned -c",
         "phpunit": "true"
     }
 }
