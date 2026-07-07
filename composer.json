@@ -105,10 +105,10 @@
         ]
     },
     "bin": [
+        "tools/phar/composer",
         "tools/phar/composer-normalize",
         "tools/phar/composer-require-checker",
         "tools/phar/composer-unused",
-        "tools/phar/composer",
         "tools/phar/infection",
         "tools/phar/phive",
         "tools/phar/phpactor",
