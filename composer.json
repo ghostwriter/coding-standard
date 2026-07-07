@@ -93,7 +93,6 @@
         "exclude-from-classmap": ["/tests/"]
     },
     "bin": [
-        "tools/phar/composer",
         "tools/phar/composer-normalize",
         "tools/phar/composer-require-checker",
         "tools/phar/composer-unused",
