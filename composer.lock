@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4608c9caf709db374c9d1feefbe78f3e",
+    "content-hash": "09ad795358f370d22549dcd3f2ac6afa",
     "packages": [
         {
             "name": "amphp/amp",
@@ -6060,28 +6060,30 @@
     "packages-dev": [
         {
             "name": "ghostwriter/container",
-            "version": "4.0.3",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostwriter/container.git",
-                "reference": "a36501ae47e77441504b04500e303d118509f162"
+                "reference": "a0aa3c884e1b8e4bb1b044c72ebac74675a45bf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostwriter/container/zipball/a36501ae47e77441504b04500e303d118509f162",
-                "reference": "a36501ae47e77441504b04500e303d118509f162",
+                "url": "https://api.github.com/repos/ghostwriter/container/zipball/a0aa3c884e1b8e4bb1b044c72ebac74675a45bf6",
+                "reference": "a0aa3c884e1b8e4bb1b044c72ebac74675a45bf6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.3"
             },
             "require-dev": {
-                "ghostwriter/coding-standard": "dev-main"
+                "ghostwriter/coding-standard": "@dev",
+                "ghostwriter/psalm-plugin": "@dev",
+                "ghostwriter/testify": "@dev"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Ghostwriter\\Container\\": "src"
+                    "Ghostwriter\\Container\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6103,8 +6105,6 @@
                 "ghostwriter"
             ],
             "support": {
-                "docs": "https://github.com/ghostwriter/container",
-                "forum": "https://github.com/ghostwriter/container/discussions",
                 "issues": "https://github.com/ghostwriter/container/issues",
                 "rss": "https://github.com/ghostwriter/container/releases.atom",
                 "security": "https://github.com/ghostwriter/container/security/advisories/new",
@@ -6116,7 +6116,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-10-09T18:15:29+00:00"
+            "time": "2025-02-02T00:23:20+00:00"
         },
         {
             "name": "ghostwriter/filesystem",

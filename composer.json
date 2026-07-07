@@ -47,7 +47,7 @@
         "vimeo/psalm": "^6.1.0"
     },
     "require-dev": {
-        "ghostwriter/container": "^4.0.3",
+        "ghostwriter/container": "^4.0.5",
         "ghostwriter/filesystem": "^0.1.1",
         "ghostwriter/shell": "^0.1.0"
     },
