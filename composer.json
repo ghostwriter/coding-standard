@@ -105,17 +105,17 @@
         ]
     },
     "bin": [
-        "tools/phar/composer",
-        "tools/phar/composer-normalize",
-        "tools/phar/composer-require-checker",
-        "tools/phar/composer-unused",
-        "tools/phar/infection",
-        "tools/phar/phive",
-        "tools/phar/phpactor",
-        "tools/phar/phpbench",
-        "tools/phar/phpdocumentor",
-        "tools/phar/phpunit",
-        "tools/phar/psalm"
+        "tools/phar/composer-normalize.phar",
+        "tools/phar/composer-require-checker.phar",
+        "tools/phar/composer-unused.phar",
+        "tools/phar/composer.phar",
+        "tools/phar/infection.phar",
+        "tools/phar/phive.phar",
+        "tools/phar/phpactor.phar",
+        "tools/phar/phpbench.phar",
+        "tools/phar/phpdocumentor.phar",
+        "tools/phar/phpunit.phar",
+        "tools/phar/psalm.phar"
     ],
     "config": {
         "allow-plugins": {
@@ -186,12 +186,12 @@
         "plugin-optional": false
     },
     "scripts": {
-        "bin_composer": "tools/phar/composer",
-        "bin_infection": "tools/phar/infection --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
-        "bin_normalize": "tools/phar/composer-normalize",
-        "bin_phive": "tools/phar/phive",
-        "bin_phpunit": "tools/phar/phpunit --do-not-cache-result --colors=always",
-        "bin_psalm": "tools/phar/psalm --no-cache",
+        "bin_composer": "tools/phar/composer.phar",
+        "bin_infection": "tools/phar/infection.phar --ansi --min-covered-msi=0 --min-msi=0 --show-mutations --threads=max",
+        "bin_normalize": "tools/phar/composer-normalize.phar",
+        "bin_phive": "tools/phar/phive.phar",
+        "bin_phpunit": "tools/phar/phpunit.phar --do-not-cache-result --colors=always",
+        "bin_psalm": "tools/phar/psalm.phar --no-cache",
         "cache:clear": "rm -rf ./.cache/*",
         "check": [
             "@cache:clear",
