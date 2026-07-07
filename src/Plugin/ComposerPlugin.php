@@ -42,11 +42,14 @@ use Throwable;
 use const PATHINFO_EXTENSION;
 
 use function array_key_exists;
+use function count;
 use function file_exists;
 use function file_get_contents;
 use function file_put_contents;
+use function is_array;
 use function is_numeric;
 use function iterator_to_array;
+use function ksort;
 use function mb_substr;
 use function pathinfo;
 use function preg_replace;
@@ -143,6 +146,11 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
             throw new RuntimeException('Unable to write the composer.json file');
         }
 
+        if ($composer->getLocker()->isLocked()) {
+            self::log('[***]Updating the composer.lock file...', $io);
+            $composer->getLocker()->updateHash(new JsonFile($composerJsonFile));
+        }
+
         self::updateLockContentHash($composerLockFile, Locker::getContentHash($composerJson));
     }
 
@@ -170,6 +178,31 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
             yield $packageName => $required->getConstraint()
                 ->getPrettyString();
         }
+    }
+
+    private static function fixupJsonDataType(array $lockData): array
+    {
+        foreach (['stability-flags', 'platform', 'platform-dev'] as $key) {
+            if (! isset($lockData[$key])) {
+                continue;
+            }
+
+            if (! is_array($lockData[$key])) {
+                continue;
+            }
+
+            if (count($lockData[$key])) {
+                continue;
+            }
+
+            $lockData[$key] = new stdClass();
+        }
+
+        if (is_array($lockData['stability-flags'])) {
+            ksort($lockData['stability-flags']);
+        }
+
+        return $lockData;
     }
 
     /** @return Generator<string,string> */
@@ -319,6 +352,6 @@ final readonly class ComposerPlugin implements Capable, CommandProvider, EventSu
 
         $lockData['content-hash'] = $contentHash;
 
-        $lockFile->write($lockData);
+        $lockFile->write(self::fixupJsonDataType($lockData));
     }
 }

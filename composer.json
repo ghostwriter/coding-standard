@@ -117,17 +117,6 @@
         ],
         "exclude-from-classmap": ["/tests/"]
     },
-    "bin": [
-        "tools/phar/composer-normalize",
-        "tools/phar/composer-require-checker",
-        "tools/phar/composer-unused",
-        "tools/phar/infection",
-        "tools/phar/phive",
-        "tools/phar/phpactor",
-        "tools/phar/phpbench",
-        "tools/phar/phpdocumentor",
-        "tools/phar/psalm"
-    ],
     "config": {
         "allow-plugins": {
             "ghostwriter/coding-standard": true
