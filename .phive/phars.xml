@@ -4,7 +4,7 @@
   <phar name="composer-require-checker" version="^4.10.0" installed="4.10.0" location="./tools/composer-require-checker" copy="true"/>
   <phar name="composer-unused" version="^0.8.11" installed="0.8.11" location="./tools/composer-unused" copy="true"/>
   <phar name="composer" version="^2.7.2" installed="2.7.2" location="./tools/composer" copy="true"/>
-  <phar name="infection" version="^0.27.11" installed="0.27.11" location="./tools/infection" copy="true"/>
+  <phar name="infection" version="^0.28.0" installed="0.28.0" location="./tools/infection" copy="true"/>
   <phar name="phar-io/phive" version="^0.15.2" installed="0.15.2" location="./tools/phive" copy="true"/>
   <phar name="phpbench" version="^1.2.15" installed="1.2.15" location="./tools/phpbench" copy="true"/>
   <phar name="phpcbf" version="^3.9.0" installed="3.9.0" location="./tools/phpcbf" copy="true"/>
