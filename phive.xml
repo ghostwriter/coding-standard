@@ -2,7 +2,7 @@
 <phive xmlns="https://phar.io/phive">
   <phar name="composer" version="^2.8.5" installed="2.8.5" location="./tools/composer" copy="true"/>
   <phar name="composer-normalize" version="^2.45.0" installed="2.45.0" location="./tools/composer-normalize" copy="true"/>
-  <phar name="infection" version="^0.29.11" installed="0.29.11" location="./tools/infection" copy="true"/>
+  <phar name="infection" version="^0.29.12" installed="0.29.12" location="./tools/infection" copy="true"/>
   <phar name="phar-io/phive" version="^0.15.3" installed="0.15.3" location="./tools/phive" copy="true"/>
   <phar name="phpunit" version="^12.0.2" installed="12.0.2" location="./tools/phpunit" copy="true"/>
   <phar name="psalm" version="^6.6.1" installed="6.6.1" location="./tools/psalm" copy="true"/>
