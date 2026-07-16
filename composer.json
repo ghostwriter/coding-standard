@@ -110,6 +110,9 @@
         ]
     },
     "config": {
+        "allow-plugins": {
+            "ghostwriter/coding-standard": true
+        },
         "bump-after-update": false,
         "classmap-authoritative": false,
         "discard-changes": true,
