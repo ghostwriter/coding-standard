@@ -50,7 +50,6 @@
         "ext-curl": "*",
         "ext-dom": "*",
         "ext-ds": "*",
-        "ext-event": "*",
         "ext-exif": "*",
         "ext-fileinfo": "*",
         "ext-filter": "*",
