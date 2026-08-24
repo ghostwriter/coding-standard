@@ -6,10 +6,9 @@ namespace Tests\Unit;
 
 use Ghostwriter\CodingStandard\Example;
 use PHPUnit\Framework\Attributes\CoversClass;
-use PHPUnit\Framework\TestCase;
 
 #[CoversClass(Example::class)]
-final class ExampleTest extends TestCase
+final class ExampleTest extends AbstractTestCase
 {
     public function testExample(): void
     {
