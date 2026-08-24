@@ -44,11 +44,13 @@
     ],
     "require": {
         "php": "~8.4.0 || ~8.5.0 || ~8.6.0",
+        "ext-apcu": "*",
         "ext-bcmath": "*",
         "ext-ctype": "*",
         "ext-curl": "*",
         "ext-dom": "*",
         "ext-ds": "*",
+        "ext-event": "*",
         "ext-exif": "*",
         "ext-fileinfo": "*",
         "ext-filter": "*",
@@ -86,7 +88,10 @@
         "ext-yaml": "*",
         "ext-zend-opcache": "*",
         "ext-zip": "*",
-        "ext-zlib": "*"
+        "ext-zlib": "*",
+        "boundwize/structarmed": "^0.16.17",
+        "ghostwriter/phpunit-assertions": "^0.1.1",
+        "mockery/mockery": "^1.6.15"
     },
     "conflict": {
         "pestphp/pest": "*"
