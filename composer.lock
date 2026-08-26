@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ab4b545f9933569cda703a222bf07ab",
+    "content-hash": "85ecf2b7e77b1ac687c6ba1b37e20672",
     "packages": [],
     "packages-dev": [
         {
@@ -214,6 +214,109 @@
                 }
             ],
             "time": "2025-08-14T07:29:31+00:00"
+        },
+        {
+            "name": "ghostwriter/phpunit-assertions",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ghostwriter/phpunit-assertions.git",
+                "reference": "5880824f335d24af9e6d50a2a470bd441445e2fa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ghostwriter/phpunit-assertions/zipball/5880824f335d24af9e6d50a2a470bd441445e2fa",
+                "reference": "5880824f335d24af9e6d50a2a470bd441445e2fa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "~8.4.0 || ~8.5.0 || ~8.6.0"
+            },
+            "require-dev": {
+                "ext-xdebug": "*",
+                "fig/http-message-util": "^1.1.5",
+                "ghostwriter/coding-standard": "dev-main",
+                "ghostwriter/container": "^7.0.2",
+                "mockery/mockery": "^1.6.13",
+                "phpunit/phpunit": "^13.3.1",
+                "psr/cache": "^3.0.0",
+                "psr/clock": "^1.0.0",
+                "psr/container": "^2.0.2",
+                "psr/event-dispatcher": "^1.0.0",
+                "psr/http-client": "^1.0.3",
+                "psr/http-factory": "^1.1.0",
+                "psr/http-message": "^2.0.0",
+                "psr/http-server-handler": "^1.0.2",
+                "psr/http-server-middleware": "^1.0.2",
+                "psr/link": "^2.0.1",
+                "psr/log": "^3.0.2",
+                "psr/simple-cache": "^3.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "url": "https://github.com/ghostwriter/phpunit-assertions",
+                    "name": "ghostwriter/phpunit-assertions"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ghostwriter\\PHPUnitAssertions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nathanael Esayeas",
+                    "email": "nathanael.esayeas@protonmail.com",
+                    "homepage": "https://github.com/ghostwriter",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Additional assertions for PHPUnit",
+            "homepage": "https://github.com/ghostwriter/phpunit-assertions",
+            "keywords": [
+                "PSR-11",
+                "assertions",
+                "dev",
+                "ghostwriter",
+                "php",
+                "phpunit",
+                "phpunit-assertions",
+                "psr",
+                "psr-13",
+                "psr-14",
+                "psr-15",
+                "psr-16",
+                "psr-17",
+                "psr-18",
+                "psr-20",
+                "psr-3",
+                "psr-6",
+                "psr-7",
+                "testing"
+            ],
+            "support": {
+                "issues": "https://github.com/ghostwriter/phpunit-assertions/issues",
+                "rss": "https://github.com/ghostwriter/phpunit-assertions/releases.atom",
+                "security": "https://github.com/ghostwriter/phpunit-assertions/security/advisories/new",
+                "source": "https://github.com/ghostwriter/phpunit-assertions"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/ghostwriter",
+                    "type": "github"
+                },
+                {
+                    "url": "https://paypal.me/codepoet",
+                    "type": "paypal"
+                }
+            ],
+            "time": "2026-08-15T04:21:02+00:00"
         },
         {
             "name": "nikic/php-parser",

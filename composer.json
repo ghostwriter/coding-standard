@@ -91,7 +91,8 @@
         "ext-zlib": "*"
     },
     "require-dev": {
-        "boundwize/structarmed": "^0.16.24"
+        "boundwize/structarmed": "^0.16.24",
+        "ghostwriter/phpunit-assertions": "^0.1.1"
     },
     "conflict": {
         "pestphp/pest": "*"
