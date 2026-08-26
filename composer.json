@@ -89,7 +89,6 @@
         "ext-zend-opcache": "*",
         "ext-zip": "*",
         "ext-zlib": "*",
-        "boundwize/structarmed": "^0.16.17",
         "ghostwriter/phpunit-assertions": "^0.1.1",
         "mockery/mockery": "^1.6.15"
     },
