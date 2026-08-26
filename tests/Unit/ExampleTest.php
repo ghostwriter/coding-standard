@@ -12,6 +12,8 @@ final class ExampleTest extends AbstractTestCase
 {
     public function testExample(): void
     {
-        self::assertInstanceOf(Example::class, new Example());
+        $example = new Example();
+
+        self::assertSame('bar', $example->foo());
     }
 }
