@@ -93,7 +93,8 @@
     "require-dev": {
         "boundwize/structarmed": "^0.16.24",
         "ghostwriter/phpunit-assertions": "^0.1.1",
-        "mockery/mockery": "^1.6.15"
+        "mockery/mockery": "^1.6.15",
+        "phpunit/phpunit": "^13.3.1"
     },
     "conflict": {
         "pestphp/pest": "*"
