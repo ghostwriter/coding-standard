@@ -88,8 +88,7 @@
         "ext-yaml": "*",
         "ext-zend-opcache": "*",
         "ext-zip": "*",
-        "ext-zlib": "*",
-        "mockery/mockery": "^1.6.15"
+        "ext-zlib": "*"
     },
     "conflict": {
         "pestphp/pest": "*"
