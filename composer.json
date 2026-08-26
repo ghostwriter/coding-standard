@@ -90,6 +90,9 @@
         "ext-zip": "*",
         "ext-zlib": "*"
     },
+    "require-dev": {
+        "boundwize/structarmed": "^0.16.24"
+    },
     "conflict": {
         "pestphp/pest": "*"
     },
