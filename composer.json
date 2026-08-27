@@ -183,12 +183,9 @@
         "phive:update": "phive update",
         "phpunit": [
             "@xdebug",
-            "phpunit --do-not-cache-result --colors=always"
+            "phpunit --colors=always"
         ],
-        "phpunit:migrate": [
-            "@xdebug",
-            "phpunit --do-not-cache-result --colors=always --migrate-configuration"
-        ],
+        "phpunit:migrate": "@phpunit --migrate-configuration",
         "psalm": "psalm --no-cache --show-info=true --no-diff --shepherd --stats",
         "psalm:alter": "psalm --no-cache --alter --allow-backwards-incompatible-changes=false --safe-types",
         "psalm:baseline": "psalm --no-cache --no-diff --set-baseline=psalm-baseline.xml",
