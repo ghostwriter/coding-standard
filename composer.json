@@ -94,7 +94,7 @@
         "boundwize/structarmed": "^0.17.2",
         "ghostwriter/phpunit-assertions": "^0.1.1",
         "mockery/mockery": "^1.6.15",
-        "phpunit/phpunit": "^13.3.2"
+        "phpunit/phpunit": "^13.3.3"
     },
     "conflict": {
         "pestphp/pest": "*"
