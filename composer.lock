@@ -78,16 +78,16 @@
         },
         {
             "name": "boundwize/structarmed",
-            "version": "0.19.4",
+            "version": "0.19.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/boundwize/structarmed.git",
-                "reference": "5188c4c4a790e9237a90491b0596d4669b9944e2"
+                "reference": "2733bae2c04254cb36f08cf96c3cd56bc4cb62a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/5188c4c4a790e9237a90491b0596d4669b9944e2",
-                "reference": "5188c4c4a790e9237a90491b0596d4669b9944e2",
+                "url": "https://api.github.com/repos/boundwize/structarmed/zipball/2733bae2c04254cb36f08cf96c3cd56bc4cb62a8",
+                "reference": "2733bae2c04254cb36f08cf96c3cd56bc4cb62a8",
                 "shasum": ""
             },
             "require": {
@@ -144,7 +144,7 @@
             ],
             "support": {
                 "issues": "https://github.com/boundwize/structarmed/issues",
-                "source": "https://github.com/boundwize/structarmed/tree/0.19.4"
+                "source": "https://github.com/boundwize/structarmed/tree/0.19.10"
             },
             "funding": [
                 {
@@ -152,7 +152,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-11T11:18:52+00:00"
+            "time": "2026-10-26T15:02:09+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",
@@ -2378,7 +2378,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {},
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "~8.4.0 || ~8.5.0 || ~8.6.0",
